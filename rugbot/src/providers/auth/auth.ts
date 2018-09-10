@@ -1,25 +1,15 @@
 import { Injectable } from '@angular/core';
 
 import { AngularFireAuth } from 'angularfire2/auth';
-import { usercreds } from '../../models/interfaces/usercreds';
+// import firebase from 'firebase/app';
 
 @Injectable()
 export class AuthProvider {
 
-  constructor(public afireauth: AngularFireAuth) {
-  }
+  constructor(public afAuth: AngularFireAuth) {}
 
-  //For logging in a particular user. Called from login.ts
-
-  login(credentials: usercreds) {
-    var promise = new Promise((resolve, reject) => {
-      this.afireauth.auth.signInWithEmailAndPassword(credentials.email, credentials.password).then(() => {
-        resolve(true);
-      }).catch((err) => {
-        reject(err);
-      })
-    })
-    return promise;
+  loginUser(email: string, pass: string): Promise<any> {
+    return this.afAuth.auth.signInWithEmailAndPassword(email, pass);
   }
 
 }

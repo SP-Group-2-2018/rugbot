@@ -6,13 +6,21 @@
 -->
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>calender</ion-title>
+  <ion-navbar color="primary">
+    <ion-title>{{viewTitle}}</ion-title>
+    <ion-buttons end>
+      <button ion-button[disabled] = "isToday" (click) = "today()">Today</button>
+      <button ion-button (click) = "changeMode('month')">Month</button>
+      <button ion-button (click) = "changeMode('week')">Week</button>
+      <button ion-button (click) = "changeMode('day')">Day</button>
+      <button ion-button (click) = "loadEvents()">Load Events</button>
+    </ion-buttons>
   </ion-navbar>
-
 </ion-header>
 
 
-<ion-content padding>
+<ion-content class="has-header">
+  <calendar [eventSource] = "eventSource" [calendarMode]= "calendar.mode" [currentDate]= "calendar.currentDate" (onCurrentDateChanged)= "onCurrentDateChanged($event)" (onEventSelected)= "onEventSelected($event)" (onTitleChanged) = "onTitleChanged($event)" step="30">
+  </calendar>
 
 </ion-content>
