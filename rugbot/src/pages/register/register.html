@@ -1,0 +1,56 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Register</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col col-4></ion-col>
+      <ion-col col-4 style="margin-left: auto; margin-right: auto; display: block;">
+        <img src="assets/imgs/logo.png" style="width: 100%; height: auto; border-radius: 100%">
+      </ion-col>
+      <ion-col col-4></ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+  <form [formGroup]="registerForm" (submit)="registerUser()" novalidate>
+
+      <ion-item>
+        <ion-label floating>Email</ion-label>
+        <ion-input #email formControlName="email" type="email"  [class.invalid]="!registerForm.controls.email.valid && registerForm.controls.email.dirty"></ion-input>
+      </ion-item>
+      <ion-item class="error-message" *ngIf="!registerForm.controls.email.valid && registerForm.controls.email.dirty">
+        <p>Please enter a valid email.</p>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Password</ion-label>
+        <ion-input #password formControlName="password" type="password"  [class.invalid]="!registerForm.controls.password.valid && registerForm.controls.password.dirty"></ion-input>
+      </ion-item>
+      <ion-item class="error-message" *ngIf="!registerForm.controls.password.valid && registerForm.controls.password.dirty">
+        <p>Your password needs more than 6 characters.</p>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Confirm Password</ion-label>
+        <ion-input #passwordConfirm formControlName="passwordConfirm" type="password"  [class.invalid]="!registerForm.controls.passwordConfirm.valid && registerForm.controls.passwordConfirm.dirty"></ion-input>
+      </ion-item>
+      <ion-item class="error-message" *ngIf="registerForm.hasError('mismatchedPasswords')">
+
+        <!-- registerForm.controls.passwordConfirm.touched &&  && registerForm.controls.passwordConfirm.valid -->
+
+        <p>Your passwords do not match.</p>
+      </ion-item>
+
+    <button ion-button block type="submit" style="margin-top: 15px; height: 35px; font-size: 14px; background: black;">
+      Register
+    </button>
+  </form>
+</ion-content>
