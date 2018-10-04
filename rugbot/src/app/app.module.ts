@@ -6,17 +6,23 @@ import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
+import { RegisterPage } from '../pages/register/register';
 import { AuthProvider } from '../providers/auth/auth';
 
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 
 import { firebaseConfig } from '../config';
+import { LoginPage } from '../pages/login/login';
+import { PhysioListPage } from '../pages/physio-list/physio-list';
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    HomePage,
+    RegisterPage,
+    LoginPage,
+    PhysioListPage
   ],
   imports: [
     BrowserModule,
@@ -27,7 +33,10 @@ import { firebaseConfig } from '../config';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    HomePage,
+    RegisterPage,
+    LoginPage,
+    PhysioListPage
   ],
   providers: [
     StatusBar,

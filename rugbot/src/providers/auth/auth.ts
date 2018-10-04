@@ -12,4 +12,8 @@ export class AuthProvider {
     return this.afAuth.auth.signInWithEmailAndPassword(email, pass);
   }
 
+  registerUser(email: string, pass: string): Promise<any> {
+  	return this.afAuth.auth.createUserWithEmailAndPassword(email, pass);
+  }
+
 }

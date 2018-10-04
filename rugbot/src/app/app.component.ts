@@ -4,6 +4,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage } from '../pages/home/home';
+import { LoginPage } from '../pages/login/login';
 
 import { AngularFireAuth } from 'angularfire2/auth';
 
@@ -19,7 +20,7 @@ export class MyApp {
         this.rootPage = HomePage;
         authObserver.unsubscribe();
       } else {
-        this.rootPage = 'LoginPage';
+        this.rootPage = LoginPage;
         authObserver.unsubscribe();
       }
     });
