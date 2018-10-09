@@ -1,0 +1,94 @@
+<!--
+  Generated template for the PhysioFormPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Injury Details</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col col-4></ion-col>
+      <ion-col col-4 style="margin-left: auto; margin-right: auto; display: block;">
+        <img src="assets/imgs/logo.png" style="width: 100%; height: auto; border-radius: 100%">
+      </ion-col>
+      <ion-col col-4></ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <div class="container">
+  <form action="submit">
+    <div class="row">
+      <div class="col-25">
+        <label for="fname">First Name</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="fname" name="firstname" placeholder="get from database">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="lname">Last Name</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="lname" name="lastname" placeholder="get from database">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="injuryStatus">Injury Status</label>
+      </div>
+      <div class="col-75">
+        <select id="injuryStatus" name="injuryStatus">
+          <option value="red">Red(actual colour)</option>
+          <option value="orange">Orange(actual colour)</option>
+          <option value="green">Green(actual colour)</option>
+        </select>
+      </div>
+    </div>
+<!-- make date picker work -->
+    <div class="row">
+      <div class="col-25">
+        <label for="dateSeen">Date seen</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="dateSeen" name="dateSeen" placeholder="Enter Date Seen">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-25">
+        <label for="resumeDate">Date To Resume Training</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="resumeDate" name="resumeDate" placeholder="Enter Date To Resume Training">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-25">
+        <label for="comments">Comments</label>
+      </div>
+      <div class="col-75">
+        <textarea id="comments" name="comments" placeholder="Comment.." style="height:200px"></textarea>
+      </div>
+    </div>
+    <div class="row">
+      <input type="submit" value="Submit" id="button">
+    </div>
+  </form>
+</div>
+
+</ion-content>

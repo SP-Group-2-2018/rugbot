@@ -9,8 +9,9 @@ import { HomePage } from '../pages/home/home';
 import { RegisterPage } from '../pages/register/register';
 import { AuthProvider } from '../providers/auth/auth';
 
-import { AngularFireModule } from 'angularfire2';
-import { AngularFireAuthModule } from 'angularfire2/auth';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { AngularFireDatabaseModule, AngularFireDatabase } from '@angular/fire/database';
 
 import { firebaseConfig } from '../config';
 import { LoginPage } from '../pages/login/login';
@@ -28,7 +29,8 @@ import { PhysioListPage } from '../pages/physio-list/physio-list';
     BrowserModule,
     IonicModule.forRoot(MyApp),
     AngularFireModule.initializeApp(firebaseConfig),
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    AngularFireDatabaseModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -42,7 +44,8 @@ import { PhysioListPage } from '../pages/physio-list/physio-list';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    AuthProvider
+    AuthProvider,
+    AngularFireDatabase
   ]
 })
 export class AppModule {}
