@@ -10,4 +10,4 @@ import { CoachListPage } from './coach-list';
     IonicPageModule.forChild(CoachListPage),
   ],
 })
-export class CoachListPageModule {}
+export class CoachListPageModule { }

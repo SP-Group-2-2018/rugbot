@@ -10,9 +10,11 @@ import { Observable } from 'rxjs/Observable';
   templateUrl: 'physio-list.html',
 })
 export class PhysioListPage {
+
 	users: Observable<any[]>;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public afd: AngularFireDatabase) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,
+		public afd: AngularFireDatabase) {
   }
 
   ionViewDidLoad() {

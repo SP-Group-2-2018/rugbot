@@ -12,6 +12,7 @@ import { PhysioListPage } from '../physio-list/physio-list';
   templateUrl: 'home.html',
 })
 export class HomePage {
+
   // users: Observable<any[]>;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
