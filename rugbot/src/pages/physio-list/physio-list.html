@@ -33,22 +33,18 @@
     <table>
 
       <tr>
-        <th>First Name</th>
+        <th>Name</th>
         <th>Email</th>
-        <th>Action</th>
-
+        <th>Status</th>
       </tr>
 
-      <!-- <ion-list> -->
-      <!-- <ion-item class="text" *ngFor="let user of users | async"> -->
       <tr *ngFor="let user of users | async">
-        <td>{{ user.name }}</td>
+        <td>{{ user.name }} {{ user.surname }}</td> <!-- surname not showing -->
         <td>{{ user.email }}</td>
-        <td><button onclick="myFunction()">Edit</button></td>
+        <td>
+          <button ion-button (click)="edit();" color="danger">Injured</button>
+        </td>
       </tr>
-      <!-- </ion-item> -->
-      <!-- </ion-list> -->
-
     </table>
 
     <ion-fab bottom right>
