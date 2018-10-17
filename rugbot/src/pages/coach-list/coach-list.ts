@@ -1,12 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
-/**
- * Generated class for the CoachListPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { AlertController } from 'ionic-angular';
 
 @IonicPage()
 @Component({
@@ -16,10 +10,10 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 export class CoachListPage {
 
 	fullName = [{name:'test'},{name:'asdsd'}];
-	
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-	
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, private alertCtrl: AlertController) {
+
   }
 
   ionViewDidLoad() {
@@ -30,9 +24,14 @@ export class CoachListPage {
   {
 	  alert("mark");
   }
-  
+
   view()
   {
-	  alert("view");
+    let alert = this.alertCtrl.create({
+    title: 'Low battery',
+      subTitle: '10% of battery remaining',
+      buttons: ['Close']
+    });
+    alert.present();
   }
 }
