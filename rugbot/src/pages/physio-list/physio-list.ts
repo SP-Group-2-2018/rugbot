@@ -33,10 +33,10 @@ export class PhysioListPage {
   edit(user) {
     let alert = this.alertCtrl.create({
       title: 'Status',
-      value: user.status,
+      // value: user.status,
       inputs: [
         {
-          value: "sdf",
+          // value: user.status,
           name: 'comment',
           placeholder: 'comment...'
         }

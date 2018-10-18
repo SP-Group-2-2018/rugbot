@@ -10,4 +10,4 @@ import { PhysioListPage } from './physio-list';
     IonicPageModule.forChild(PhysioListPage),
   ],
 })
-export class PhysioListPageModule {}
+export class PhysioListPageModule { }

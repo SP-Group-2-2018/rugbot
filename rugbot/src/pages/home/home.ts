@@ -20,21 +20,26 @@ export class HomePage {
 
   // users: Observable<any[]>;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public afa: AngularFireAuth) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,
+    public afa: AngularFireAuth) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad HomePage');
   }
 
-  showPage() {
-  	console.log('hello, this button works');
-  	this.navCtrl.push(CoachListPage);
+  showPhysio() {
+    console.log('hello, this button works');
+    this.navCtrl.push(PhysioListPage);
+  }
+
+  showCoach() {
+    console.log('hello, this button works');
+    this.navCtrl.push(CoachListPage);
   }
 
   logout() {
     this.afa.auth.signOut();
     this.navCtrl.setRoot(LoginPage);
   }
-
 }

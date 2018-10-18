@@ -34,7 +34,7 @@ export class CoachListPage {
 
   //does not work...
   pushToFire() {
-    this.afd.list('/attendance/').push({key:this.date, uid: this.uid});
+    this.afd.list('/attendance/').push({ key: this.date, uid: this.uid });
   }
 
   view(sdf) {
@@ -48,11 +48,9 @@ export class CoachListPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad CoachListPage');
-    
-    
   }
 
-  ngOnInit(){
+  ngOnInit() {
     this.users = this.afd.list('/users').valueChanges();
   }
 }
