@@ -29,11 +29,12 @@ export class PhysioListPage {
   }
 
   edit(user) {
+    let text = "";
     let alert = this.alertCtrl.create({
       title: 'Status',
       inputs: [
         {
-          name: 'Comment',
+          name: 'comment',
           placeholder: 'comment...'
         }
       ],
@@ -43,6 +44,7 @@ export class PhysioListPage {
           text: 'A Okay',
           role: 'ok',
           handler: data => {
+            user.status = data.comment;
             console.log('player maked as ok');
             user.statusColour = 'secondary';
           }
@@ -51,6 +53,7 @@ export class PhysioListPage {
           text: 'Injured',
           role: 'injured',
           handler: data => {
+            user.status = data.comment;
             user.statusColour = 'danger';
             console.log('player marked as injured'); // TODO
           }
@@ -59,6 +62,7 @@ export class PhysioListPage {
           text: 'No play',
           role: 'dead',
           handler: data => {
+            user.status = data.comment;
             user.statusColour = 'dark';
             console.log('player marked as dead'); // TODO
           }
