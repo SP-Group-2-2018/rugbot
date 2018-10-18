@@ -14,10 +14,12 @@ import { AlertController } from 'ionic-angular'
 export class PhysioListPage {
 
   users: Observable<any[]>;
-  buttonColours: String[] = ['light', 'danger'];
+  tasks: FirebaseListObservable<any[]>;
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
     public afd: AngularFireDatabase, private alertCtrl: AlertController) {
+
+    this.tasks = afd.list('users');
   }
 
   ionViewDidLoad() {
@@ -29,11 +31,12 @@ export class PhysioListPage {
   }
 
   edit(user) {
-    let text = "";
     let alert = this.alertCtrl.create({
       title: 'Status',
+      value: user.status,
       inputs: [
         {
+          value: "sdf",
           name: 'comment',
           placeholder: 'comment...'
         }
@@ -47,6 +50,8 @@ export class PhysioListPage {
             user.status = data.comment;
             console.log('player maked as ok');
             user.statusColour = 'secondary';
+
+            this.tasks.update(user.uid, { status: user.status });
           }
         },
         {
