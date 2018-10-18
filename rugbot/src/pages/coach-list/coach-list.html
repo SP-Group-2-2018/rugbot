@@ -1,19 +1,13 @@
-<!--
-  Generated template for the CoachListPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
   <meta charset="utf-8">
   <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+
   <ion-navbar>
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
     <ion-title>Rugby Players</ion-title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-
   </ion-navbar>
 
 </ion-header>
@@ -21,37 +15,48 @@
 
 <ion-content padding>
   <ion-searchbar class="searchBoxInput" *ngIf="isSearchbarOpened" showCancelButton="true" (search)="onSearch($event)" (ionCancel)="isSearchbarOpened=false"></ion-searchbar>
-    <ion-buttons end>
-      <button class="searchBtn" ion-button icon-only *ngIf="!isSearchbarOpened" (click) = "isSearchbarOpened=true">
-      </button>
-    </ion-buttons>
-  <div style="overflow-x:auto;">
-  
-  <table>
-    <tr>
-	  <th><!-- Thumb --></th>
-	  <th>First Name</th>
-      <th>Last Name</th>
-      <th>Status</th>
-      <th>Action</th>
-    </tr>
-  
-	<tr *ngFor ="let data of fullName" >
-	  <td>
-		<a (click)="mark();"><img src="assets/imgs/thumb-up.png" style="width:32px;"></a>
-	  </td>
-	  <td>{{data.name}}</td>
-      <td>Smith</td>
-      <td>Recieve from physio</td>
-      <td>
-		<a (click)="view();">View</a>
-	  </td>
-	</tr>
-  </table>
 
-  <ion-fab bottom right >
-  <button ion-fab (click) = "isSearchbarOpened=true"><ion-icon name="search"></ion-icon></button>
-  </ion-fab>
-</div>
+  <ion-buttons end>
+    <button class="searchBtn" ion-button icon-only *ngIf="!isSearchbarOpened" (click)="isSearchbarOpened=true">
+    </button>
+  </ion-buttons>
+
+  <div style="overflow-x:auto;">
+
+    <ion-item>
+      <ion-label>Date</ion-label>
+      <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="date"></ion-datetime>
+    </ion-item>
+
+    <table>
+      <tr>
+        <th>
+          <!-- Thumb -->
+        </th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Status</th>
+        <th>Action</th>
+      </tr>
+
+      <tr *ngFor="let user of users | async">
+        <td>
+          <a (click)="mark();"><img src="assets/imgs/thumb-up.png" style="width:32px;"></a>
+        </td>
+        <td>{{user.name}}</td>
+        <td>{{user.surname}}</td>
+        <td>{{user.status}}</td>
+        <td>
+          <a (click)="view(user.name);">View</a>
+        </td>
+      </tr>
+    </table>
+
+    <ion-fab bottom right>
+      <button ion-fab (click)="isSearchbarOpened=true">
+        <ion-icon name="search"></ion-icon>
+      </button>
+    </ion-fab>
+  </div>
 
 </ion-content>

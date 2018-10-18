@@ -16,6 +16,7 @@ import { LoginPage } from '../login/login';
   templateUrl: 'home.html',
 })
 export class HomePage {
+
   // users: Observable<any[]>;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public afa: AngularFireAuth) {

@@ -43,9 +43,9 @@ import { PhysioListPage } from '../pages/physio-list/physio-list';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    { provide: ErrorHandler, useClass: IonicErrorHandler },
     AuthProvider,
     AngularFireDatabase
   ]
 })
-export class AppModule {}
+export class AppModule { }
