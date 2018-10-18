@@ -36,14 +36,16 @@
         <th>Name</th>
         <th>Email</th>
         <th>Status</th>
+        <th>Comment</th>
       </tr>
 
       <tr *ngFor="let user of users | async">
-        <td>{{ user.name }} {{ user.surname }}</td> <!-- surname not showing -->
+        <td>{{ user.name }} {{ user.surname }}</td>
         <td>{{ user.email }}</td>
         <td>
-          <button ion-button (click)="edit();">Injured</button>
+          <button ion-button (click)="edit(user);" color="{{user.statusColour}}">Injured</button>
         </td>
+        <td>{{user.status}}</td>
       </tr>
     </table>
 
