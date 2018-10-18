@@ -16,6 +16,9 @@ import { AngularFireDatabaseModule, AngularFireDatabase } from '@angular/fire/da
 import { firebaseConfig } from '../config';
 import { LoginPage } from '../pages/login/login';
 import { PhysioListPage } from '../pages/physio-list/physio-list';
+import { FirebaseProvider } from '../providers/firebase/firebase';
+import { HttpClientModule } from '@angular/common/http';
+import { CoachListPage } from '../pages/coach-list/coach-list';
 
 @NgModule({
   declarations: [
@@ -23,14 +26,16 @@ import { PhysioListPage } from '../pages/physio-list/physio-list';
     HomePage,
     RegisterPage,
     LoginPage,
-    PhysioListPage
+    PhysioListPage,
+    CoachListPage
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireAuthModule,
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+    HttpClientModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -38,14 +43,16 @@ import { PhysioListPage } from '../pages/physio-list/physio-list';
     HomePage,
     RegisterPage,
     LoginPage,
-    PhysioListPage
+    PhysioListPage,
+    CoachListPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     { provide: ErrorHandler, useClass: IonicErrorHandler },
     AuthProvider,
-    AngularFireDatabase
+    AngularFireDatabase,
+    FirebaseProvider
   ]
 })
 export class AppModule { }

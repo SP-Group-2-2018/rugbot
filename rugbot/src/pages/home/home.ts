@@ -5,6 +5,7 @@ import { PhysioListPage } from '../physio-list/physio-list';
 import { AngularFireAuth } from '@angular/fire/auth';
 
 import { LoginPage } from '../login/login';
+import { CoachListPage } from '../coach-list/coach-list';
 
 
 // import { AngularFireDatabase } from '@angular/fire/database';
@@ -28,7 +29,7 @@ export class HomePage {
 
   showPage() {
   	console.log('hello, this button works');
-  	this.navCtrl.push(PhysioListPage);
+  	this.navCtrl.push(CoachListPage);
   }
 
   logout() {

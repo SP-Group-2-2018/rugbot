@@ -2,10 +2,12 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { AlertController } from 'ionic-angular';
 
-import { AngularFireDatabase } from '@angular/fire/database';
+import { AngularFireDatabase, AngularFireList } from '@angular/fire/database';
 import { Observable } from 'rxjs/Observable';
 
-import { DatePicker } from '@ionic-native/date-picker';
+// import { FirebaseProvider } from '../../providers/firebase/firebase';
+
+// import { DatePicker } from '@ionic-native/date-picker';
 
 @IonicPage()
 @Component({
@@ -14,16 +16,25 @@ import { DatePicker } from '@ionic-native/date-picker';
 })
 export class CoachListPage {
 
+  date = new Date();
+  uid;
+  // attend: ;
   users: Observable<any[]>;
+  public usersAtPractice: String[] = [];
   // date: DatePickerDirective;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams,
-    private alertCtrl: AlertController, public afd: AngularFireDatabase) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private alertCtrl: AlertController, public afd: AngularFireDatabase) {
   }
 
-  mark() {
-    alert('add to db');
-    alert(new Date().toISOString());
+  mark(user) {
+    console.log(user.$key);
+    // alert(new Date().toISOString());
+    console.log(this.usersAtPractice.push(uid));
+  }
+
+  //does not work...
+  pushToFire() {
+    this.afd.list('/attendance/').push({key:this.date, uid: this.uid});
   }
 
   view(sdf) {
@@ -37,6 +48,11 @@ export class CoachListPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad CoachListPage');
-    this.users = this.afd.list('users').valueChanges();
+    
+    
+  }
+
+  ngOnInit(){
+    this.users = this.afd.list('/users').valueChanges();
   }
 }

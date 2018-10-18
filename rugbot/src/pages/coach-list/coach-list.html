@@ -25,7 +25,7 @@
 
     <ion-item>
       <ion-label>Date</ion-label>
-      <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="date"></ion-datetime>
+      <ion-datetime displayFormat="DD-MM-YYYY" [(ngModel)]="date"></ion-datetime>
     </ion-item>
 
     <table>
@@ -39,9 +39,9 @@
         <th>Action</th>
       </tr>
 
-      <tr *ngFor="let user of users | async">
+      <tr *ngFor="let user of (users | async)">
         <td>
-          <a (click)="mark();"><img src="assets/imgs/thumb-up.png" style="width:32px;"></a>
+          <a (click)="mark(user)"><img src="assets/imgs/thumb-up.png" style="width:32px;"></a>
         </td>
         <td>{{user.name}}</td>
         <td>{{user.surname}}</td>
@@ -51,6 +51,8 @@
         </td>
       </tr>
     </table>
+
+    <button ion-button (click)="pushToFire()">Submit</button>
 
     <ion-fab bottom right>
       <button ion-fab (click)="isSearchbarOpened=true">
