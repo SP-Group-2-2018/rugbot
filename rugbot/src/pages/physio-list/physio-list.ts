@@ -42,30 +42,33 @@ export class PhysioListPage {
           text: 'A Okay',
           role: 'ok',
           handler: data => {
-            console.log('Cancel clicked'); // TODO
+            console.log('player maked as ok'); // TODO
           }
         },
         {
           text: 'Injured',
           role: 'injured',
           handler: data => {
-            console.log('Cancel clicked'); // TODO
+            this.color = "danger";
+            console.log('player marked as injured'); // TODO
           }
         },
         {
           text: 'No play',
           role: 'dead',
           handler: data => {
-            console.log('Cancel clicked'); // TODO
+            console.log('player marked as dead'); // TODO
           }
-        },
+        }
+        // Matthew 18/10/2018: Not readlly needed
+        /*,
         {
           text: 'Close',
           role: 'cancel',
           handler: data => {
             console.log('Closing status window');
           }
-        }
+        }*/
       ]
     });
     alert.present();
