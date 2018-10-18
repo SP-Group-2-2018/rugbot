@@ -14,6 +14,7 @@ import { AlertController } from 'ionic-angular'
 export class PhysioListPage {
 
   users: Observable<any[]>;
+  buttonColours: String[] = ['light', 'danger'];
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
     public afd: AngularFireDatabase, private alertCtrl: AlertController) {
@@ -27,7 +28,7 @@ export class PhysioListPage {
     this.users = this.afd.list('users').valueChanges();
   }
 
-  edit() {
+  edit(user) {
     let alert = this.alertCtrl.create({
       title: 'Status',
       inputs: [
@@ -42,14 +43,15 @@ export class PhysioListPage {
           text: 'A Okay',
           role: 'ok',
           handler: data => {
-            console.log('player maked as ok'); // TODO
+            console.log('player maked as ok');
+            user.statusColour = 'secondary';
           }
         },
         {
           text: 'Injured',
           role: 'injured',
           handler: data => {
-            // this.color = "danger";
+            user.statusColour = 'danger';
             console.log('player marked as injured'); // TODO
           }
         },
@@ -57,6 +59,7 @@ export class PhysioListPage {
           text: 'No play',
           role: 'dead',
           handler: data => {
+            user.statusColour = 'dark';
             console.log('player marked as dead'); // TODO
           }
         }
