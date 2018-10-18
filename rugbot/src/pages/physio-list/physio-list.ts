@@ -49,7 +49,7 @@ export class PhysioListPage {
           text: 'Injured',
           role: 'injured',
           handler: data => {
-            this.color = "danger";
+            // this.color = "danger";
             console.log('player marked as injured'); // TODO
           }
         },
