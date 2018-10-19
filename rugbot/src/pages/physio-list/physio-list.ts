@@ -6,6 +6,8 @@ import { Observable } from 'rxjs/Observable';
 
 import { AlertController } from 'ionic-angular'
 
+import { AngularFire, FirebaseListObservable } from 'angularfire2';
+
 @IonicPage()
 @Component({
   selector: 'page-physio-list',
@@ -51,7 +53,16 @@ export class PhysioListPage {
             console.log('player maked as ok');
             user.statusColour = 'secondary';
 
-            this.tasks.update(user.uid, { status: user.status });
+            this.tasks.remove(user.$key);
+            this.tasks.update(user.uid, {
+              status: user.status,
+              uid: user.uid,
+              email: user.email,
+              statusColour: user.statusColour,
+              name: user.name,
+              surname: user.surname,
+              type: user.type
+            });
           }
         },
         {

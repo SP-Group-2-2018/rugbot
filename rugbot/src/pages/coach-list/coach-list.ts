@@ -29,7 +29,7 @@ export class CoachListPage {
   mark(user) {
     console.log(user.$key);
     // alert(new Date().toISOString());
-    console.log(this.usersAtPractice.push(uid));
+    //  console.log(this.usersAtPractice.push(uid));
   }
 
   //does not work...
