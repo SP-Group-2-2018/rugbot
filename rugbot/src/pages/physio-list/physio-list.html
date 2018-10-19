@@ -31,14 +31,14 @@
 
       <tr>
         <th>Name</th>
-        <th>Email</th>
+        <!-- <th>Email</th> -->
         <th>Status</th>
         <th>Comment</th>
       </tr>
 
       <tr *ngFor="let user of users | async">
-        <td>{{ user.name }} {{ user.surname }}</td>
-        <td>{{ user.email }}</td>
+        <td>{{ user.surname }}, {{ user.name }}</td>
+        <!-- <td>{{ user.email }}</td> -->
         <td>
           <button ion-button (click)="edit(user);" color="{{user.statusColour}}">{{user.status}}</button>
         </td>

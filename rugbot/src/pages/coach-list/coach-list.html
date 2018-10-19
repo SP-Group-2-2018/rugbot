@@ -13,13 +13,6 @@
 </ion-header>
 
 <ion-content padding>
-  <ion-searchbar class="searchBoxInput" *ngIf="isSearchbarOpened" showCancelButton="true" (search)="onSearch($event)" (ionCancel)="isSearchbarOpened=false"></ion-searchbar>
-
-  <ion-buttons end>
-    <button class="searchBtn" ion-button icon-only *ngIf="!isSearchbarOpened" (click)="isSearchbarOpened=true">
-    </button>
-  </ion-buttons>
-
   <div style="overflow-x:auto;">
 
     <ion-item>
@@ -27,35 +20,31 @@
       <ion-datetime displayFormat="DD-MM-YYYY" [(ngModel)]="date"></ion-datetime>
     </ion-item>
 
+    <br>
+
     <table>
       <tr>
         <th>
           <!-- Thumb -->
         </th>
-        <th>First Name</th>
-        <th>Last Name</th>
+        <th>Name</th>
         <th>Status</th>
       </tr>
 
       <tr *ngFor="let user of (users | async)">
         <td>
-          <a (click)="mark(user)"><img src="assets/imgs/thumb-up.png" style="width:32px;"></a>
+          <a (click)="mark(user)"><img src="{{asd(user) ? thumbBlack : thumbGreen}}" style="width:32px;"></a>
         </td>
-        <td>{{user.name}}</td>
-        <td>{{user.surname}}</td>
+        <td>{{ user.surname }}, {{ user.name }}</td>
         <td>
           <button ion-button (click)="statusDetails(user);" color="{{user.statusColour}}">{{user.status}}</button>
         </td>
       </tr>
     </table>
 
+    <br>
+    <hr>
     <button ion-button (click)="pushToFire()">Submit</button>
-
-    <ion-fab bottom right>
-      <button ion-fab (click)="isSearchbarOpened=true">
-        <ion-icon name="search"></ion-icon>
-      </button>
-    </ion-fab>
   </div>
 
 </ion-content>
