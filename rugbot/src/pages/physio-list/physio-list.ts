@@ -49,10 +49,10 @@ export class PhysioListPage {
           text: 'A Okay',
           role: 'ok',
           handler: data => {
-            user.status = data.comment;
+            user.status = 'Okay';
+            user.comment = data.comment;
             console.log('player maked as ok');
-            user.statusColour = 'secondary';
-
+            user.statusColour = 'secondary'; // TODO set colour
             this.tasks.remove(user.$key);
             this.tasks.update(user.uid, {
               status: user.status,
@@ -61,7 +61,8 @@ export class PhysioListPage {
               statusColour: user.statusColour,
               name: user.name,
               surname: user.surname,
-              type: user.type
+              type: user.type,
+              comment: user.comment,
             });
           }
         },
@@ -69,18 +70,42 @@ export class PhysioListPage {
           text: 'Injured',
           role: 'injured',
           handler: data => {
-            user.status = data.comment;
-            user.statusColour = 'danger';
+            user.status = 'Injured';
+            user.comment = data.comment;
+            user.statusColour = 'dark'; // TODO set colour
             console.log('player marked as injured'); // TODO
+            this.tasks.remove(user.$key);
+            this.tasks.update(user.uid, {
+              status: user.status,
+              uid: user.uid,
+              email: user.email,
+              statusColour: user.statusColour,
+              name: user.name,
+              comment: user.comment,
+              surname: user.surname,
+              type: user.type,
+            });
           }
         },
         {
           text: 'No play',
           role: 'dead',
           handler: data => {
-            user.status = data.comment;
-            user.statusColour = 'dark';
+            user.status = 'No play';
+            user.comment = data.comment;
+            user.statusColour = 'danger';
             console.log('player marked as dead'); // TODO
+            this.tasks.remove(user.$key);
+            this.tasks.update(user.uid, {
+              status: user.status,
+              uid: user.uid,
+              email: user.email,
+              comment: user.comment,
+              statusColour: user.statusColour,
+              name: user.name,
+              surname: user.surname,
+              type: user.type,
+            });
           }
         }
         // Matthew 18/10/2018: Not readlly needed
@@ -96,4 +121,17 @@ export class PhysioListPage {
     });
     alert.present();
   }
+
+  // update(user) {
+  //   this.tasks.remove(user.$key);
+  //   this.tasks.update(user.uid, {
+  //     status: user.status,
+  //     uid: user.uid,
+  //     email: user.email,
+  //     statusColour: user.statusColour,
+  //     name: user.name,
+  //     surname: user.surname,
+  //     type: user.type
+  //   });
+  // }
 }

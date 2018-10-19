@@ -35,7 +35,6 @@
         <th>First Name</th>
         <th>Last Name</th>
         <th>Status</th>
-        <th>Action</th>
       </tr>
 
       <tr *ngFor="let user of (users | async)">
@@ -44,9 +43,8 @@
         </td>
         <td>{{user.name}}</td>
         <td>{{user.surname}}</td>
-        <td>{{user.status}}</td>
         <td>
-          <a (click)="view(user.name);">View</a>
+          <button ion-button (click)="statusDetails(user);" color="{{user.statusColour}}">{{user.status}}</button>
         </td>
       </tr>
     </table>

@@ -7,7 +7,7 @@ import { Observable } from 'rxjs/Observable';
 
 // import { FirebaseProvider } from '../../providers/firebase/firebase';
 
-// import { DatePicker } from '@ionic-native/date-picker';
+import { AngularFire, FirebaseListObservable } from 'angularfire2';
 
 @IonicPage()
 @Component({
@@ -16,31 +16,30 @@ import { Observable } from 'rxjs/Observable';
 })
 export class CoachListPage {
 
-  date = new Date();
-  uid;
   // attend: ;
   users: Observable<any[]>;
   public usersAtPractice: String[] = [];
   // date: DatePickerDirective;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private alertCtrl: AlertController, public afd: AngularFireDatabase) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,
+    private alertCtrl: AlertController, public afd: AngularFireDatabase) {
   }
 
   mark(user) {
-    console.log(user.$key);
-    // alert(new Date().toISOString());
-    //  console.log(this.usersAtPractice.push(uid));
+    let id = this.date + " " + user.uid;
+    this.afd.list('/attendance/').update(id,
+      { date: this.date, uid: user.uid });
   }
 
   //does not work...
   pushToFire() {
-    this.afd.list('/attendance/').push({ key: this.date, uid: this.uid });
+    // this.afd.list('/attendance/').push({ key: this.date, uid: this.uid });
   }
 
-  view(sdf) {
+  statusDetails(user) {
     let alert = this.alertCtrl.create({
-      title: sdf,
-      subTitle: '10% of battery remaining',
+      title: user.name + " " + user.surname,
+      subTitle: user.comment,
       buttons: ['Close']
     });
     alert.present();
