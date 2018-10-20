@@ -20,9 +20,7 @@ export class CoachListPage {
   thumbBlack = "assets/imgs/thumb-up.png";
   thumbGreen = "assets/imgs/thumb-up-green.png";
 
-  // attend: ;
   users: FirebaseListObservable<any[]>;
-  public usersAtPractice: String[] = [];
 
   date: Date = new Date();
 
@@ -63,11 +61,19 @@ export class CoachListPage {
   }
 
   ngOnInit() {
-    this.users = this.afd.list('/users').valueChanges();
+    this.users = this.afd.list('/users',
+      ref => ref.orderByChild('surname')).valueChanges();
+
+    // this.users = this.afd.list('/users',
+    //   ref => ref.orderByChild('surname').equalTo('a')).valueChanges();
   }
 
   asd(user) {
     let id = this.date + " " + user.uid;
     return true;
+  }
+
+  f() {
+
   }
 }
