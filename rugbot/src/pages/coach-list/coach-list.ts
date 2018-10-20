@@ -6,7 +6,7 @@ import { AngularFireDatabase, AngularFireList } from '@angular/fire/database';
 import { Observable } from 'rxjs/Observable';
 
 import { AngularFireModule, FirebaseListObservable } from 'angularfire2';
-// import { AngularFireDatabase, FirebaseListObservable, FirebaseObjectObservable } from 'angularfire2/database-deprecated';
+import { AngularFireDatabase, FirebaseListObservable, FirebaseObjectObservable } from 'angularfire2/database-deprecated';
 
 import { ToastController } from 'ionic-angular';
 
@@ -21,6 +21,8 @@ export class CoachListPage {
   thumbGreen = "assets/imgs/thumb-up-green.png";
 
   users: FirebaseListObservable<any[]>;
+  attendance: FirebaseListObservable<any[]>;
+
 
   date: Date = new Date();
 
@@ -61,19 +63,12 @@ export class CoachListPage {
   }
 
   ngOnInit() {
+    this.attendance = this.afd.list('/attendance/').valueChanges();
+
     this.users = this.afd.list('/users',
       ref => ref.orderByChild('surname')).valueChanges();
 
     // this.users = this.afd.list('/users',
     //   ref => ref.orderByChild('surname').equalTo('a')).valueChanges();
-  }
-
-  asd(user) {
-    let id = this.date + " " + user.uid;
-    return true;
-  }
-
-  f() {
-
   }
 }

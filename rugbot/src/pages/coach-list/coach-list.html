@@ -33,12 +33,27 @@
 
       <tr *ngFor="let user of (users | async)">
         <td>
-          <a (click)="mark(user)"><img src="{{asd(user) ? thumbBlack : thumbGreen}}" style="width:32px;"></a>
+          <a (click)="mark(user)"><img src="{{true ? thumbGreen : thumbBlack}}" style="width:32px;"></a>
         </td>
         <td>{{ user.surname }}, {{ user.name }}</td>
         <td>
           <button ion-button (click)="statusDetails(user);" color="{{user.statusColour}}">{{user.status}}</button>
         </td>
+      </tr>
+    </table>
+
+    <br>
+    <h2>for testing</h2>
+
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>date</th>
+      </tr>
+
+      <tr *ngFor="let user of (attendance | async)">
+        <td>{{user.uid}}</td>
+        <td>{{user.date}}</td>
       </tr>
     </table>
 

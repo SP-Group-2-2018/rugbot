@@ -6,7 +6,7 @@ import { Observable } from 'rxjs/Observable';
 
 import { AlertController } from 'ionic-angular'
 
-import { AngularFire, FirebaseListObservable } from 'angularfire2';
+import { FirebaseListObservable } from 'angularfire2';
 
 @IonicPage()
 @Component({
@@ -53,7 +53,7 @@ export class PhysioListPage {
             user.comment = data.comment;
             console.log('player maked as ok');
             user.statusColour = 'secondary'; // TODO set colour
-            this.tasks.remove(user.$key);
+            // this.tasks.remove(user.$key);
             this.tasks.update(user.uid, {
               status: user.status,
               uid: user.uid,
@@ -74,7 +74,7 @@ export class PhysioListPage {
             user.comment = data.comment;
             user.statusColour = 'dark'; // TODO set colour
             console.log('player marked as injured'); // TODO
-            this.tasks.remove(user.$key);
+            // this.tasks.remove(user.$key);
             this.tasks.update(user.uid, {
               status: user.status,
               uid: user.uid,
@@ -95,7 +95,7 @@ export class PhysioListPage {
             user.comment = data.comment;
             user.statusColour = 'danger';
             console.log('player marked as dead'); // TODO
-            this.tasks.remove(user.$key);
+            // this.tasks.remove(user.$key);
             this.tasks.update(user.uid, {
               status: user.status,
               uid: user.uid,
