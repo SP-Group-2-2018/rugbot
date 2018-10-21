@@ -2,11 +2,11 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { AlertController } from 'ionic-angular';
 
-import { AngularFireDatabase } from '@angular/fire/database';
+import { AngularFireDatabase } from 'angularfire2/database';
 import { Observable } from 'rxjs/Observable';
 
-import { AngularFireDatabase } from 'angularfire2';
-import { FirebaseListObservable } from 'angularfire2/database-deprecated';
+// import { AngularFireDatabase } from 'angularfire2';
+// import { FirebaseListObservable } from 'angularfire2/database-deprecated';
 
 import { ToastController } from 'ionic-angular';
 
@@ -20,8 +20,8 @@ export class CoachListPage {
   thumbBlack = "assets/imgs/thumb-up.png";
   thumbGreen = "assets/imgs/thumb-up-green.png";
 
-  users: FirebaseListObservable<any[]>;
-  attendance: FirebaseListObservable<any[]>;
+  users: Observable<any[]>;
+  attendance: Observable<any[]>;
 
   date: Date = new Date();
 
