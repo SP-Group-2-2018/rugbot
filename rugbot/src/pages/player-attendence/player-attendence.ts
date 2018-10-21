@@ -1,12 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
-/**
- * Generated class for the PlayerAttendencePage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { AngularFireDatabase, AngularFireList } from '@angular/fire/database';
+import { AngularFireDatabase, FirebaseListObservable } from "angularfire2/database-deprecated";
 
 @IonicPage()
 @Component({
@@ -15,11 +11,17 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class PlayerAttendencePage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  attendance: FirebaseListObservable<any[]>;
+
+  constructor(public navCtrl: NavController, public navParams: NavParams,
+    public afd: AngularFireDatabase) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad PlayerAttendencePage');
-  }
 
+    // TODO reverse list
+    this.attendance = this.afd.list('/attendance/',
+      ref => ref.orderByChild('date')).valueChanges();
+  }
 }

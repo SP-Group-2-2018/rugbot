@@ -2,11 +2,11 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { AlertController } from 'ionic-angular';
 
-import { AngularFireDatabase, AngularFireList } from '@angular/fire/database';
+import { AngularFireDatabase } from '@angular/fire/database';
 import { Observable } from 'rxjs/Observable';
 
-import { AngularFireModule, FirebaseListObservable } from 'angularfire2';
-import { AngularFireDatabase, FirebaseListObservable, FirebaseObjectObservable } from 'angularfire2/database-deprecated';
+import { AngularFireDatabase } from 'angularfire2';
+import { FirebaseListObservable, FirebaseObjectObservable } from 'angularfire2/database-deprecated';
 
 import { ToastController } from 'ionic-angular';
 
@@ -22,7 +22,6 @@ export class CoachListPage {
 
   users: FirebaseListObservable<any[]>;
   attendance: FirebaseListObservable<any[]>;
-
 
   date: Date = new Date();
 

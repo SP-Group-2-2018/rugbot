@@ -1,9 +1,3 @@
-<!--
-  Generated template for the PlayerAttendencePage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
 
   <ion-navbar>
@@ -12,7 +6,13 @@
 
 </ion-header>
 
-
 <ion-content padding>
-
+  <table>
+    <tr>
+      <th>Date</th>
+    </tr>
+    <tr *ngFor="let player of (attendance | async)">
+      <td>{{player.date}}</td>
+    </tr>
+  </table>
 </ion-content>

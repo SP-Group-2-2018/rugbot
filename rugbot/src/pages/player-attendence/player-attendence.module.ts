@@ -10,4 +10,4 @@ import { PlayerAttendencePage } from './player-attendence';
     IonicPageModule.forChild(PlayerAttendencePage),
   ],
 })
-export class PlayerAttendencePageModule {}
+export class PlayerAttendencePageModule { }

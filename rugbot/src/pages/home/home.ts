@@ -7,7 +7,6 @@ import { AngularFireAuth } from '@angular/fire/auth';
 import { LoginPage } from '../login/login';
 import { CoachListPage } from '../coach-list/coach-list';
 
-
 // import { AngularFireDatabase } from '@angular/fire/database';
 // import { Observable } from 'rxjs/Observable';
 
@@ -41,5 +40,9 @@ export class HomePage {
   logout() {
     this.afa.auth.signOut();
     this.navCtrl.setRoot(LoginPage);
+  }
+
+  test() {
+    // this.navCtrl.setRoot(PlayerAttendencePage);
   }
 }
