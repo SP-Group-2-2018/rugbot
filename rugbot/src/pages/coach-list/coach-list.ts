@@ -6,7 +6,7 @@ import { AngularFireDatabase } from '@angular/fire/database';
 import { Observable } from 'rxjs/Observable';
 
 import { AngularFireDatabase } from 'angularfire2';
-import { FirebaseListObservable, FirebaseObjectObservable } from 'angularfire2/database-deprecated';
+import { FirebaseListObservable } from 'angularfire2/database-deprecated';
 
 import { ToastController } from 'ionic-angular';
 
