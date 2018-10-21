@@ -13,7 +13,7 @@ import { AlertController } from 'ionic-angular'
 })
 export class PhysioListPage {
 
-  users: Observable<any[]>;
+  users: AngularFireList<any[]>;
   tasks: AngularFireList<any[]>;
 
   constructor(public navCtrl: NavController, public navParams: NavParams,

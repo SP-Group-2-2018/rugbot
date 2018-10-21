@@ -24,6 +24,7 @@ export class CoachListPage {
   attendance: Observable<any[]>;
 
   date: Date = new Date();
+  marks = [];
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
     private alertCtrl: AlertController, public afd: AngularFireDatabase,
@@ -33,7 +34,7 @@ export class CoachListPage {
   mark(user) {
     let id = this.date + " " + user.uid;
     this.afd.list('/attendance/').update(id,
-      { date: this.date, uid: user.uid });
+      { date: this.date + "", uid: user.uid });
 
     let toast = this.toaster.create({
       message: user.name + ' ' + user.surname + ' was added successfully',
@@ -59,15 +60,38 @@ export class CoachListPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad CoachListPage');
+
+    this.attendance = this.afd.list('/attendance',
+      ref => ref.orderByChild('date').equalTo(this.date + "")).valueChanges();
   }
 
   ngOnInit() {
-    this.attendance = this.afd.list('/attendance/').valueChanges();
-
     this.users = this.afd.list('/users',
       ref => ref.orderByChild('surname')).valueChanges();
 
     // this.users = this.afd.list('/users',
     //   ref => ref.orderByChild('surname').equalTo('a')).valueChanges();
+  }
+
+  f(user) {
+    for (let i of this.marks) {
+      if (i.uid == user.uid) {
+        return true;
+      }
+    }
+    return false;
+  }
+
+  dateChange() {
+    this.attendance = this.afd.list('/attendance',
+      ref => ref.orderByChild('date').equalTo(this.date + "")).valueChanges();
+
+    this.afd.list('/attendance',
+      ref => ref.orderByChild('date').equalTo(this.date + "")).valueChanges().subscribe((data) => {
+        // for (let i of data) {
+        //   console.log(i);
+        // }
+        this.marks = data;
+      });
   }
 }
