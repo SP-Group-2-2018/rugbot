@@ -1,12 +1,10 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
-import { AngularFireDatabase } from 'angularfire2/database';
+import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
 import { Observable } from 'rxjs/Observable';
 
 import { AlertController } from 'ionic-angular'
-
-import { FirebaseListObservable } from 'angularfire2';
 
 @IonicPage()
 @Component({
@@ -16,7 +14,7 @@ import { FirebaseListObservable } from 'angularfire2';
 export class PhysioListPage {
 
   users: Observable<any[]>;
-  tasks: Observable<any[]>;
+  tasks: AngularFireList<any[]>;
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
     public afd: AngularFireDatabase, private alertCtrl: AlertController) {
