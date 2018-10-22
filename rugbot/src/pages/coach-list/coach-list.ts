@@ -22,6 +22,7 @@ export class CoachListPage {
 
   date: Date = new Date();
   marks = [];
+  // attendance = [];
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
     private alertCtrl: AlertController, public afd: AngularFireDatabase,
@@ -95,5 +96,24 @@ export class CoachListPage {
         // }
         this.marks = data;
       });
+  }
+
+  onSearchInput() {
+    let results = [];
+    this.afd.list('/users',
+      ref => ref.orderByChild('surname')).valueChanges()
+      .subscribe(items => {
+        items.forEach(item => {
+          if (item.surname.startsWith(this.txtSearch)) {
+            results.push(item);
+          }
+        });
+      });
+    this.users = results;
+  }
+
+  onCancel() {
+    this.attendance = this.afd.list('/attendance',
+      ref => ref.orderByChild('date').equalTo(this.date + "")).valueChanges();
   }
 }

@@ -6,6 +6,7 @@ import { AngularFireAuth } from '@angular/fire/auth';
 
 import { LoginPage } from '../login/login';
 import { CoachListPage } from '../coach-list/coach-list';
+import { PlayerAttendencePage } from '../player-attendence/player-attendence';
 
 // import { AngularFireDatabase } from '@angular/fire/database';
 // import { Observable } from 'rxjs/Observable';
@@ -43,6 +44,6 @@ export class HomePage {
   }
 
   test() {
-    // this.navCtrl.setRoot(PlayerAttendencePage);
+    this.navCtrl.setRoot(PlayerAttendencePage);
   }
 }

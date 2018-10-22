@@ -15,9 +15,12 @@
 <ion-content padding>
   <div style="overflow-x:auto;">
 
+    <ion-searchbar [(ngModel)]="txtSearch" [showCancelButton]="shouldShowCancel" (ionInput)="onSearchInput()" (ionCancel)="onCancel()">
+    </ion-searchbar>
+
     <ion-item>
       <ion-label>Date</ion-label>
-      <ion-datetime displayFormat="DD-MM-YYYY" [(ngModel)]="date"  (ionChange)="dateChange()"></ion-datetime>
+      <ion-datetime displayFormat="DD-MM-YYYY" [(ngModel)]="date" (ionChange)="dateChange()"></ion-datetime>
     </ion-item>
 
     <br>
@@ -42,7 +45,7 @@
       </tr>
     </table>
 
-    <br>
+    <!-- <br>
     <h2>for testing</h2>
 
     <table>
@@ -55,7 +58,7 @@
         <td>{{user.uid}}</td>
         <td>{{user.date}}</td>
       </tr>
-    </table>
+    </table> -->
 
     <br>
     <hr>

@@ -19,6 +19,7 @@ import { PhysioListPage } from '../pages/physio-list/physio-list';
 import { FirebaseProvider } from '../providers/firebase/firebase';
 import { HttpClientModule } from '@angular/common/http';
 import { CoachListPage } from '../pages/coach-list/coach-list';
+import { PlayerAttendencePage } from '../pages/player-attendence/player-attendence';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { CoachListPage } from '../pages/coach-list/coach-list';
     RegisterPage,
     LoginPage,
     PhysioListPage,
+    PlayerAttendencePage,
     CoachListPage
   ],
   imports: [
@@ -43,6 +45,7 @@ import { CoachListPage } from '../pages/coach-list/coach-list';
     HomePage,
     RegisterPage,
     LoginPage,
+    PlayerAttendencePage,
     PhysioListPage,
     CoachListPage
   ],

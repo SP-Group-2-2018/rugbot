@@ -1,0 +1,21 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>player-attendence</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+  <table>
+    <tr>
+      <th>Date</th>
+    </tr>
+
+    <tr *ngFor="let user of (users | async)">
+      <td>
+        {{user.date}} {{user.uid}}
+      </td>
+    </tr>
+  </table>
+</ion-content>
