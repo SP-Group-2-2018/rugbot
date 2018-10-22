@@ -5,9 +5,6 @@ import { AlertController } from 'ionic-angular';
 import { AngularFireDatabase } from 'angularfire2/database';
 import { Observable } from 'rxjs/Observable';
 
-// import { AngularFireDatabase } from 'angularfire2';
-// import { FirebaseListObservable } from 'angularfire2/database-deprecated';
-
 import { ToastController } from 'ionic-angular';
 
 @IonicPage()
@@ -33,15 +30,19 @@ export class CoachListPage {
 
   mark(user) {
     let id = this.date + " " + user.uid;
-    this.afd.list('/attendance/').update(id,
-      { date: this.date + "", uid: user.uid });
+    if (this.f(user)) {
+      this.afd.list('/attendance/').remove(id);
+    } else {
+      this.afd.list('/attendance/').update(id,
+        { date: this.date + "", uid: user.uid });
 
-    let toast = this.toaster.create({
-      message: user.name + ' ' + user.surname + ' was added successfully',
-      duration: 1000,
-      position: 'bottom'
-    });
-    toast.present();
+      let toast = this.toaster.create({
+        message: user.name + ' ' + user.surname + ' was added successfully',
+        duration: 1000,
+        position: 'bottom'
+      });
+      toast.present();
+    }
   }
 
   //does not work...
@@ -68,11 +69,11 @@ export class CoachListPage {
   ngOnInit() {
     this.users = this.afd.list('/users',
       ref => ref.orderByChild('surname')).valueChanges();
-
     // this.users = this.afd.list('/users',
     //   ref => ref.orderByChild('surname').equalTo('a')).valueChanges();
   }
 
+  // TODO matthew 22/10/2018: RENAME
   f(user) {
     for (let i of this.marks) {
       if (i.uid == user.uid) {
@@ -87,7 +88,8 @@ export class CoachListPage {
       ref => ref.orderByChild('date').equalTo(this.date + "")).valueChanges();
 
     this.afd.list('/attendance',
-      ref => ref.orderByChild('date').equalTo(this.date + "")).valueChanges().subscribe((data) => {
+      ref => ref.orderByChild('date').equalTo(this.date + "")).valueChanges()
+      .subscribe((data) => {
         // for (let i of data) {
         //   console.log(i);
         // }
