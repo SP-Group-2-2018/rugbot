@@ -44,6 +44,6 @@ export class HomePage {
   }
 
   test() {
-    this.navCtrl.setRoot(PlayerAttendencePage);
+    this.navCtrl.push(PlayerAttendencePage);
   }
 }
