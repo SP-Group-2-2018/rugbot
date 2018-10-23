@@ -1,6 +1,5 @@
 # RugBot
-***
-## Rugby Club Application
+### Rugby Club Application
 The sole purpose of the Western Province Rugby Academy is to facilitate the growth of young athlete so that they may reach their full potential. The Western Province Rugby Academy provides their athletes with an athlete development and high-performance rugby program to ensure that each individual athlete has the resources to complete successfully. 
 
 The rugby academy makes use of a functional strength and conditioning program with the purpose of transforming the young rugby boys into professional rugby men. This program which is implemented in their training is supported by a diet and an expert lifestyle management process.  
