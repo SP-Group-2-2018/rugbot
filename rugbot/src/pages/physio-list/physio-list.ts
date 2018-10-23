@@ -51,15 +51,15 @@ export class PhysioListPage {
             console.log('player maked as ok');
             user.statusColour = 'secondary'; // TODO set colour
             // this.tasks.remove(user.$key);
-            this.tasks.update(user.uid, {
-              status: user.status,
-              uid: user.uid,
-              email: user.email,
-              statusColour: user.statusColour,
-              name: user.name,
-              surname: user.surname,
-              type: user.type,
-              comment: user.comment,
+            this.tasks.update(user.uid + "", {
+              status: user.status + "",
+              uid: user.uid + "",
+              email: user.email + "",
+              statusColour: user.statusColour + "",
+              name: user.name + "",
+              surname: user.surname + "",
+              type: user.type + "",
+              comment: user.comment + "",
             });
           }
         },
@@ -72,15 +72,15 @@ export class PhysioListPage {
             user.statusColour = 'dark'; // TODO set colour
             console.log('player marked as injured'); // TODO
             // this.tasks.remove(user.$key);
-            this.tasks.update(user.uid, {
-              status: user.status,
-              uid: user.uid,
-              email: user.email,
-              statusColour: user.statusColour,
-              name: user.name,
-              comment: user.comment,
-              surname: user.surname,
-              type: user.type,
+            this.tasks.update(user.uid + "", {
+              status: user.status + "",
+              uid: user.uid + "",
+              email: user.email + "",
+              statusColour: user.statusColour + "",
+              name: user.name + "",
+              comment: user.comment + "",
+              surname: user.surname + "",
+              type: user.type + "",
             });
           }
         },
@@ -89,19 +89,19 @@ export class PhysioListPage {
           role: 'dead',
           handler: data => {
             user.status = 'No play';
-            user.comment = data.comment;
+            user.comment = data.comment + "";
             user.statusColour = 'danger';
             console.log('player marked as dead'); // TODO
             // this.tasks.remove(user.$key);
-            this.tasks.update(user.uid, {
-              status: user.status,
-              uid: user.uid,
-              email: user.email,
-              comment: user.comment,
-              statusColour: user.statusColour,
-              name: user.name,
-              surname: user.surname,
-              type: user.type,
+            this.tasks.update(user.uid + "", {
+              status: user.status + "",
+              uid: user.uid + "",
+              email: user.email + "",
+              comment: user.comment + "",
+              statusColour: user.statusColour + "",
+              name: user.name + "",
+              surname: user.surname + "",
+              type: user.type + "",
             });
           }
         }
