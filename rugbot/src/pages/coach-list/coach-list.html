@@ -15,9 +15,6 @@
 <ion-content padding>
   <div style="overflow-x:auto;">
 
-    <ion-searchbar [(ngModel)]="txtSearch" [showCancelButton]="shouldShowCancel" (ionInput)="onSearchInput()" (ionCancel)="onCancel()">
-    </ion-searchbar>
-
     <ion-item>
       <ion-label>Date</ion-label>
       <ion-datetime displayFormat="DD-MM-YYYY" [(ngModel)]="date" (ionChange)="dateChange()"></ion-datetime>
@@ -30,17 +27,17 @@
         <th>
           <!-- Thumb -->
         </th>
-        <th>Name</th>
-        <th>Status</th>
+        <th align="center">Name</th>
+        <th align="center">Status</th>
       </tr>
 
       <tr *ngFor="let user of (users | async)">
-        <td>
+        <td align="center">
           <a (click)="mark(user)"><img src="{{f(user) ? thumbGreen : thumbBlack}}" style="width:32px;"></a>
         </td>
         <td>{{ user.surname }}, {{ user.name }}</td>
         <td>
-          <button ion-button (click)="statusDetails(user);" color="{{user.statusColour}}">{{user.status}}</button>
+          <button ion-button full (click)="statusDetails(user);" color="{{user.statusColour}}">{{user.status}}</button>
         </td>
       </tr>
     </table>
@@ -63,6 +60,7 @@
     <br>
     <hr>
     <button ion-button (click)="pushToFire()">Submit</button>
+    <br>
   </div>
 
 </ion-content>

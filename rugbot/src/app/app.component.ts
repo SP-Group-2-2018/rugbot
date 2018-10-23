@@ -14,7 +14,8 @@ import { AngularFireAuth } from '@angular/fire/auth';
 export class MyApp {
   rootPage: any;
 
-  constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, afAuth: AngularFireAuth) {
+  constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen,
+    afAuth: AngularFireAuth) {
     const authObserver = afAuth.authState.subscribe(user => {
       if (user) {
         this.rootPage = HomePage;
@@ -26,8 +27,6 @@ export class MyApp {
     });
 
     platform.ready().then(() => {
-      // Okay, so the platform is ready and our plugins are available.
-      // Here you can do any higher level native things you might need.
       statusBar.styleDefault();
       splashScreen.hide();
     });

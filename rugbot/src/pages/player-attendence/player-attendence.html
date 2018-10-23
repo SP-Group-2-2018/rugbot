@@ -15,14 +15,31 @@
 <ion-content padding>
   <table>
     <tr>
+      <td>
+        <b>Surname</b>
+      </td>
+      <td align="center">{{firstName}}</td>
+    </tr>
+    <tr>
+      <td>
+        <b>First name</b>
+      </td>
+      <td align="center">{{surname}}</td>
+    </tr>
+  </table>
+
+  <br>
+
+  <table>
+    <tr>
       <th>
         <!-- thumb -->
       </th>
-      <th>Date</th>
+      <th align="center">Date</th>
     </tr>
 
     <tr *ngFor="let user of (users | async)">
-      <td>
+      <td align="center">
         <a><img src="assets/imgs/thumb-up-green.png" style="width:32px;"></a>
       </td>
       <td>

@@ -9,34 +9,29 @@
 
 <ion-content padding>
 
-  <ion-grid>
-    <ion-row>
-      <ion-col col-4></ion-col>
-      <ion-col col-4 style="margin-left: auto; margin-right: auto; display: block;">
-        <img src="assets/imgs/logo.png" style="width: 100%; height: auto; border-radius: 100%">
-      </ion-col>
-      <ion-col col-4></ion-col>
-    </ion-row>
-  </ion-grid>
-
+  <br>
+  <img src="assets/imgs/logo.png" style="width: 100%; height: auto; border-radius: 100%">
+  <br> <br>
 
   <form [formGroup]="loginForm" (submit)="loginUser()" novalidate>
 
-      <ion-item>
-        <ion-label floating>Email</ion-label>
-        <ion-input #email formControlName="email" type="email"  [class.invalid]="!loginForm.controls.email.valid && loginForm.controls.email.dirty"></ion-input>
-      </ion-item>
-      <ion-item class="error-message" *ngIf="!loginForm.controls.email.valid && loginForm.controls.email.dirty">
-        <p>Please enter a valid email.</p>
-      </ion-item>
+    <ion-item>
+      <ion-label floating>Email</ion-label>
+      <ion-input #email formControlName="email" type="email" [class.invalid]="!loginForm.controls.email.valid && loginForm.controls.email.dirty"></ion-input>
+    </ion-item>
+    <ion-item class="error-message" *ngIf="!loginForm.controls.email.valid && loginForm.controls.email.dirty">
+      <p>Please enter a valid email.</p>
+    </ion-item>
 
-      <ion-item>
-        <ion-label floating>Password</ion-label>
-        <ion-input #password formControlName="password" type="password"  [class.invalid]="!loginForm.controls.password.valid && loginForm.controls.password.dirty"></ion-input>
-      </ion-item>
-      <ion-item class="error-message" *ngIf="!loginForm.controls.password.valid && loginForm.controls.password.dirty">
-        <p>Your password needs more than 6 characters.</p>
-      </ion-item>
+    <ion-item>
+      <ion-label floating>Password</ion-label>
+      <ion-input #password formControlName="password" type="password" [class.invalid]="!loginForm.controls.password.valid && loginForm.controls.password.dirty"></ion-input>
+    </ion-item>
+    <ion-item class="error-message" *ngIf="!loginForm.controls.password.valid && loginForm.controls.password.dirty">
+      <p>Your password needs more than 6 characters.</p>
+    </ion-item>
+
+    <br> <br>
 
     <button ion-button block type="submit" style="margin-top: 15px; height: 35px; font-size: 14px; background: black;">
       Login

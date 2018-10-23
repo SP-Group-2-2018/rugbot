@@ -14,5 +14,4 @@ export class CoachAttendencePage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad CoachAttendencePage');
   }
-
 }

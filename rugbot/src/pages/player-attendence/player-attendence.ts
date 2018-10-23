@@ -11,6 +11,9 @@ import { Observable } from 'rxjs/Observable';
 })
 export class PlayerAttendencePage {
 
+  firstName = "test first Name";
+  surname = "test surname";
+
   users: Observable<any[]>;
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
@@ -18,7 +21,7 @@ export class PlayerAttendencePage {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad PlayerAttendencePage');
+    // console.log('ionViewDidLoad PlayerAttendencePage');
   }
 
   ngOnInit() {
