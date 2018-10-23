@@ -10,4 +10,4 @@ import { MatchDayPlayerPage } from './match-day-player';
     IonicPageModule.forChild(MatchDayPlayerPage),
   ],
 })
-export class MatchDayPlayerPageModule {}
+export class MatchDayPlayerPageModule { }

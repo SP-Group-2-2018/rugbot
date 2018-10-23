@@ -103,3 +103,9 @@ ion-input {
 *:before {
   box-sizing: inherit;
 }
+
+// Should never use anchor tag but hey
+a {
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+}

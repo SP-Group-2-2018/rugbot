@@ -10,4 +10,4 @@ import { PhysioRegPage } from './physio-reg';
     IonicPageModule.forChild(PhysioRegPage),
   ],
 })
-export class PhysioRegPageModule {}
+export class PhysioRegPageModule { }
