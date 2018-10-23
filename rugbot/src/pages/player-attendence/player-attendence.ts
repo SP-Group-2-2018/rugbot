@@ -21,9 +21,10 @@ export class PlayerAttendencePage {
   }
 
   ionViewDidLoad() {
-    // console.log('ionViewDidLoad PlayerAttendencePage');
+    console.log('ionViewDidLoad PlayerAttendencePage');
   }
 
+  // TODO
   ngOnInit() {
     this.users = this.afd.list('/attendance',
       ref => ref.orderByChild('uid').equalTo("s9M4Jr8DczSUbADBiq3HP1tTup33")).valueChanges();

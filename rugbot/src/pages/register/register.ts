@@ -7,13 +7,6 @@ import { AuthProvider } from '../../providers/auth/auth';
 import { EmailValidator } from '../../validators/email';
 import { HomePage } from '../home/home';
 
-/**
- * Generated class for the RegisterPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-
 @IonicPage()
 @Component({
   selector: 'page-register',
@@ -24,7 +17,9 @@ export class RegisterPage {
   registerForm: FormGroup;
   loading: Loading;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public auth: AuthProvider, public FormBuilder: FormBuilder, public alertCtrl: AlertController, public loadingCtrl: LoadingController) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,
+     public auth: AuthProvider, public FormBuilder: FormBuilder,
+     public alertCtrl: AlertController, public loadingCtrl: LoadingController) {
     this.registerForm = FormBuilder.group({
       email: ['', Validators.compose([Validators.required, EmailValidator.isValid])],
       password: ['', Validators.compose([Validators.minLength(6), Validators.required])],
@@ -61,7 +56,6 @@ export class RegisterPage {
     }
   }
 
-  // passwordSame: boolean = false;
   matchPassword(password: string, passwordConfirm: string) {
     return (group: FormGroup): {[key: string]: any} => {
       let pass = group.controls[password];
@@ -78,5 +72,4 @@ export class RegisterPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad RegisterPage');
   }
-
 }
