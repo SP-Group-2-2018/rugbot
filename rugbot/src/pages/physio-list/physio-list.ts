@@ -49,7 +49,7 @@ export class PhysioListPage {
             user.status = 'Okay';
             user.comment = data.comment;
             console.log('player maked as ok');
-            user.statusColour = 'good'; // TODO set colour
+            user.statusColour = 'good';
             // this.tasks.remove(user.$key);
             this.tasks.update(user.uid + "", {
               status: user.status + "",
@@ -70,7 +70,7 @@ export class PhysioListPage {
             user.status = 'Injured';
             user.comment = data.comment;
             user.statusColour = 'threat';
-            console.log('player marked as injured'); // TODO
+            console.log('player marked as injured');
             // this.tasks.remove(user.$key);
             this.tasks.update(user.uid + "", {
               status: user.status + "",
@@ -91,7 +91,7 @@ export class PhysioListPage {
             user.status = 'No play';
             user.comment = data.comment + "";
             user.statusColour = 'danger';
-            console.log('player marked as dead'); // TODO
+            console.log('player marked as dead'); 
             // this.tasks.remove(user.$key);
             this.tasks.update(user.uid + "", {
               status: user.status + "",
@@ -131,4 +131,9 @@ export class PhysioListPage {
   //     type: user.type
   //   });
   // }
+
+  userDetails(user) {
+    // TODO
+    window.alert(user.name);
+  }
 }

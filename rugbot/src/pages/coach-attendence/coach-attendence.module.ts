@@ -10,4 +10,4 @@ import { CoachAttendencePage } from './coach-attendence';
     IonicPageModule.forChild(CoachAttendencePage),
   ],
 })
-export class CoachAttendencePageModule {}
+export class CoachAttendencePageModule { }

@@ -27,7 +27,7 @@ export class HomePage {
     console.log('ionViewDidLoad HomePage');
 
     let toast = this.toaster.create({
-      message: 'Drag right to open the menu', 
+      message: 'Drag right to open the menu',
       duration: 3000,
       position: 'bottom'
     });
@@ -35,7 +35,7 @@ export class HomePage {
   }
 
   showPhysio() {
-    console.log('hello, this button works');
+    // console.log('hello, this button works');
     this.navCtrl.push(PhysioListPage);
     // this.menuCtrl.close();
   }

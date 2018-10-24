@@ -46,11 +46,6 @@ export class CoachListPage {
     }
   }
 
-  //does not work...
-  pushToFire() {
-    // this.afd.list('/attendance/').push({ key: this.date, uid: this.uid });
-  }
-
   statusDetails(user) {
     let alert = this.alertCtrl.create({
       title: user.name + " " + user.surname,
@@ -99,21 +94,26 @@ export class CoachListPage {
   }
 
   onSearchInput() {
-    let results = [];
-    this.afd.list('/users',
-      ref => ref.orderByChild('surname')).valueChanges()
-      .subscribe(items => {
-        items.forEach(item => {
-          if (item.surname.startsWith(this.txtSearch)) {
-            results.push(item);
-          }
-        });
-      });
-    this.users = results;
+    // let results = [];
+    // this.afd.list('/users',
+    //   ref => ref.orderByChild('surname')).valueChanges()
+    //   .subscribe(items => {
+    //     items.forEach(item => {
+    //       if (item.surname.startsWith(this.txtSearch)) {
+    //         results.push(item);
+    //       }
+    //     });
+    //   });
+    // this.users = results;
   }
 
   onCancel() {
     this.attendance = this.afd.list('/attendance',
       ref => ref.orderByChild('date').equalTo(this.date + "")).valueChanges();
+  }
+
+  userDetails(user) {
+    // TODO
+    window.alert(user.name);
   }
 }

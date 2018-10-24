@@ -35,7 +35,7 @@
         <td align="center">
           <a (click)="mark(user)"><img src="{{f(user) ? thumbGreen : thumbBlack}}" style="width:32px;"></a>
         </td>
-        <td>{{ user.surname }}, {{ user.name }}</td>
+        <td><a onclick="userDetails(user)">{{ user.surname }}, {{ user.name }}</a></td>
         <td>
           <button ion-button full (click)="statusDetails(user);" color="{{user.statusColour}}">{{user.status}}</button>
         </td>
@@ -59,8 +59,6 @@
 
     <br>
     <hr>
-    <button ion-button (click)="pushToFire()">Submit</button>
-    <br>
   </div>
 
 </ion-content>
