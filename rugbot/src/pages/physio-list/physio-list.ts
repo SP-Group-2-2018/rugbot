@@ -4,6 +4,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
 
 import { AlertController } from 'ionic-angular'
+import { Observable } from 'rxjs';
 
 @IonicPage()
 @Component({
