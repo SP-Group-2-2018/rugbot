@@ -37,7 +37,7 @@
       </tr>
 
       <tr *ngFor="let user of users | async">
-        <td>{{ user.surname }}, {{ user.name }}</td>
+        <td><a (click)="userDetails(user)">{{ user.surname }}, {{ user.name }}</a></td>
         <!-- <td>{{ user.email }}</td> -->
         <td>
           <button full ion-button (click)="edit(user);" color="{{user.statusColour}}">{{user.status}}</button>
@@ -45,12 +45,6 @@
         <td>{{user.comment}}</td>
       </tr>
     </table>
-
-    <ion-fab bottom right>
-      <button ion-fab (click)="isSearchbarOpened=true">
-        <ion-icon name="search"></ion-icon>
-      </button>
-    </ion-fab>
   </div>
 
 </ion-content>

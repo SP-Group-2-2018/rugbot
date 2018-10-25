@@ -37,5 +37,4 @@ export class PhysioRegPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad PhysioRegPage');
   }
-
 }
