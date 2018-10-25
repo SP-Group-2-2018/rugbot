@@ -13,7 +13,7 @@ import { Observable } from 'rxjs';
 })
 export class PhysioListPage {
 
-  users: AngularFireList<any[]>;
+  users: Observable<any[]>;
   tasks: AngularFireList<any[]>;
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
