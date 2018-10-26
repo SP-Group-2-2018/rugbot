@@ -20,6 +20,9 @@ import { FirebaseProvider } from '../providers/firebase/firebase';
 import { HttpClientModule } from '@angular/common/http';
 import { CoachListPage } from '../pages/coach-list/coach-list';
 import { PlayerAttendencePage } from '../pages/player-attendence/player-attendence';
+import { CalendarPage } from '../pages/calendar/calendar';
+
+import { NgCalendarModule } from 'ionic2-calendar';
 
 @NgModule({
   declarations: [
@@ -29,10 +32,12 @@ import { PlayerAttendencePage } from '../pages/player-attendence/player-attenden
     LoginPage,
     PhysioListPage,
     PlayerAttendencePage,
-    CoachListPage
+    CoachListPage,
+    CalendarPage
   ],
   imports: [
     BrowserModule,
+    NgCalendarModule,
     IonicModule.forRoot(MyApp),
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireAuthModule,
@@ -47,6 +52,7 @@ import { PlayerAttendencePage } from '../pages/player-attendence/player-attenden
     LoginPage,
     PlayerAttendencePage,
     PhysioListPage,
+    CalendarPage,
     CoachListPage
   ],
   providers: [

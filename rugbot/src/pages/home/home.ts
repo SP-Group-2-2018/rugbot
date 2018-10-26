@@ -7,6 +7,7 @@ import { AngularFireAuth } from '@angular/fire/auth';
 import { LoginPage } from '../login/login';
 import { CoachListPage } from '../coach-list/coach-list';
 import { PlayerAttendencePage } from '../player-attendence/player-attendence';
+import { CalendarPage } from '../calendar/calendar';
 
 import { MenuController } from 'ionic-angular';
 import { ToastController } from 'ionic-angular';
@@ -43,6 +44,10 @@ export class HomePage {
   showCoach() {
     this.navCtrl.push(CoachListPage);
     // this.menuCtrl.close();
+  }
+
+  showCalendar() {
+    this.navCtrl.push(CalendarPage);
   }
 
   logout() {

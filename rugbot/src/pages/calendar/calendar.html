@@ -1,13 +1,29 @@
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>calendar</ion-title>
+  <ion-navbar color="primary">
+    <ion-title>
+      {{ viewTitle }}
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="addEvent()">
+        <ion-icon name="add"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
 </ion-header>
 
-<ion-content padding>
+<ion-content>
+<calendar [eventSource]="eventSource"
+          [calendarMode]="calendar.mode"
+          [currentDate]="calendar.currentDate"
+          (onEventSelected)="onEventSelected($event)"
+          (onTitleChanged)="onTitleChanged($event)"
+          (onTimeSelected)="onTimeSelected($event)"
+          step="30"
+          class="calendar">
+</calendar>
 
 </ion-content>

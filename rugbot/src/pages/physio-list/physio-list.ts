@@ -39,9 +39,14 @@ export class PhysioListPage {
           // value: user.status,
           name: 'comment',
           placeholder: 'comment...'
+        },
+        {
+          name: 'title',
+          placeholder: 'Title',
+          type: 'date'
         }
       ],
-      // TODO horzontal buttons
+      // TODO horizontal buttons
       buttons: [
         {
           text: 'A Okay',
@@ -49,7 +54,7 @@ export class PhysioListPage {
           handler: data => {
             user.status = 'Okay';
             user.comment = data.comment;
-            console.log('player maked as ok');
+            console.log('player marked as ok');
             user.statusColour = 'good';
             // this.tasks.remove(user.$key);
             this.tasks.update(user.uid + "", {
