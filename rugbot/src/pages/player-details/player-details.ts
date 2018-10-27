@@ -1,25 +1,24 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
-/**
- * Generated class for the PlayerDetailsPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { IonicPage, NavController, NavParams, Platform } from 'ionic-angular';
 
 @IonicPage()
 @Component({
-  selector: 'page-player-details',
+  selector: 'player-details',
   templateUrl: 'player-details.html',
 })
-export class PlayerDetailsPage {
+export class PlayerDetails {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,
+    public plt: Platform) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad PlayerDetailsPage');
   }
 
+  mailto(email) {
+    this.plt.ready().then(() => {
+      window.open('mailto:' + email);
+    });
+  }
 }

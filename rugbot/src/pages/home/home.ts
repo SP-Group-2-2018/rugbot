@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, ModalController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ModalController, Platform } from 'ionic-angular';
 
 import { PhysioListPage } from '../physio-list/physio-list';
 import { AngularFireAuth } from '@angular/fire/auth';
@@ -21,7 +21,8 @@ export class HomePage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
     public afa: AngularFireAuth, public menuCtrl: MenuController,
-    private toaster: ToastController, public modalCtrl: ModalController) {
+    private toaster: ToastController, private modalCtrl: ModalController,
+    public plt: Platform) {
   }
 
   ionViewDidLoad() {
@@ -66,5 +67,16 @@ export class HomePage {
   test() {
     this.navCtrl.push(PlayerAttendencePage);
     // this.menuCtrl.close();
+  }
+
+  modal() {
+
+  }
+
+  mailto(email) {
+    // this.plt.ready().then(() => {
+    //   window.open('mailto:' + email);
+    // });
+    this.navCtrl.push(PlayerDetails);
   }
 }

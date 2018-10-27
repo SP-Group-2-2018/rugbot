@@ -1,9 +1,9 @@
 <ion-header>
 
   <ion-navbar>
-      <button ion-button menuToggle icon-only>
-        <ion-icon name='menu'></ion-icon>
-      </button>
+    <button ion-button menuToggle icon-only>
+      <ion-icon name='menu'></ion-icon>
+    </button>
     <ion-title>Home</ion-title>
   </ion-navbar>
 
@@ -21,6 +21,8 @@
         <button ion-button full (click)="showCalendar()">Calendar</button>
         <!-- <button ion-button full (click)="modal()">Modal</button> -->
         <button ion-button full (click)="logout()">Logout</button>
+        <br>
+        <button ion-button full (click)="mailto('\matthewvdbijl@gmail.com')">TESTING</button>
       </ion-list>
     </ion-content>
   </ion-menu>
