@@ -13,6 +13,8 @@ import { Observable } from 'rxjs';
 })
 export class PhysioListPage {
 
+  isPhysio = false;
+
   users: Observable<any[]>;
   tasks: AngularFireList<any[]>;
 
@@ -24,9 +26,30 @@ export class PhysioListPage {
 
   ionViewDidLoad() {
     this.users = this.afd.list('users').valueChanges();
+
+    let email = "stefbuys21@gmail.com"; // TODO
+    // let email = this.afa.auth.currentUser.email + "";
+
+    this.afd.list('/users',
+      ref => ref.orderByChild('email').equalTo(email)).valueChanges()
+      .subscribe((data) => {
+        for (let user of data) {
+          console.log('User type ' + user.userType + " (" + (user.userType == 'physio') + ")");
+          this.isPhysio = user.type == 'physio';
+        }
+      });
   }
 
   edit(user) {
+    if (!this.isPhysio) {
+      let alert = this.alertCtrl.create({
+        title: 'Access Denied',
+        subTitle: 'This field can only be edited by physiotherapists.',
+        buttons: ['Close']
+      });
+      alert.present();
+      return;
+    }
     let alert = this.alertCtrl.create({
       title: 'Status',
       // value: user.status,
