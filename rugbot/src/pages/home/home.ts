@@ -77,6 +77,6 @@ export class HomePage {
     // this.plt.ready().then(() => {
     //   window.open('mailto:' + email);
     // });
-    this.navCtrl.push(PlayerDetails);
+    this.navCtrl.push(PlayerDetailsPage);
   }
 }

@@ -16,6 +16,7 @@ export class MyApp {
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen,
     afAuth: AngularFireAuth) {
+
     const authObserver = afAuth.authState.subscribe(user => {
       if (user) {
         this.rootPage = HomePage;
