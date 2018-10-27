@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ModalController } from 'ionic-angular';
 
 import { PhysioListPage } from '../physio-list/physio-list';
 import { AngularFireAuth } from '@angular/fire/auth';
@@ -21,7 +21,7 @@ export class HomePage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
     public afa: AngularFireAuth, public menuCtrl: MenuController,
-    private toaster: ToastController) {
+    private toaster: ToastController, public modalCtrl: ModalController) {
   }
 
   ionViewDidLoad() {

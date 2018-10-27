@@ -27,6 +27,19 @@ export class CalendarPage {
 
   ionViewDidLoad() {
     this.events = this.afd.list('events');
+
+    this.afd.list('/events').valueChanges()
+      .subscribe((data) => {
+        for (let eventData of data) {
+          console.log(eventData.uid + "");
+
+          let n = this.eventSource;
+          eventData.startTime = new Date(eventData.startTime);
+          eventData.endTime = new Date(eventData.endTime);
+          n.push(eventData);
+          this.eventSource = n;
+        }
+      });
   }
 
   addEvent() {
@@ -46,11 +59,19 @@ export class CalendarPage {
         this.eventSource = [];
         setTimeout(() => {
           this.eventSource = events;
+
+          let uid = (Math.floor(Math.random() * 999999) + 100000) + "";
+          this.events.update(uid + "", {
+            uid: uid + "",
+            startTime: eventData.startTime + "",
+            endTime: eventData.endTime + "",
+            title: eventData.title + ""
+          });
         });
       }
     });
 
-    console.log(this.eventSource[0]);
+    // console.log(this.eventSource[0]);
   }
 
   onTitleChanged(title) {
@@ -72,4 +93,8 @@ export class CalendarPage {
   onTimeSelected(ev) {
     this.selectedDay = ev.selectedTime;
   }
+
+  // genFBID() {
+  //   return Math.floor(Math.random() * 9999999) + 1000000;
+  // }
 }
