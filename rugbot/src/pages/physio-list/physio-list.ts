@@ -23,10 +23,6 @@ export class PhysioListPage {
   }
 
   ionViewDidLoad() {
-    this.initUsers();
-  }
-
-  initUsers() {
     this.users = this.afd.list('users').valueChanges();
   }
 
@@ -97,7 +93,7 @@ export class PhysioListPage {
             user.status = 'No play';
             user.comment = data.comment + "";
             user.statusColour = 'danger';
-            console.log('player marked as dead'); 
+            console.log('player marked as dead');
             // this.tasks.remove(user.$key);
             this.tasks.update(user.uid + "", {
               status: user.status + "",
