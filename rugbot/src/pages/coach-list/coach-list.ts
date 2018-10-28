@@ -87,6 +87,8 @@ export class CoachListPage {
           this.isCoach = user.type == 'coach';
         }
       });
+
+      this.date = new Date().toJSON().split('T')[0];
   }
 
   ngOnInit() {
