@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 
 import { PhysioListPage } from '../physio-list/physio-list';
 import { AngularFireAuth } from '@angular/fire/auth';
@@ -21,7 +21,7 @@ export class HomePage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
     public afa: AngularFireAuth, public menuCtrl: MenuController,
-    private toaster: ToastController) {
+    private toaster: ToastController, public alertCtrl: AlertController) {
   }
 
   ionViewDidLoad() {
@@ -36,9 +36,16 @@ export class HomePage {
   }
 
   showPhysio() {
-    // console.log('hello, this button works');
-    this.navCtrl.push(PhysioListPage);
-    // this.menuCtrl.close();
+    this.navCtrl.push(PhysioListPage).then(res => {
+      if(res == false) {
+        let alert = this.alertCtrl.create({
+          title: 'No Entry!',
+          subTitle: 'You shall not pass!',
+          buttons: ['OK']
+        });
+        alert.present();
+      }
+    });
   }
 
   showCoach() {

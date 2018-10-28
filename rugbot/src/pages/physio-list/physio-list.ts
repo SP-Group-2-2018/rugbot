@@ -5,6 +5,7 @@ import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
 
 import { AlertController } from 'ionic-angular'
 import { Observable } from 'rxjs';
+import { AngularFireAuth } from '@angular/fire/auth';
 
 @IonicPage()
 @Component({
@@ -17,9 +18,34 @@ export class PhysioListPage {
   tasks: AngularFireList<any>;
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
-    public afd: AngularFireDatabase, private alertCtrl: AlertController) {
+    public afd: AngularFireDatabase, public afa: AngularFireAuth, private alertCtrl: AlertController) {
 
-    this.tasks = afd.list('users');
+    this.tasks = afd.list('/users/');
+  }
+
+  ionViewCanEnter() {
+    let uid: string = this.afa.auth.currentUser.uid;
+    // let exists = false;
+    // let usersArray: string[];
+    // console.log(uid);
+    const user = this.afd.object('/users/' + uid);
+    let name;
+    user.snapshotChanges().subscribe(a => {
+      name = a.payload.hasChild('name');
+    });
+    console.log(name);
+
+    // it.snapshotChanges().subscribe(action => {
+    //   action.payload.forEach(item => {
+    //     console.log(item.key);
+    //     usersArray.push(item.key);
+    //     return true;//exists = item.key.includes('hello');
+    //   });
+    // });
+    // if(usersArray.indexOf(uid) != null) {
+    //   return true;
+    // } else return false;
+    // return exists;
   }
 
   ionViewDidLoad() {
