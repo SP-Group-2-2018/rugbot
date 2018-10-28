@@ -78,7 +78,7 @@ export class CoachListPage {
 
     this.afd.list('/users',
       ref => ref.orderByChild('email').equalTo(email)).valueChanges()
-      .subscribe((data) => {
+      .subscribe((data: any) => {
         for (let user of data) {
           console.log('User type ' + user.userType + " (" + (user.userType == 'coach') + ")");
           this.isCoach = user.type == 'coach';

@@ -25,30 +25,18 @@ export class PhysioListPage {
     this.tasks = afd.list('/users/');
   }
 
-  ionViewCanEnter() {
-    let uid: string = this.afa.auth.currentUser.uid;
-    // let exists = false;
-    // let usersArray: string[];
-    // console.log(uid);
-    const user = this.afd.object('/users/' + uid);
-    let name;
-    user.snapshotChanges().subscribe(a => {
-      name = a.payload.hasChild('name');
-    });
-    console.log(name);
-
-    // it.snapshotChanges().subscribe(action => {
-    //   action.payload.forEach(item => {
-    //     console.log(item.key);
-    //     usersArray.push(item.key);
-    //     return true;//exists = item.key.includes('hello');
-    //   });
-    // });
-    // if(usersArray.indexOf(uid) != null) {
-    //   return true;
-    // } else return false;
-    // return exists;
-  }
+  // ionViewCanEnter() {
+  //   let uid: string = this.afa.auth.currentUser.uid;
+  //   // let exists = false;
+  //   // let usersArray: string[];
+  //   // console.log(uid);
+  //   const user = this.afd.object('/users/' + uid);
+  //   let name;
+  //   user.snapshotChanges().subscribe(a => {
+  //     name = a.payload.hasChild('name');
+  //   });
+  //   console.log(name);
+  // }
 
   ionViewDidLoad() {
     this.users = this.afd.list('users').valueChanges();
@@ -58,7 +46,7 @@ export class PhysioListPage {
 
     this.afd.list('/users',
       ref => ref.orderByChild('email').equalTo(email)).valueChanges()
-      .subscribe((data) => {
+      .subscribe((data: any) => {
         for (let user of data) {
           console.log('User type ' + user.userType + " (" + (user.userType == 'physio') + ")");
           this.isPhysio = user.type == 'physio';

@@ -36,7 +36,7 @@ export class HomePage {
 
     this.afd.list('/users',
       ref => ref.orderByChild('email').equalTo(email)).valueChanges()
-      .subscribe((data) => {
+      .subscribe((data: any) => {
         for (let user of data) {
           this.name = user.name + " " + user.surname;
           this.userType = user.type;
@@ -52,18 +52,54 @@ export class HomePage {
     toast.present();
   }
 
-  // showPhysio() {
-  //   this.navCtrl.push(PhysioListPage).then(res => {
-  //     if(res == false) {
-  //       let alert = this.alertCtrl.create({
-  //         title: 'No Entry!',
-  //         subTitle: 'You shall not pass!',
-  //         buttons: ['OK']
-  //       });
-  //       alert.present();
-  //     }
-  //   });
-  // }
+  buttonStatusCoach(): boolean {
+    if(this.userType == 'coach') {
+      return false;
+    }
+    return true;
+  }
+
+  buttonStatusPhysio(): boolean {
+    if(this.userType == 'physio') {
+      return false;
+    }
+    return true;
+  }
+  
+  buttonStatusDetails(): boolean {
+    if(this.userType == 'coach') {
+      return false;
+    }
+    return true;
+  }
+  
+  buttonStatusCalendar(): boolean {
+    if(this.userType == 'coach') {
+      return false;
+    }
+    return true;
+  }
+  
+  buttonStatusTest(): boolean {
+    if(this.userType == 'coach') {
+      return false;
+    }
+    return true;
+  }
+
+
+  showPhysio() {
+    this.navCtrl.push(PhysioListPage); //.then(res => {
+    //   if(res == false) {
+    //     let alert = this.alertCtrl.create({
+    //       title: 'No Entry!',
+    //       subTitle: 'You shall not pass!',
+    //       buttons: ['OK']
+    //     });
+    //     alert.present();
+    //   }
+    // });
+  }
 
   showCoach() {
     this.navCtrl.push(CoachListPage);
@@ -100,6 +136,6 @@ export class HomePage {
     // this.plt.ready().then(() => {
     //   window.open('mailto:' + email);
     // });
-    this.navCtrl.push(PlayerDetailsPage);
+    // this.navCtrl.push(PlayerDetailsPage);
   }
 }

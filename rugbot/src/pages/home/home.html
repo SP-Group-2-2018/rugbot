@@ -16,12 +16,12 @@
   <ion-menu [content]="content">
     <ion-content>
       <ion-list>
-        <button ion-button full (click)="showCoach()">Register (coach)</button>
-        <button ion-button full (click)="showPhysio()">physio</button>
-        <button ion-button full (click)="test()">attendance (TODO)</button>
-        <button ion-button full (click)="showCalendar()">Calendar</button>
+        <button [hidden]="buttonStatusCoach()" ion-button full (click)="showCoach()">Register (coach)</button>
+        <button [hidden]="buttonStatusPhysio()" ion-button full (click)="showPhysio()">physio</button>
+        <button [hidden]="buttonStatusTest()" ion-button full (click)="test()">attendance (TODO)</button>
+        <button [hidden]="buttonStatusCalendar()" ion-button full (click)="showCalendar()">Calendar</button>
         <!-- <button ion-button full (click)="modal()">Modal</button> -->
-        <button ion-button full (click)="mailto('\matthewvdbijl@gmail.com')">player details (TODO)</button>
+        <button [hidden]="buttonStatusDetails()" ion-button full (click)="mailto('\matthewvdbijl@gmail.com')">player details (TODO)</button>
         <br>
         <button ion-button full (click)="logout()">Logout</button>
       </ion-list>

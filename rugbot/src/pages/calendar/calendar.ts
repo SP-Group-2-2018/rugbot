@@ -10,7 +10,7 @@ import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
 })
 export class CalendarPage {
 
-  events: AngularFireList<any[]>;
+  events: AngularFireList<any>;
 
   eventSource = [];
   viewTitle: string;
@@ -29,7 +29,7 @@ export class CalendarPage {
     this.events = this.afd.list('events');
 
     this.afd.list('/events').valueChanges()
-      .subscribe((data) => {
+      .subscribe((data: any) => {
         for (let eventData of data) {
           console.log(eventData.uid + "");
 
