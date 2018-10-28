@@ -14,6 +14,8 @@ import { ToastController } from 'ionic-angular';
 })
 export class CoachListPage {
 
+  isCoach = false;
+
   thumbBlack = "assets/imgs/thumb-up.png";
   thumbGreen = "assets/imgs/thumb-up-green.png";
 
@@ -30,6 +32,15 @@ export class CoachListPage {
   }
 
   mark(user) {
+    if (!this.isCoach) {
+      let alert = this.alertCtrl.create({
+        title: 'Access Denied',
+        subTitle: 'This field can only be edited by coaches.',
+        buttons: ['Close']
+      });
+      alert.present();
+      return;
+    }
     let id = this.date + " " + user.uid;
     if (this.f(user)) {
       this.afd.list('/attendance/').remove(id);
@@ -60,6 +71,19 @@ export class CoachListPage {
 
     this.attendance = this.afd.list('/attendance',
       ref => ref.orderByChild('date').equalTo(this.date + "")).valueChanges();
+
+
+    let email = "stefbuys21@gmail.com"; // TODO
+    // let email = this.afa.auth.currentUser.email + "";
+
+    this.afd.list('/users',
+      ref => ref.orderByChild('email').equalTo(email)).valueChanges()
+      .subscribe((data) => {
+        for (let user of data) {
+          console.log('User type ' + user.userType + " (" + (user.userType == 'coach') + ")");
+          this.isCoach = user.type == 'coach';
+        }
+      });
   }
 
   ngOnInit() {

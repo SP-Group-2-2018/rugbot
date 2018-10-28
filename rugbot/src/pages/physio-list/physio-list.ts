@@ -14,6 +14,8 @@ import { AngularFireAuth } from '@angular/fire/auth';
 })
 export class PhysioListPage {
 
+  isPhysio = false;
+
   users: Observable<any[]>;
   tasks: AngularFireList<any>;
 
@@ -49,14 +51,31 @@ export class PhysioListPage {
   }
 
   ionViewDidLoad() {
-    this.initUsers();
-  }
-
-  initUsers() {
     this.users = this.afd.list('users').valueChanges();
+
+    let email = "stefbuys21@gmail.com"; // TODO
+    // let email = this.afa.auth.currentUser.email + "";
+
+    this.afd.list('/users',
+      ref => ref.orderByChild('email').equalTo(email)).valueChanges()
+      .subscribe((data) => {
+        for (let user of data) {
+          console.log('User type ' + user.userType + " (" + (user.userType == 'physio') + ")");
+          this.isPhysio = user.type == 'physio';
+        }
+      });
   }
 
   edit(user) {
+    if (!this.isPhysio) {
+      let alert = this.alertCtrl.create({
+        title: 'Access Denied',
+        subTitle: 'This field can only be edited by physiotherapists.',
+        buttons: ['Close']
+      });
+      alert.present();
+      return;
+    }
     let alert = this.alertCtrl.create({
       title: 'Status',
       // value: user.status,
@@ -123,7 +142,7 @@ export class PhysioListPage {
             user.status = 'No play';
             user.comment = data.comment + "";
             user.statusColour = 'danger';
-            console.log('player marked as dead'); 
+            console.log('player marked as dead');
             // this.tasks.remove(user.$key);
             this.tasks.update(user.uid + "", {
               status: user.status + "",

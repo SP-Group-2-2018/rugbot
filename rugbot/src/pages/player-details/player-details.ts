@@ -3,15 +3,15 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 @IonicPage()
 @Component({
-  selector: 'page-coach-attendence',
-  templateUrl: 'coach-attendence.html',
+  selector: 'page-player-details',
+  templateUrl: 'player-details.html',
 })
-export class CoachAttendencePage {
+export class PlayerDetailsPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad CoachAttendencePage');
+    console.log('ionViewDidLoad PlayerDetailsPage');
   }
 }

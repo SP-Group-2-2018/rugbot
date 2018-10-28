@@ -24,6 +24,8 @@ import { CalendarPage } from '../pages/calendar/calendar';
 
 import { NgCalendarModule } from 'ionic2-calendar';
 
+import { PlayerDetailsPage } from '../pages/player-details/player-details';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -33,7 +35,8 @@ import { NgCalendarModule } from 'ionic2-calendar';
     PhysioListPage,
     PlayerAttendencePage,
     CoachListPage,
-    CalendarPage
+    CalendarPage,
+    PlayerDetailsPage
   ],
   imports: [
     BrowserModule,
@@ -53,7 +56,8 @@ import { NgCalendarModule } from 'ionic2-calendar';
     PlayerAttendencePage,
     PhysioListPage,
     CalendarPage,
-    CoachListPage
+    CoachListPage,
+    PlayerDetailsPage
   ],
   providers: [
     StatusBar,

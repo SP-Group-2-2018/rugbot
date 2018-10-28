@@ -29,5 +29,4 @@ export class EventModalPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad EventModalPage');
   }
-
 }

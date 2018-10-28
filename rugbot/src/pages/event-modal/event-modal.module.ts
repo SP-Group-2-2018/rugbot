@@ -10,4 +10,4 @@ import { EventModalPage } from './event-modal';
     IonicPageModule.forChild(EventModalPage),
   ],
 })
-export class EventModalPageModule {}
+export class EventModalPageModule { }

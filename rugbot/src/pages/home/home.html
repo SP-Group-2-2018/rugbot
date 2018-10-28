@@ -1,24 +1,28 @@
 <ion-header>
 
   <ion-navbar>
-      <button ion-button menuToggle icon-only>
-        <ion-icon name='menu'></ion-icon>
-      </button>
+    <button ion-button menuToggle icon-only>
+      <ion-icon name='menu'></ion-icon>
+    </button>
     <ion-title>Home</ion-title>
   </ion-navbar>
 
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </ion-header>
 
-<ion-content padding>
+<ion-content>
   <ion-menu [content]="content">
     <ion-content>
       <ion-list>
         <button ion-button full (click)="showCoach()">Register (coach)</button>
         <button ion-button full (click)="showPhysio()">physio</button>
-        <button ion-button full (click)="test()">test attendance</button>
+        <button ion-button full (click)="test()">attendance (TODO)</button>
         <button ion-button full (click)="showCalendar()">Calendar</button>
+        <!-- <button ion-button full (click)="modal()">Modal</button> -->
+        <button ion-button full (click)="mailto('\matthewvdbijl@gmail.com')">player details (TODO)</button>
+        <br>
         <button ion-button full (click)="logout()">Logout</button>
       </ion-list>
     </ion-content>
@@ -26,7 +30,19 @@
 
   <ion-nav #content [root]="rootPage"></ion-nav>
 
-  DRAG RIGHT TO SEE MENU<br>
-  PLACE CALENDER HERE
+  <div class="card">
+    <hr><br><br>
+    <img src="assets/imgs/logo.png" alt="W.P. Rugby Academy!">
+    <h1>{{name}}</h1>
+    <p class="title">{{userType}}</p>
+    <br>
+    <p>W.P. Rugby Academy</p>
+
+    <!-- Tyler, please add links to appropiate social media links -->
+    <!-- <a href="#"><i class="fa fa-dribbble"></i></a>
+    <a href="#"><i class="fa fa-twitter"></i></a>
+    <a href="#"><i class="fa fa-linkedin"></i></a>
+    <a href="#"><i class="fa fa-facebook"></i></a> -->
+  </div>
 
 </ion-content>
