@@ -88,7 +88,8 @@ export class CoachListPage {
 
   ngOnInit() {
     this.users = this.afd.list('/users',
-      ref => ref.orderByChild('surname')).valueChanges();
+      ref => ref.orderByChild('type').equalTo('Player')).valueChanges();
+    
     // this.users = this.afd.list('/users',
     //   ref => ref.orderByChild('surname').equalTo('a')).valueChanges();
   }

@@ -39,7 +39,8 @@ export class PhysioListPage {
   // }
 
   ionViewDidLoad() {
-    this.users = this.afd.list('users').valueChanges();
+    this.users = this.afd.list('/users/', reg => 
+      reg.orderByChild('type').equalTo('Player')).valueChanges();
 
     let email = "stefbuys21@gmail.com"; // TODO
     // let email = this.afa.auth.currentUser.email + "";
