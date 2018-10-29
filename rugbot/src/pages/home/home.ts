@@ -10,6 +10,7 @@ import { CoachListPage } from '../coach-list/coach-list';
 import { PlayerAttendencePage } from '../player-attendence/player-attendence';
 import { CalendarPage } from '../calendar/calendar';
 import { PlayerDetailsPage } from '../player-details/player-details';
+import { AttendenceHistoryPage } from '../attendence-history/attendence-history';
 
 import { MenuController, ToastController } from 'ionic-angular';
 
@@ -112,12 +113,12 @@ export class HomePage {
   }
 
   logout() {
-    let toast = this.toaster.create({
-      message: 'Goodbye(:',
-      duration: 1000,
-      position: 'bottom'
-    });
-    toast.present();
+    // let toast = this.toaster.create({
+    //   message: 'Goodbye(:',
+    //   duration: 1000,
+    //   position: 'bottom'
+    // });
+    // toast.present();
 
     this.afa.auth.signOut();
     this.navCtrl.setRoot(LoginPage);
@@ -125,7 +126,7 @@ export class HomePage {
   }
 
   test() {
-    this.navCtrl.push(PlayerAttendencePage);
+    this.navCtrl.push(AttendenceHistoryPage);
     // this.menuCtrl.close();
   }
 

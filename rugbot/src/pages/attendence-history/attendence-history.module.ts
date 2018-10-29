@@ -10,4 +10,4 @@ import { AttendenceHistoryPage } from './attendence-history';
     IonicPageModule.forChild(AttendenceHistoryPage),
   ],
 })
-export class AttendenceHistoryPageModule {}
+export class AttendenceHistoryPageModule { }

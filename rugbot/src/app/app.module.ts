@@ -22,6 +22,7 @@ import { CoachListPage } from '../pages/coach-list/coach-list';
 import { PlayerAttendencePage } from '../pages/player-attendence/player-attendence';
 import { CalendarPage } from '../pages/calendar/calendar';
 import { PlayerDetailsPage } from '../pages/player-details/player-details';
+import { AttendenceHistoryPage } from '../pages/attendence-history/attendence-history';
 
 import { NgCalendarModule } from 'ionic2-calendar';
 
@@ -35,7 +36,8 @@ import { NgCalendarModule } from 'ionic2-calendar';
     PlayerAttendencePage,
     CoachListPage,
     CalendarPage,
-    PlayerDetailsPage
+    PlayerDetailsPage,
+    AttendenceHistoryPage
   ],
   imports: [
     BrowserModule,
@@ -56,7 +58,8 @@ import { NgCalendarModule } from 'ionic2-calendar';
     PhysioListPage,
     CalendarPage,
     CoachListPage,
-    PlayerDetailsPage
+    PlayerDetailsPage,
+    AttendenceHistoryPage
   ],
   providers: [
     StatusBar,

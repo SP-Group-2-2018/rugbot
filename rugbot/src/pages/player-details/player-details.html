@@ -14,15 +14,14 @@
 
 </ion-header>
 
-<ion-content padding>
+<ion-content>
   <div class="card">
     <img src="assets/imgs/logo.png" alt="{{name}}" style="width:100%">
     <h1>{{name}}</h1>
-    <p class="price">{{type}}</p>
+    <p class="title">{{type}}</p>
     <br>
     <p>W.P. Rugby Academy</p>
     <br>
-
     <table>
       <tr>
         <td align="left">First Name</td>
@@ -37,14 +36,13 @@
         <td><a (click)="sendEmail();">{{email}}</a></td>
       </tr>
     </table>
-
-    <br><br>
-    <hr><br>
+    <br>
     <p>
-      <button ion-button full (click)="editUser();">edit details</button>
-    </p>
-    <p>
-      <button ion-button full color="danger" (click)="deleteUser();">Delete</button>
+      <button ion-button block (click)="attendance();">View attendance history</button>
+      <button ion-button block (click)="editUser();">edit details</button>
+      <button ion-button block color="danger" (click)="deleteUser();">Delete</button>
     </p>
   </div>
+  <br>
+  <hr>
 </ion-content>

@@ -1,12 +1,10 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { AngularFireDatabase } from 'angularfire2/database';
 
-/**
- * Generated class for the AttendenceHistoryPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+// import { AttendenceHistoryPage } from './attendence-history/attendence-history';
+import { PlayerAttendencePage } from '../player-attendence/player-attendence';
+import { PlayerDetailsPage } from '../player-details/player-details';
 
 @IonicPage()
 @Component({
@@ -15,11 +13,23 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class AttendenceHistoryPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  players: Observable<any[]>;
+
+  constructor(public navCtrl: NavController, public navParams: NavParams,
+    public afd: AngularFireDatabase) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad AttendenceHistoryPage');
+    this.players = this.afd.list('/users/', reg =>
+      reg.orderByChild('type').equalTo('player')).valueChanges();
   }
 
+  history(player) {
+    this.navCtrl.push(PlayerAttendencePage);
+  }
+
+  details(player) {
+    this.navCtrl.push(PlayerDetailsPage);
+  }
 }

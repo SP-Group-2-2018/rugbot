@@ -4,11 +4,13 @@ import { IonicPage, NavController, NavParams, ModalController, Platform, AlertCo
 import { PhysioListPage } from '../physio-list/physio-list';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { AngularFireDatabase } from 'angularfire2/database';
+import { Observable } from 'rxjs/Observable';
 
 import { LoginPage } from '../login/login';
 import { CoachListPage } from '../coach-list/coach-list';
 import { PlayerAttendencePage } from '../player-attendence/player-attendence';
 import { CalendarPage } from '../calendar/calendar';
+import { PlayerAttendencePage } from '../player-attendence/player-attendence';
 
 import { MenuController, ToastController } from 'ionic-angular';
 
@@ -61,7 +63,7 @@ export class PlayerDetailsPage {
         {
           text: 'Continue',
           handler: data => {
-            this.afd.list('/users').valueChanges().remove(this.uid); // still need to test
+            this.afd.list('/users').remove(this.uid); // still need to test
           }
         },
         {
@@ -79,5 +81,9 @@ export class PlayerDetailsPage {
     this.plt.ready().then(() => {
       window.open('mailto:' + this.email);
     });
+  }
+
+  attendance() {
+    this.navCtrl.push(PlayerAttendencePage);
   }
 }

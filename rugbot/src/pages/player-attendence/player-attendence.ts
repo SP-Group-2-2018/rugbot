@@ -4,6 +4,8 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { AngularFireDatabase } from 'angularfire2/database';
 import { Observable } from 'rxjs/Observable';
 
+import { PlayerDetailsPage } from './player-details/player-details';
+
 @IonicPage()
 @Component({
   selector: 'page-player-attendence',
