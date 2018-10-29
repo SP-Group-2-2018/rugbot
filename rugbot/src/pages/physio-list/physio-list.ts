@@ -26,8 +26,8 @@ export class PhysioListPage {
   }
 
   ionViewDidLoad() {
-    this.users = this.afd.list('/users/', reg => 
-      reg.orderByChild('type').equalTo('Player')).valueChanges();
+    this.users = this.afd.list('/users/', reg =>
+      reg.orderByChild('type').equalTo('player')).valueChanges();
 
     let email = "stefbuys21@gmail.com"; // TODO
     // let email = this.afa.auth.currentUser.email + "";
@@ -36,8 +36,8 @@ export class PhysioListPage {
       ref => ref.orderByChild('email').equalTo(email)).valueChanges()
       .subscribe((data: any) => {
         for (let user of data) {
-          console.log('User type ' + user.userType + " (" + (user.userType == 'physio') + ")");
-          this.isPhysio = user.type == 'physio';
+          console.log('User type ' + user.userType.toLowerCase() + " (" + (user.userType == 'physio') + ")");
+          this.isPhysio = user.type.toLowerCase() == 'physio';
         }
       });
   }

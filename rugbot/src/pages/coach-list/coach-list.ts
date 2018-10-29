@@ -59,7 +59,7 @@ export class CoachListPage {
 
   statusDetails(user) {
     let message = "<strong>" + user.comment + "</strong>";
-    if (user.playDate != null) {
+    if (user.playDate != null && user.status.toLowerCase() != 'play') {
       message = message + "<br><br>" + "Estimate date of revocery:<br>" + user.playDate;
     }
 
@@ -87,8 +87,8 @@ export class CoachListPage {
       ref => ref.orderByChild('email').equalTo(email)).valueChanges()
       .subscribe((data: any) => {
         for (let user of data) {
-          console.log('User type ' + user.userType + " (" + (user.userType == 'coach') + ")");
-          this.isCoach = user.type == 'coach';
+          console.log('User type ' + user.type + " (" + (user.type == 'coach') + ")");
+          this.isCoach = user.type.toLowerCase() == 'coach';
         }
       });
 
@@ -97,7 +97,7 @@ export class CoachListPage {
 
   ngOnInit() {
     this.users = this.afd.list('/users',
-      ref => ref.orderByChild('type').equalTo('Player')).valueChanges();
+      ref => ref.orderByChild('type').equalTo('player')).valueChanges();
 
     // this.users = this.afd.list('/users',
     //   ref => ref.orderByChild('surname').equalTo('a')).valueChanges();
