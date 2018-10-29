@@ -59,7 +59,7 @@ export class CoachListPage {
 
   statusDetails(user) {
     let message = "<strong>" + user.comment + "</strong>";
-    if (user.playDate != null && user.status.toLowerCase() != 'okay') {
+    if (user.playDate != null && user.status.toLowerCase() != 'play') {
       message = message + "<br><br>" + "Estimate date of revocery:<br>" + user.playDate;
     }
 
