@@ -58,10 +58,14 @@ export class CoachListPage {
   }
 
   statusDetails(user) {
+    let message = "<strong>" + user.comment + "</strong>";
+    if (user.playDate != null) {
+      message = message + "<br><br>" + "Estimate date of revocery:<br>" + user.playDate;
+    }
+
     let alert = this.alertCtrl.create({
       title: user.name + " " + user.surname,
-      message: user.comment,
-      subTitle: "Ready by: " + user.playDate,
+      subTitle: message,
       //lines above display data when butto clicked
       //only one shows, both supposed to show
       buttons: ['Close']
@@ -88,13 +92,13 @@ export class CoachListPage {
         }
       });
 
-      this.date = new Date().toJSON().split('T')[0];
+    this.date = new Date().toJSON().split('T')[0];
   }
 
   ngOnInit() {
     this.users = this.afd.list('/users',
       ref => ref.orderByChild('type').equalTo('Player')).valueChanges();
-    
+
     // this.users = this.afd.list('/users',
     //   ref => ref.orderByChild('surname').equalTo('a')).valueChanges();
   }
