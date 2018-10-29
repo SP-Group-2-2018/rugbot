@@ -10,4 +10,4 @@ import { OtherPage } from './other';
     IonicPageModule.forChild(OtherPage),
   ],
 })
-export class OtherPageModule {}
+export class OtherPageModule { }

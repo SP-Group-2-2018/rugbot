@@ -11,6 +11,7 @@ import { PlayerAttendencePage } from '../player-attendence/player-attendence';
 import { CalendarPage } from '../calendar/calendar';
 import { PlayerDetailsPage } from '../player-details/player-details';
 import { AttendenceHistoryPage } from '../attendence-history/attendence-history';
+import { OtherPage } from '../other/other';
 
 import { MenuController, ToastController } from 'ionic-angular';
 
@@ -55,35 +56,35 @@ export class HomePage {
   }
 
   buttonStatusCoach(): boolean {
-    if(this.userType == 'coach') {
+    if (this.userType == 'coach') {
       return false;
     }
     return true;
   }
 
   buttonStatusPhysio(): boolean {
-    if(this.userType == 'physio') {
+    if (this.userType == 'physio') {
       return false;
     }
     return true;
   }
 
   buttonStatusDetails(): boolean {
-    if(this.userType == 'player') {
+    if (this.userType == 'player') {
       return false;
     }
     return true;
   }
 
   buttonStatusCalendar(): boolean {
-    if(this.userType == 'coach') {
+    if (this.userType == 'coach') {
       return false;
     }
     return true;
   }
 
   buttonStatusTest(): boolean {
-    if(this.userType == 'coach') {
+    if (this.userType == 'coach') {
       return false;
     }
     return true;
@@ -139,5 +140,13 @@ export class HomePage {
     //   window.open('mailto:' + email);
     // });
     this.navCtrl.push(PlayerDetailsPage);
+  }
+
+  misc() {
+    this.navCtrl.push(OtherPage);
+  }
+
+  exit() {
+    this.plt.exitApp();
   }
 }

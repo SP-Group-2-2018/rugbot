@@ -1,13 +1,18 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ModalController, Platform } from 'ionic-angular';
 
-/**
- * Generated class for the OtherPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { PhysioListPage } from '../physio-list/physio-list';
+import { AngularFireAuth } from '@angular/fire/auth';
+import { AngularFireDatabase } from 'angularfire2/database';
 
+import { LoginPage } from '../login/login';
+import { CoachListPage } from '../coach-list/coach-list';
+import { PlayerAttendencePage } from '../player-attendence/player-attendence';
+import { CalendarPage } from '../calendar/calendar';
+import { PlayerDetailsPage } from '../player-details/player-details';
+import { AttendenceHistoryPage } from '../attendence-history/attendence-history';
+
+import { MenuController, ToastController } from 'ionic-angular';
 @IonicPage()
 @Component({
   selector: 'page-other',
@@ -22,4 +27,19 @@ export class OtherPage {
     console.log('ionViewDidLoad OtherPage');
   }
 
+  about() {
+
+  }
+
+  manual() {
+
+  }
+
+  github() {
+
+  }
+
+  help() {
+
+  }
 }

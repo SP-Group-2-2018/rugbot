@@ -22,8 +22,9 @@
         <button [hidden]="buttonStatusCalendar()" ion-button full (click)="showCalendar()">Calendar</button>
         <button ion-button full (click)="mailto('\matthewvdbijl@gmail.com')">player details (TODO)</button>
         <br>
-        <button ion-button full (click)="logout()">User details</button>
+        <button ion-button full (click)="misc()">Other/Misc.</button>
         <button ion-button full (click)="logout()">Logout</button>
+        <button ion-button full (click)="exit()">Exit</button>
       </ion-list>
     </ion-content>
   </ion-menu>
@@ -37,12 +38,6 @@
     <p class="title">{{userType}}</p>
     <br>
     <p>W.P. Rugby Academy</p>
-
-    <!-- Tyler, please add links to appropiate social media links -->
-    <!-- <a href="#"><i class="fa fa-dribbble"></i></a>
-    <a href="#"><i class="fa fa-twitter"></i></a>
-    <a href="#"><i class="fa fa-linkedin"></i></a>
-    <a href="#"><i class="fa fa-facebook"></i></a> -->
   </div>
 
 </ion-content>
