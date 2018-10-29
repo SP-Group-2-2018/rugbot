@@ -12,7 +12,7 @@ import { AngularFireAuth } from '@angular/fire/auth';
   templateUrl: 'app.html'
 })
 export class MyApp {
-  
+
   rootPage: any;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen,

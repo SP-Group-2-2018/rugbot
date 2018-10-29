@@ -9,6 +9,7 @@ import { LoginPage } from '../login/login';
 import { CoachListPage } from '../coach-list/coach-list';
 import { PlayerAttendencePage } from '../player-attendence/player-attendence';
 import { CalendarPage } from '../calendar/calendar';
+import { PlayerDetailsPage } from '../player-details/player-details';
 
 import { MenuController, ToastController } from 'ionic-angular';
 
@@ -65,21 +66,21 @@ export class HomePage {
     }
     return true;
   }
-  
+
   buttonStatusDetails(): boolean {
     if(this.userType == 'player') {
       return false;
     }
     return true;
   }
-  
+
   buttonStatusCalendar(): boolean {
     if(this.userType == 'coach') {
       return false;
     }
     return true;
   }
-  
+
   buttonStatusTest(): boolean {
     if(this.userType == 'coach') {
       return false;
@@ -136,6 +137,6 @@ export class HomePage {
     // this.plt.ready().then(() => {
     //   window.open('mailto:' + email);
     // });
-    // this.navCtrl.push(PlayerDetailsPage);
+    this.navCtrl.push(PlayerDetailsPage);
   }
 }

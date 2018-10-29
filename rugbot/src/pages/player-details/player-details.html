@@ -1,10 +1,12 @@
 <ion-header>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
 
   <ion-navbar>
     <button ion-button menuToggle icon-only>
       <ion-icon name='menu'></ion-icon>
     </button>
-    <ion-title>Details</ion-title>
+    <ion-title>User Details</ion-title>
   </ion-navbar>
 
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
@@ -12,27 +14,37 @@
 
 </ion-header>
 
-<ion-content>
-  <!-- <div class="card">
-    <br>
-    <img src="assets/imgs/logo.png" alt="Welcome!">
-    <h1>John Doe</h1>
-    <p class="title">CEO & Founder, Example</p>
-    <br>
-    <p>Harvard University</p>
-
-    <!-- Tyler, please add links to appropiate social media links -->
-  <!-- <a href="#"><i class="fa fa-dribbble"></i></a>
-    <a href="#"><i class="fa fa-twitter"></i></a>
-    <a href="#"><i class="fa fa-linkedin"></i></a>
-    <a href="#"><i class="fa fa-facebook"></i></a>
-  </div> -->
-
+<ion-content padding>
   <div class="card">
-    <img src="jeans3.jpg" alt="Denim Jeans" style="width:100%">
-    <h1>Tailored Jeans</h1>
-    <p class="price">$19.99</p>
-    <p>Some text about the jeans..</p>
-    <p><button>Add to Cart</button></p>
+    <img src="assets/imgs/logo.png" alt="{{name}}" style="width:100%">
+    <h1>{{name}}</h1>
+    <p class="price">{{type}}</p>
+    <br>
+    <p>W.P. Rugby Academy</p>
+    <br>
+
+    <table>
+      <tr>
+        <td align="left">First Name</td>
+        <td>{{fname}}</td>
+      </tr>
+      <tr>
+        <td align="left">Surname</td>
+        <td>{{lname}}</td>
+      </tr>
+      <tr>
+        <td align="left">E-mail address</td>
+        <td><a (click)="sendEmail();">{{email}}</a></td>
+      </tr>
+    </table>
+
+    <br><br>
+    <hr><br>
+    <p>
+      <button ion-button full (click)="editUser();">edit details</button>
+    </p>
+    <p>
+      <button ion-button full color="danger" (click)="deleteUser();">Delete</button>
+    </p>
   </div>
 </ion-content>

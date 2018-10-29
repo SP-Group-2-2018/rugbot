@@ -21,10 +21,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { CoachListPage } from '../pages/coach-list/coach-list';
 import { PlayerAttendencePage } from '../pages/player-attendence/player-attendence';
 import { CalendarPage } from '../pages/calendar/calendar';
+import { PlayerDetailsPage } from '../pages/player-details/player-details';
 
 import { NgCalendarModule } from 'ionic2-calendar';
-
-import { PlayerDetailsPage } from '../pages/player-details/player-details';
 
 @NgModule({
   declarations: [
