@@ -25,6 +25,16 @@
     </ion-item>
 
     <ion-item>
+      <ion-label floating>Name</ion-label>
+      <ion-input #name formControlName="name" type="name" [class.invalid]="!registerForm.controls.name.valid && registerForm.controls.name.dirty"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Surname</ion-label>
+      <ion-input #surname formControlName="surname" type="surname" [class.invalid]="!registerForm.controls.surname.valid && registerForm.controls.surname.dirty"></ion-input>
+    </ion-item>
+
+    <ion-item>
       <ion-label floating>Password</ion-label>
       <ion-input #password formControlName="password" type="password" [class.invalid]="!registerForm.controls.password.valid && registerForm.controls.password.dirty"></ion-input>
     </ion-item>
@@ -37,7 +47,6 @@
       <ion-input #passwordConfirm formControlName="passwordConfirm" type="password" [class.invalid]="!registerForm.controls.passwordConfirm.valid && registerForm.controls.passwordConfirm.dirty"></ion-input>
     </ion-item>
     <ion-item class="error-message" *ngIf="registerForm.hasError('mismatchedPasswords')">
-
       <p>Your passwords do not match.</p>
     </ion-item>
 

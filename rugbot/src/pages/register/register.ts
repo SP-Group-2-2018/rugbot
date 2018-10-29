@@ -6,6 +6,7 @@ import { AuthProvider } from '../../providers/auth/auth';
 
 import { EmailValidator } from '../../validators/email';
 import { HomePage } from '../home/home';
+import { LoginPage } from '../login/login';
 
 @IonicPage()
 @Component({
@@ -22,6 +23,8 @@ export class RegisterPage {
      public alertCtrl: AlertController, public loadingCtrl: LoadingController) {
     this.registerForm = FormBuilder.group({
       email: ['', Validators.compose([Validators.required, EmailValidator.isValid])],
+      name: ['', Validators.required],
+      surname: ['', Validators.required],
       password: ['', Validators.compose([Validators.minLength(6), Validators.required])],
       passwordConfirm: ['', Validators.required],
     }, {validator: this.matchPassword('password', 'passwordConfirm')});
@@ -33,7 +36,7 @@ export class RegisterPage {
     } else {
       this.auth.registerUser(this.registerForm.value.email, this.registerForm.value.password)
         .then(auth => {
-          this.navCtrl.setRoot(HomePage);
+          this.navCtrl.setRoot(LoginPage);
         }, error => {
           this.loading.dismiss().then(() => {
             let alert = this.alertCtrl.create({
