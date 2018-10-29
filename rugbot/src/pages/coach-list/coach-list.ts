@@ -61,6 +61,9 @@ export class CoachListPage {
     let alert = this.alertCtrl.create({
       title: user.name + " " + user.surname,
       subTitle: user.comment,
+      subTitle: user.playDate,
+      //lines above display data when butto clicked
+      //only one shows, both supposed to show
       buttons: ['Close']
     });
     alert.present();
@@ -78,12 +81,14 @@ export class CoachListPage {
 
     this.afd.list('/users',
       ref => ref.orderByChild('email').equalTo(email)).valueChanges()
-      .subscribe((data: any) => {
+      .subscribe((data) => {
         for (let user of data) {
           console.log('User type ' + user.userType + " (" + (user.userType == 'coach') + ")");
           this.isCoach = user.type == 'coach';
         }
       });
+
+      this.date = new Date().toJSON().split('T')[0];
   }
 
   ngOnInit() {
