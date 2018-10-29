@@ -22,7 +22,7 @@ export class CoachListPage {
   users: Observable<any[]>;
   attendance: Observable<any[]>;
 
-  date: Date = new Date();
+  date: string = new Date().toJSON();
   marks = [];
   // attendance = [];
 
@@ -60,8 +60,8 @@ export class CoachListPage {
   statusDetails(user) {
     let alert = this.alertCtrl.create({
       title: user.name + " " + user.surname,
-      subTitle: user.comment,
-      subTitle: user.playDate,
+      message: user.comment,
+      subTitle: "Ready by: " + user.playDate,
       //lines above display data when butto clicked
       //only one shows, both supposed to show
       buttons: ['Close']
@@ -81,7 +81,7 @@ export class CoachListPage {
 
     this.afd.list('/users',
       ref => ref.orderByChild('email').equalTo(email)).valueChanges()
-      .subscribe((data) => {
+      .subscribe((data: any) => {
         for (let user of data) {
           console.log('User type ' + user.userType + " (" + (user.userType == 'coach') + ")");
           this.isCoach = user.type == 'coach';

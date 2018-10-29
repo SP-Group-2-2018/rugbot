@@ -16,7 +16,7 @@ export class PhysioListPage {
   isPhysio = false;
 
   users: Observable<any[]>;
-  tasks: AngularFireList<any[]>;
+  tasks: AngularFireList<any>;
   date: Date = new Date();
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
@@ -34,7 +34,7 @@ export class PhysioListPage {
 
     this.afd.list('/users',
       ref => ref.orderByChild('email').equalTo(email)).valueChanges()
-      .subscribe((data) => {
+      .subscribe((data: any) => {
         for (let user of data) {
           console.log('User type ' + user.userType + " (" + (user.userType == 'physio') + ")");
           this.isPhysio = user.type == 'physio';
@@ -63,8 +63,8 @@ export class PhysioListPage {
           placeholder: 'comment...'
         },
         {
-          name: 'title',
-          placeholder: 'playDate',
+          name: 'playDate',
+          placeholder: 'Ready for practise',
           type: 'date'
         }
       ],
@@ -79,7 +79,7 @@ export class PhysioListPage {
           handler: data => {
             user.status = 'Okay';
             user.comment = data.comment;
-            user.playDate = data.currentDate
+            user.playDate = data.playDate;
             console.log('player marked as ok');
             user.statusColour = 'good';
             // this.tasks.remove(user.$key);
@@ -92,7 +92,7 @@ export class PhysioListPage {
               surname: user.surname + "",
               type: user.type + "",
               comment: user.comment + "",
-              playDate: this.date + "",
+              playDate: user.playDate + "",
             });
           }
         },
@@ -103,7 +103,7 @@ export class PhysioListPage {
             user.status = 'Injured';
             user.comment = data.comment;
             user.statusColour = 'threat';
-            user.playDate = data.date
+            user.playDate = data.playDate;
             console.log('player marked as injured');
             // this.tasks.remove(user.$key);
             this.tasks.update(user.uid + "", {
@@ -115,7 +115,7 @@ export class PhysioListPage {
               comment: user.comment + "",
               surname: user.surname + "",
               type: user.type + "",
-              playDate: this.date + "",
+              playDate: user.playDate + "",
             });
           }
         },
@@ -126,7 +126,7 @@ export class PhysioListPage {
             user.status = 'No play';
             user.comment = data.comment + "";
             user.statusColour = 'danger';
-            user.playDate = data.date
+            user.playDate = data.playDate;
             console.log('player marked as dead');
             // this.tasks.remove(user.$key);
             this.tasks.update(user.uid + "", {
@@ -138,7 +138,7 @@ export class PhysioListPage {
               name: user.name + "",
               surname: user.surname + "",
               type: user.type + "",
-              playDate: this.date + "",
+              playDate: user.playDate + "",
             });
           }
         }

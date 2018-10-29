@@ -61,8 +61,8 @@ export class CalendarPage {
           this.eventSource = events;
 
           let uid = (Math.floor(Math.random() * 999999) + 100000) + "";
-          this.events.update(uid + "", {
-            uid: uid + "",
+          this.events.push({
+            // uid: eventData.key + "",
             startTime: eventData.startTime + "",
             endTime: eventData.endTime + "",
             title: eventData.title + ""

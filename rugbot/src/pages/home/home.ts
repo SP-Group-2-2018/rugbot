@@ -67,7 +67,7 @@ export class HomePage {
   }
   
   buttonStatusDetails(): boolean {
-    if(this.userType == 'coach') {
+    if(this.userType == 'player') {
       return false;
     }
     return true;
