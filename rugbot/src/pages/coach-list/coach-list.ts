@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { AlertController } from 'ionic-angular';
 
+import { PlayerDetailsPage } from '../player-details/player-details';
+
 import { AngularFireDatabase } from 'angularfire2/database';
 import { Observable } from 'rxjs/Observable';
 
@@ -71,6 +73,11 @@ export class CoachListPage {
       buttons: ['Close']
     });
     alert.present();
+  }
+
+
+  userDetails(user) {
+    this.navCtrl.push(PlayerDetailsPage);
   }
 
   ionViewDidLoad() {
@@ -144,10 +151,5 @@ export class CoachListPage {
   onCancel() {
     this.attendance = this.afd.list('/attendance',
       ref => ref.orderByChild('date').equalTo(this.date + "")).valueChanges();
-  }
-
-  userDetails(user) {
-    // TODO
-    window.alert(user.name);
   }
 }

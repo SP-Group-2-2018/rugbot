@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
+import { PlayerDetailsPage } from '../player-details/player-details';
 
 import { AlertController } from 'ionic-angular'
 import { Observable } from 'rxjs';
@@ -55,7 +56,6 @@ export class PhysioListPage {
     let alert = this.alertCtrl.create({
       title: 'Status',
       // value: user.status,
-
       inputs: [
         {
           // value: user.status,
@@ -72,8 +72,6 @@ export class PhysioListPage {
       // TODO horizontal buttons
       buttons: [
         {
-
-
           text: 'A Okay',
           role: 'ok',
           handler: data => {
@@ -170,7 +168,6 @@ export class PhysioListPage {
   // }
 
   userDetails(user) {
-    // TODO
-    window.alert(user.name);
+    this.navCtrl.push(PlayerDetailsPage);
   }
 }

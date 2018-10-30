@@ -9,6 +9,9 @@ import { LoginPage } from '../login/login';
 import { CoachListPage } from '../coach-list/coach-list';
 import { PlayerAttendencePage } from '../player-attendence/player-attendence';
 import { CalendarPage } from '../calendar/calendar';
+import { PlayerDetailsPage } from '../player-details/player-details';
+import { AttendenceHistoryPage } from '../attendence-history/attendence-history';
+import { OtherPage } from '../other/other';
 
 import { MenuController, ToastController } from 'ionic-angular';
 
@@ -53,35 +56,35 @@ export class HomePage {
   }
 
   buttonStatusCoach(): boolean {
-    if(this.userType == 'coach') {
+    if (this.userType == 'coach') {
       return false;
     }
     return true;
   }
 
   buttonStatusPhysio(): boolean {
-    if(this.userType == 'physio') {
+    if (this.userType == 'physio') {
       return false;
     }
     return true;
   }
-  
+
   buttonStatusDetails(): boolean {
-    if(this.userType == 'player') {
+    if (this.userType == 'player') {
       return false;
     }
     return true;
   }
-  
+
   buttonStatusCalendar(): boolean {
-    if(this.userType == 'coach') {
+    if (this.userType == 'coach') {
       return false;
     }
     return true;
   }
-  
+
   buttonStatusTest(): boolean {
-    if(this.userType == 'coach') {
+    if (this.userType == 'coach') {
       return false;
     }
     return true;
@@ -111,12 +114,12 @@ export class HomePage {
   }
 
   logout() {
-    let toast = this.toaster.create({
-      message: 'Goodbye(:',
-      duration: 1000,
-      position: 'bottom'
-    });
-    toast.present();
+    // let toast = this.toaster.create({
+    //   message: 'Goodbye(:',
+    //   duration: 1000,
+    //   position: 'bottom'
+    // });
+    // toast.present();
 
     this.afa.auth.signOut();
     this.navCtrl.setRoot(LoginPage);
@@ -124,7 +127,7 @@ export class HomePage {
   }
 
   test() {
-    this.navCtrl.push(PlayerAttendencePage);
+    this.navCtrl.push(AttendenceHistoryPage);
     // this.menuCtrl.close();
   }
 
@@ -136,6 +139,14 @@ export class HomePage {
     // this.plt.ready().then(() => {
     //   window.open('mailto:' + email);
     // });
-    // this.navCtrl.push(PlayerDetailsPage);
+    this.navCtrl.push(PlayerDetailsPage);
+  }
+
+  misc() {
+    this.navCtrl.push(OtherPage);
+  }
+
+  exit() {
+    this.plt.exitApp();
   }
 }

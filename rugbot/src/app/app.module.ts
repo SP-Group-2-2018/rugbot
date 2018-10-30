@@ -21,10 +21,11 @@ import { HttpClientModule } from '@angular/common/http';
 import { CoachListPage } from '../pages/coach-list/coach-list';
 import { PlayerAttendencePage } from '../pages/player-attendence/player-attendence';
 import { CalendarPage } from '../pages/calendar/calendar';
+import { PlayerDetailsPage } from '../pages/player-details/player-details';
+import { AttendenceHistoryPage } from '../pages/attendence-history/attendence-history';
+import { OtherPage } from '../pages/other/other';
 
 import { NgCalendarModule } from 'ionic2-calendar';
-
-import { PlayerDetailsPage } from '../pages/player-details/player-details';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,9 @@ import { PlayerDetailsPage } from '../pages/player-details/player-details';
     PlayerAttendencePage,
     CoachListPage,
     CalendarPage,
-    PlayerDetailsPage
+    PlayerDetailsPage,
+    AttendenceHistoryPage,
+    OtherPage
   ],
   imports: [
     BrowserModule,
@@ -57,7 +60,9 @@ import { PlayerDetailsPage } from '../pages/player-details/player-details';
     PhysioListPage,
     CalendarPage,
     CoachListPage,
-    PlayerDetailsPage
+    PlayerDetailsPage,
+    AttendenceHistoryPage,
+    OtherPage
   ],
   providers: [
     StatusBar,

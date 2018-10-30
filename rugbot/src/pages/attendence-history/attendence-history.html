@@ -1,0 +1,33 @@
+<ion-header>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Attendance History</ion-title>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+  <table>
+    <!-- <tr>
+      <th>Name</th> not really needed
+    </tr> -->
+    <tr *ngFor="let player of players | async">
+      <td>
+        {{player.surname}}, {{player.name}}
+      </td>
+      <td>
+        <button full ion-button (click)="history(player);">attendence<br>history</button>
+      </td>
+      <td>
+        <button full ion-button (click)="details(player);">player<br>details</button>
+      </td>
+    </tr>
+  </table>
+</ion-content>
