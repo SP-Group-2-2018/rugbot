@@ -1,0 +1,40 @@
+<ion-header>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Match Day Information</ion-title>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+  <table>
+    <tr>
+      <th>
+        <!-- Thumb -->
+      </th>
+      <th align="center">Name</th>
+      <th align="center">Jersey Number</th>
+      <th align="center">Level of Injury</th>
+    </tr>
+
+    <tr *ngFor="let user of (users | async)">
+      <td align="center">
+        <a (click)="mark(user)"><img src="{{f(user) ? thumbGreen : thumbBlack}}" style="width:32px;"></a>
+      </td>
+      <td><a (click)="userDetails(user);">{{ user.surname }}, {{ user.name }}</a></td>
+      <td>
+
+      </td>
+      <td>
+        <button ion-button full (click)="statusDetails(user);" color="{{user.statusColour}}">{{user.status}}</button>
+      </td>
+    </tr>
+  </table>
+</ion-content>
