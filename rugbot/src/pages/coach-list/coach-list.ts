@@ -69,14 +69,9 @@ export class CoachListPage {
 
   statusDetails(user) {
     let message = "<strong>" + user.comment + "</strong>";
-<<<<<<< HEAD
-    if (user.playDate != null && user.status.toLowerCase() != 'play') {
-      message = message + "<br><br>" + "Estimate date of recovery:<br>" + user.playDate;
-=======
     if (user.playDate != null && user.status.toLowerCase() != 'play'
       && user.status.toLowerCase() != 'okay') {
-      message = message + "<br><br>" + "Estimate date of revocery:<br>" + user.playDate;
->>>>>>> b6d9e98a3c56d9451e3803f5629b25839fb0eab0
+      message = message + "<br><br>" + "Estimate date of recovery:<br>" + user.playDate;
     }
 
     let alert = this.alertCtrl.create({
