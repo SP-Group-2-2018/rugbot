@@ -96,6 +96,8 @@ export class CalendarPage {
           this.eventSource = n;
         }
       });
+
+      this.navCtrl.pop();
   }
 
   onTitleChanged(title) {

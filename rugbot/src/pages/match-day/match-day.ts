@@ -57,7 +57,7 @@ export class MatchDayPage {
       this.afd.list('/teams/').remove(id);
     } else {
       this.afd.list('/teams/').update(id,
-        { evtid: this.evtid + "", uid: user.uid });
+        { evtid: this.evtid + "", plyid: user.uid });
 
       let toast = this.toaster.create({
         message: user.name + ' ' + user.surname + ' was added successfully',
@@ -135,6 +135,33 @@ export class MatchDayPage {
   }
 
   setNumber(player) {
+    if (!this.isCoach) {
+      let alert = this.alertCtrl.create({
+        title: 'Access Denied',
+        subTitle: 'This field can only be edited by coach.',
+        buttons: ['Close']
+      });
+      alert.present();
+      return;
+    }
+    let alert = this.alertCtrl.create({
+      title: 'Jersey Number',
+      inputs: [
+        {
+          name: 'num',
+          placeholder: 'number'
+        }
+      ],
+      buttons: [
+        {
+          text: 'Submit',
+          role: 'ok',
+          handler: data => {
 
+          }
+        }
+      ]
+    });
+    alert.present();
   }
 }
