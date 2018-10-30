@@ -38,7 +38,10 @@ export class CalendarPage {
           let n = this.eventSource;
           eventData.startTime = new Date(eventData.startTime);
           eventData.endTime = new Date(eventData.endTime);
-          n.push(eventData);
+          if (eventData.uid != null) {
+            n.push(eventData);
+          }
+          this.eventSource = [];
           this.eventSource = n;
         }
       });
@@ -57,7 +60,9 @@ export class CalendarPage {
         eventData.endTime = new Date(data.endTime);
 
         let events = this.eventSource;
-        events.push(eventData);
+        if (eventData.uid != null) {
+          events.push(eventData);
+        }
         this.eventSource = [];
         setTimeout(() => {
           this.eventSource = events;
@@ -76,6 +81,21 @@ export class CalendarPage {
     });
 
     // console.log(this.eventSource[0]);
+    this.afd.list('/events').valueChanges()
+      .subscribe((data: any) => {
+        for (let eventData of data) {
+          console.log(eventData.uid + "");
+
+          let n = this.eventSource;
+          eventData.startTime = new Date(eventData.startTime);
+          eventData.endTime = new Date(eventData.endTime);
+          if (eventData.uid != null) {
+            n.push(eventData);
+          }
+          this.eventSource = [];
+          this.eventSource = n;
+        }
+      });
   }
 
   onTitleChanged(title) {
@@ -92,7 +112,7 @@ export class CalendarPage {
     //   buttons: ['OK']
     // })
     // alert.present();
-    this.navCtrl.push(MatchDayPage, { 'event': event });
+    this.navCtrl.push(MatchDayPage, { 'evtid': event.uid });
   }
 
   onTimeSelected(ev) {

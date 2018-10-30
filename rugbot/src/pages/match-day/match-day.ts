@@ -23,7 +23,7 @@ import { MenuController, ToastController } from 'ionic-angular';
 })
 export class MatchDayPage {
 
-  date = "";
+  evtid = "uid";
 
   isCoach = false;
 
@@ -39,7 +39,7 @@ export class MatchDayPage {
   constructor(public navCtrl: NavController, public navParams: NavParams,
     private alertCtrl: AlertController, public afd: AngularFireDatabase,
     private toaster: ToastController) {
-    this.date = "2018-10-30";
+    this.evtid = navParams.get("evtid");
   }
 
   mark(user) {
@@ -52,12 +52,12 @@ export class MatchDayPage {
       alert.present();
       return;
     }
-    let id = this.date + " " + user.uid;
+    let id = this.evtid + " " + user.uid;
     if (this.f(user)) {
       this.afd.list('/teams/').remove(id);
     } else {
       this.afd.list('/teams/').update(id,
-        { date: this.date + "", uid: user.uid });
+        { evtid: this.evtid + "", uid: user.uid });
 
       let toast = this.toaster.create({
         message: user.name + ' ' + user.surname + ' was added successfully',
@@ -94,7 +94,7 @@ export class MatchDayPage {
     console.log('ionViewDidLoad CoachListPage');
 
     this.teams = this.afd.list('/teams',
-      ref => ref.orderByChild('date').equalTo(this.date + "")).valueChanges();
+      ref => ref.orderByChild('evtid').equalTo(this.evtid + "")).valueChanges();
 
 
     let email = "stefbuys21@gmail.com"; // TODO
@@ -110,7 +110,7 @@ export class MatchDayPage {
       });
 
     this.afd.list('/teams',
-      ref => ref.orderByChild('date').equalTo(this.date + "")).valueChanges()
+      ref => ref.orderByChild('evtid').equalTo(this.evtid + "")).valueChanges()
       .subscribe((data) => {
         // for (let i of data) {
         //   console.log(i);
@@ -126,7 +126,7 @@ export class MatchDayPage {
 
   f(user) {
     for (let i of this.marks) {
-      console.log(i.uid + " " + user.id);
+      console.log(i.uid + " sdf " + user.uid);
       if (i.uid == user.uid) {
         return true;
       }
