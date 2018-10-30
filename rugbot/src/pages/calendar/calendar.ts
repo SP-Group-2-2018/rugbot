@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { NavController, ModalController, AlertController } from 'ionic-angular';
 import * as moment from 'moment';
 
+import { MatchDayPage } from '../match-day/match-day';
+
 import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
 
 @Component({
@@ -60,12 +62,14 @@ export class CalendarPage {
         setTimeout(() => {
           this.eventSource = events;
 
-          let uid = (Math.floor(Math.random() * 999999) + 100000) + "";
-          this.events.push({
-            // uid: eventData.key + "",
+          let obj = this.events.push({
             startTime: eventData.startTime + "",
             endTime: eventData.endTime + "",
             title: eventData.title + ""
+          });
+          let uid = obj.key;
+          this.events.update(uid, {
+            uid: uid + ""
           });
         });
       }
@@ -79,15 +83,16 @@ export class CalendarPage {
   }
 
   onEventSelected(event) {
-    let start = moment(event.startTime).format('LLLL');
-    let end = moment(event.endTime).format('LLLL');
-
-    let alert = this.alertCtrl.create({
-      title: '' + event.title,
-      subTitle: 'From: ' + start + '<br>To: ' + end,
-      buttons: ['OK']
-    })
-    alert.present();
+    // let start = moment(event.startTime).format('LLLL');
+    // let end = moment(event.endTime).format('LLLL');
+    //
+    // let alert = this.alertCtrl.create({
+    //   title: '' + event.title,
+    //   subTitle: 'From: ' + start + '<br>To: ' + end,
+    //   buttons: ['OK']
+    // })
+    // alert.present();
+    this.navCtrl.push(MatchDayPage, { 'event': event });
   }
 
   onTimeSelected(ev) {

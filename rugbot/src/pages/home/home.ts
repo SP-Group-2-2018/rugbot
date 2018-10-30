@@ -149,4 +149,8 @@ export class HomePage {
   exit() {
     this.plt.exitApp();
   }
+
+  userList() {
+
+  }
 }

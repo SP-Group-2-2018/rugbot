@@ -10,4 +10,4 @@ import { MatchDayPage } from './match-day';
     IonicPageModule.forChild(MatchDayPage),
   ],
 })
-export class MatchDayPageModule {}
+export class MatchDayPageModule { }
