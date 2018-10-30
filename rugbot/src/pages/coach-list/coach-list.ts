@@ -33,6 +33,14 @@ export class CoachListPage {
     private toaster: ToastController) {
   }
 
+  searchUser(searchTerm) {
+    this.users = this.afd.list('/users',
+    ref => ref.orderByChild('name').equalTo(searchTerm)).valueChanges();
+
+    // this.attendance = this.afd.list('/attendance',
+    //   ref => ref.orderByChild('date').equalTo(this.date + "")).valueChanges();
+  }
+
   mark(user) {
     if (!this.isCoach) {
       let alert = this.alertCtrl.create({

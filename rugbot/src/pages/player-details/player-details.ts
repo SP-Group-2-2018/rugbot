@@ -8,7 +8,7 @@ import { Observable } from 'rxjs/Observable';
 
 import { LoginPage } from '../login/login';
 import { CoachListPage } from '../coach-list/coach-list';
-import { PlayerAttendencePage } from '../player-attendence/player-attendence';
+// import { PlayerAttendencePage } from '../player-attendence/player-attendence';
 import { CalendarPage } from '../calendar/calendar';
 import { PlayerAttendencePage } from '../player-attendence/player-attendence';
 
@@ -44,9 +44,9 @@ export class PlayerDetailsPage {
       ref => ref.orderByChild('email').equalTo(email)).valueChanges()
       .subscribe((data: any) => {
         for (let user of data) {
-          this.name = user.name + " " + user.surname;
-          this.userType = user.type;
-          console.log('Current user: ' + this.name);
+          const name = user.name + " " + user.surname;
+          const userType = user.type;
+          console.log('Current user: ' + name);
         }
       });
   }

@@ -5,6 +5,7 @@ import { AngularFireDatabase } from 'angularfire2/database';
 // import { AttendenceHistoryPage } from './attendence-history/attendence-history';
 import { PlayerAttendencePage } from '../player-attendence/player-attendence';
 import { PlayerDetailsPage } from '../player-details/player-details';
+import { Observable } from 'rxjs';
 
 @IonicPage()
 @Component({
