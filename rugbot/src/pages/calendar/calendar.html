@@ -16,7 +16,13 @@
 </ion-header>
 
 <ion-content>
-  <calendar [eventSource]="eventSource" [calendarMode]="calendar.mode" [currentDate]="calendar.currentDate" (onEventSelected)="onEventSelected($event)" (onTitleChanged)="onTitleChanged($event)" (onTimeSelected)="onTimeSelected($event)" step="30"
-    class="calendar">
+  <calendar [eventSource]="eventSource"
+            [calendarMode]="calendar.mode"
+            [currentDate]="calendar.currentDate"
+            (onEventSelected)="onEventSelected($event)"
+            (onTitleChanged)="onTitleChanged($event)"
+            (onTimeSelected)="onTimeSelected($event)"
+            step="30"
+            class="calendar">
   </calendar>
 </ion-content>
