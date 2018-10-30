@@ -23,53 +23,49 @@ import { MenuController, ToastController } from 'ionic-angular';
 })
 export class MatchDayPage {
 
-  event = [];
+  date = "";
+
+  isCoach = false;
 
   thumbBlack = "assets/imgs/thumb-up.png";
   thumbGreen = "assets/imgs/thumb-up-green.png";
 
   users: Observable<any[]>;
+  teams: Observable<any[]>;
+
+  marks = [];
+  // teams = [];
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
-    public afd: AngularFireDatabase, private alertCtrl: AlertController) {
-       this.event = navParams.get('event');
-  }
-
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad MatchDayPage');
-
-    this.users = this.afd.list('/users',
-      ref => ref.orderByChild('type').equalTo('player')).valueChanges();
-
-      // window.alert(this.event.title);
-      console.log(this.event);
+    private alertCtrl: AlertController, public afd: AngularFireDatabase,
+    private toaster: ToastController) {
+    this.date = "2018-10-30";
   }
 
   mark(user) {
-    // if (!this.isCoach) {
-    //   let alert = this.alertCtrl.create({
-    //     title: 'Access Denied',
-    //     subTitle: 'This field can only be edited by coaches.',
-    //     buttons: ['Close']
-    //   });
-    //   alert.present();
-    //   return;
-    // }
-    // let id = this.date + " " + user.uid;
-    // if (this.f(user)) {
-    //   this.afd.list('/attendance/').remove(id);
-    // } else {0781823916
-    //   this.afd.list('/attendance/').update(id,
-    //     { date: this.date + "", uid: user.uid });
-    //
-    //   let toast = this.toaster.create({
-    //     message: user.name + ' ' + user.surname + ' was added successfully',
-    //     duration: 1000,
-    //     position: 'bottom'
-    //   });
-    //   toast.present();
-    // }
-    window.alert('mark');
+    if (!this.isCoach) {
+      let alert = this.alertCtrl.create({
+        title: 'Access Denied',
+        subTitle: 'This field can only be edited by coaches.',
+        buttons: ['Close']
+      });
+      alert.present();
+      return;
+    }
+    let id = this.date + " " + user.uid;
+    if (this.f(user)) {
+      this.afd.list('/teams/').remove(id);
+    } else {
+      this.afd.list('/teams/').update(id,
+        { date: this.date + "", uid: user.uid });
+
+      let toast = this.toaster.create({
+        message: user.name + ' ' + user.surname + ' was added successfully',
+        duration: 1000,
+        position: 'bottom'
+      });
+      toast.present();
+    }
   }
 
   statusDetails(user) {
@@ -78,6 +74,7 @@ export class MatchDayPage {
       && user.status.toLowerCase() != 'okay') {
       message = message + "<br><br>" + "Estimate date of revocery:<br>" + user.playDate;
     }
+
     let alert = this.alertCtrl.create({
       title: user.name + " " + user.surname,
       subTitle: message,
@@ -88,16 +85,56 @@ export class MatchDayPage {
     alert.present();
   }
 
-  f(user) {
-    // for (let i of this.marks) {
-    //   if (i.uid == user.uid) {
-    //     return true;
-    //   }
-    // }
-    return false;
-  }
 
   userDetails(user) {
     this.navCtrl.push(PlayerDetailsPage);
+  }
+
+  ionViewDidLoad() {
+    console.log('ionViewDidLoad CoachListPage');
+
+    this.teams = this.afd.list('/teams',
+      ref => ref.orderByChild('date').equalTo(this.date + "")).valueChanges();
+
+
+    let email = "stefbuys21@gmail.com"; // TODO
+    // let email = this.afa.auth.currentUser.email + "";
+
+    this.afd.list('/users',
+      ref => ref.orderByChild('email').equalTo(email)).valueChanges()
+      .subscribe((data: any) => {
+        for (let user of data) {
+          console.log('User type ' + user.type + " (" + (user.type == 'coach') + ")");
+          this.isCoach = user.type.toLowerCase() == 'coach';
+        }
+      });
+
+    this.afd.list('/teams',
+      ref => ref.orderByChild('date').equalTo(this.date + "")).valueChanges()
+      .subscribe((data) => {
+        // for (let i of data) {
+        //   console.log(i);
+        // }
+        this.marks = data;
+      });
+  }
+
+  ngOnInit() {
+    this.users = this.afd.list('/users',
+      ref => ref.orderByChild('type').equalTo('player')).valueChanges();
+  }
+
+  f(user) {
+    for (let i of this.marks) {
+      console.log(i.uid + " " + user.id);
+      if (i.uid == user.uid) {
+        return true;
+      }
+    }
+    return false;
+  }
+
+  setNumber(player) {
+
   }
 }
