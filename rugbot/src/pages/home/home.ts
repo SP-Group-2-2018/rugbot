@@ -34,8 +34,8 @@ export class HomePage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad HomePage');
 
-    let email = "stefbuys21@gmail.com"; // TODO
-    // let email = this.afa.auth.currentUser.email + "";
+    // let email = "stefbuys21@gmail.com"; // TODO
+    const email = this.afa.auth.currentUser.email + "";
 
     this.afd.list('/users',
       ref => ref.orderByChild('email').equalTo(email)).valueChanges()
@@ -77,7 +77,7 @@ export class HomePage {
   }
 
   buttonStatusCalendar(): boolean {
-    if (this.userType == 'coach') {
+    if (this.userType == 'coach' || this.userType == 'player') {
       return false;
     }
     return true;

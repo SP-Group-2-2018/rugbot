@@ -3,10 +3,12 @@ import { IonicPage, NavController, NavParams, LoadingController, Loading, AlertC
 
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AuthProvider } from '../../providers/auth/auth';
+import { AngularFireDatabase } from 'angularfire2/database';
 
 import { EmailValidator } from '../../validators/email';
-import { HomePage } from '../home/home';
+// import { HomePage } from '../home/home';
 import { LoginPage } from '../login/login';
+import { AngularFireAuth } from '@angular/fire/auth';
 
 @IonicPage()
 @Component({
@@ -19,7 +21,7 @@ export class RegisterPage {
   loading: Loading;
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
-     public auth: AuthProvider, public FormBuilder: FormBuilder,
+     public auth: AuthProvider, public afd: AngularFireDatabase, public afa: AngularFireAuth, public FormBuilder: FormBuilder,
      public alertCtrl: AlertController, public loadingCtrl: LoadingController) {
     this.registerForm = FormBuilder.group({
       email: ['', Validators.compose([Validators.required, EmailValidator.isValid])],
@@ -33,9 +35,32 @@ export class RegisterPage {
   registerUser() {
     if (!this.registerForm.value) {
       console.log(this.registerForm.value);
+    } else if (this.registerForm.value.password !== this.registerForm.value.passwordConfirm) {
+      let alert = this.alertCtrl.create({
+        message: "Passwords do not match.",
+        buttons: [
+          {
+            text: "Ok",
+            role: 'cancel'
+          }
+        ]
+      });
+      alert.present();
     } else {
       this.auth.registerUser(this.registerForm.value.email, this.registerForm.value.password)
         .then(auth => {
+          const uid = this.afa.auth.currentUser.uid;
+          this.afd.list('/users').set(uid, {
+            status: "",
+            uid: uid + "",
+            email: this.registerForm.value.email + "",
+            statusColour: "",
+            name: this.registerForm.value.name + "",
+            surname: this.registerForm.value.surname + "",
+            type: "", //this.registerForm.value.type + 
+            comment: "",
+            playDate: "",
+          });
           this.navCtrl.setRoot(LoginPage);
         }, error => {
           this.loading.dismiss().then(() => {

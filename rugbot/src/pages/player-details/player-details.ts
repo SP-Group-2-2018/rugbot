@@ -1,18 +1,10 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ModalController, Platform, AlertController } from 'ionic-angular';
 
-import { PhysioListPage } from '../physio-list/physio-list';
-import { AngularFireAuth } from '@angular/fire/auth';
 import { AngularFireDatabase } from 'angularfire2/database';
 import { Observable } from 'rxjs/Observable';
 
-import { LoginPage } from '../login/login';
-import { CoachListPage } from '../coach-list/coach-list';
-// import { PlayerAttendencePage } from '../player-attendence/player-attendence';
-import { CalendarPage } from '../calendar/calendar';
 import { PlayerAttendencePage } from '../player-attendence/player-attendence';
-
-import { MenuController, ToastController } from 'ionic-angular';
 
 @IonicPage()
 @Component({
@@ -45,6 +37,9 @@ export class PlayerDetailsPage {
       .subscribe((data: any) => {
         for (let user of data) {
           const name = user.name + " " + user.surname;
+          this.fname = user.name;
+          this.lname = user.surname;
+          this.email = user.email;
           const userType = user.type;
           console.log('Current user: ' + name);
         }

@@ -22,20 +22,20 @@
     <br>
     <p>W.P. Rugby Academy</p>
     <br>
-    <table>
-      <tr>
-        <td align="left">First Name</td>
-        <td>{{fname}}</td>
-      </tr>
-      <tr>
-        <td align="left">Surname</td>
-        <td>{{lname}}</td>
-      </tr>
-      <tr>
-        <td align="left">E-mail address</td>
-        <td><a (click)="sendEmail();">{{email}}</a></td>
-      </tr>
-    </table>
+    <ion-list>
+      <ion-item>
+        <ion-label color="primary">First Name</ion-label>
+        <ion-input placeholder={{fname}}></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label color="primary">Surname</ion-label>
+        <ion-input placeholder={{lname}}></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label color="primary">Email</ion-label>
+        <ion-input type="email" placeholder={{email}}></ion-input>
+      </ion-item>
+    </ion-list>
     <br>
     <p>
       <button ion-button block (click)="attendance();">View attendance history</button>
