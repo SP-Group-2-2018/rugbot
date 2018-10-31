@@ -28,9 +28,9 @@
       <td align="center">
         <a (click)="mark(user)"><img src="{{f(user) ? thumbGreen : thumbBlack}}" style="width:32px;"></a>
       </td>
-      <td><a (click)="userDetails(user);">{{ user.surname }}, {{ user.name }}</a></td>
+      <td><a (click)="userDetails(user);">{{ user.surname }}<br>{{ user.name }}</a></td>
       <td>
-
+        <button ion-button full (click)="setNumber(user);">num</button>
       </td>
       <td>
         <button ion-button full (click)="statusDetails(user);" color="{{user.statusColour}}">{{user.status}}</button>
