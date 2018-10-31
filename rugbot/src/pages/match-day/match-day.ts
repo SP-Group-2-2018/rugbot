@@ -128,7 +128,7 @@ export class MatchDayPage {
   f(user) {
     for (let i of this.marks) {
       console.log(i.uid + " sdf " + user.uid);
-      if (i.uid == user.uid) {
+      if (i.plyid == user.uid) {
         return true;
       }
     }

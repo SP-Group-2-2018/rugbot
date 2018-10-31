@@ -27,7 +27,7 @@ import { OtherPage } from '../pages/other/other';
 
 import { UserListPage } from '../pages/user-list/user-list';
 import { MatchDayPage } from '../pages/match-day/match-day';
-
+import { AboutPage } from '../pages/about/about';
 
 import { NgCalendarModule } from 'ionic2-calendar';
 
@@ -45,7 +45,8 @@ import { NgCalendarModule } from 'ionic2-calendar';
     AttendenceHistoryPage,
     OtherPage,
     MatchDayPage,
-    UserListPage
+    UserListPage,
+    AboutPage
   ],
   imports: [
     BrowserModule,
@@ -70,7 +71,8 @@ import { NgCalendarModule } from 'ionic2-calendar';
     AttendenceHistoryPage,
     OtherPage,
     MatchDayPage,
-    UserListPage
+    UserListPage,
+    AboutPage
   ],
   providers: [
     StatusBar,

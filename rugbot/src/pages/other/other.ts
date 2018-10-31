@@ -13,6 +13,9 @@ import { PlayerDetailsPage } from '../player-details/player-details';
 import { AttendenceHistoryPage } from '../attendence-history/attendence-history';
 
 import { MenuController, ToastController } from 'ionic-angular';
+
+import { AboutPage } from '../about/about';
+
 @IonicPage()
 @Component({
   selector: 'page-other',
@@ -28,7 +31,7 @@ export class OtherPage {
   }
 
   about() {
-
+    this.navCtrl.push(AboutPage);
   }
 
   manual() {
