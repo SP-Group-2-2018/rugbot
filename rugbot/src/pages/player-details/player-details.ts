@@ -5,6 +5,8 @@ import { AngularFireDatabase } from 'angularfire2/database';
 import { Observable } from 'rxjs/Observable';
 
 import { PlayerAttendencePage } from '../player-attendence/player-attendence';
+import { AngularFireAuth } from '@angular/fire/auth';
+import { LoginPage } from '../login/login';
 
 @IonicPage()
 @Component({
@@ -20,18 +22,18 @@ export class PlayerDetailsPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
     public plt: Platform, private alertCtrl: AlertController,
-    public afd: AngularFireDatabase) {
-    this.uid = navParams.get('uid');
-    this.fname = navParams.get('fname');
-    this.lname = navParams.get('lname');
-    this.email = navParams.get('email');
+    public afd: AngularFireDatabase, public afa: AngularFireAuth) {
+    // this.uid = navParams.get('uid');
+    // this.fname = navParams.get('fname');
+    // this.lname = navParams.get('lname');
+    // this.email = navParams.get('email');
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad PlayerDetailsPage');
 
-    let email = "stefbuys21@gmail.com"; // TODO
-    // let email = this.afa.auth.currentUser.email + "";
+    const email = this.afa.auth.currentUser.email + "";
+
     this.afd.list('/users',
       ref => ref.orderByChild('email').equalTo(email)).valueChanges()
       .subscribe((data: any) => {
@@ -40,7 +42,6 @@ export class PlayerDetailsPage {
           this.fname = user.name;
           this.lname = user.surname;
           this.email = user.email;
-          const userType = user.type;
           console.log('Current user: ' + name);
         }
       });
@@ -58,14 +59,16 @@ export class PlayerDetailsPage {
         {
           text: 'Continue',
           handler: data => {
-            this.afd.list('/users').remove(this.uid); // still need to test
+            this.afd.list('/users/').remove(this.afa.auth.currentUser.uid); // works!!!
+            this.afa.auth.currentUser.delete().then(thing => {
+              console.log("This is the end........");
+              this.navCtrl.setRoot(LoginPage);
+            });
           }
         },
         {
           text: 'Cancel',
-          handler: data => {
-            // do nothing
-          }
+          role: 'cancel'
         }
       ]
     });

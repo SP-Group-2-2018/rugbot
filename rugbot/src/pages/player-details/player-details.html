@@ -24,25 +24,24 @@
     <br>
     <ion-list>
       <ion-item>
-        <ion-label color="primary">First Name</ion-label>
+        <ion-label color="primary" fixed>First Name</ion-label>
         <ion-input placeholder={{fname}}></ion-input>
       </ion-item>
       <ion-item>
-        <ion-label color="primary">Surname</ion-label>
+        <ion-label color="primary" fixed>Surname</ion-label>
         <ion-input placeholder={{lname}}></ion-input>
       </ion-item>
       <ion-item>
-        <ion-label color="primary">Email</ion-label>
+        <ion-label color="primary" fixed>Email</ion-label>
         <ion-input type="email" placeholder={{email}}></ion-input>
       </ion-item>
     </ion-list>
     <br>
     <p>
-      <button ion-button block (click)="attendance();">View attendance history</button>
+      <!-- <button ion-button block (click)="attendance();">View attendance history</button> -->
       <button ion-button block (click)="editUser();">edit details</button>
       <button ion-button block color="danger" (click)="deleteUser();">Delete</button>
     </p>
   </div>
   <br>
-  <hr>
 </ion-content>
