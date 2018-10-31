@@ -27,6 +27,7 @@ export class RegisterPage {
       email: ['', Validators.compose([Validators.required, EmailValidator.isValid])],
       name: ['', Validators.required],
       surname: ['', Validators.required],
+      type: [],
       password: ['', Validators.compose([Validators.minLength(6), Validators.required])],
       passwordConfirm: ['', Validators.required],
     }, {validator: this.matchPassword('password', 'passwordConfirm')});
@@ -46,6 +47,17 @@ export class RegisterPage {
         ]
       });
       alert.present();
+    } else if (!this.containType()) {
+      let alert = this.alertCtrl.create({
+        message: "No user type selected.",
+        buttons: [
+          {
+            text: "Ok",
+            role: 'cancel'
+          }
+        ]
+      });
+      alert.present();
     } else {
       this.auth.registerUser(this.registerForm.value.email, this.registerForm.value.password)
         .then(auth => {
@@ -57,7 +69,7 @@ export class RegisterPage {
             statusColour: "",
             name: this.registerForm.value.name + "",
             surname: this.registerForm.value.surname + "",
-            type: "", //this.registerForm.value.type + 
+            type: this.registerForm.value.type + "", 
             comment: "",
             playDate: "",
           });
@@ -94,6 +106,14 @@ export class RegisterPage {
           mismatchedPasswords: true
         };
       }
+    }
+  }
+
+  containType(): boolean {
+    if (this.registerForm.value.type === null || this.registerForm.value.type === '') {
+      return false;
+    } else {
+      return true;
     }
   }
 

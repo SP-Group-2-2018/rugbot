@@ -35,6 +35,15 @@
     </ion-item>
 
     <ion-item>
+      <ion-label floating>Type</ion-label>
+      <ion-select #type formControlName="type" type="type">
+        <ion-option value="player">Player</ion-option>
+        <ion-option value="coach">Coach</ion-option>
+        <ion-option value="physio">Physio</ion-option>
+      </ion-select> 
+    </ion-item>
+
+    <ion-item>
       <ion-label floating>Password</ion-label>
       <ion-input #password formControlName="password" type="password" [class.invalid]="!registerForm.controls.password.valid && registerForm.controls.password.dirty"></ion-input>
     </ion-item>
