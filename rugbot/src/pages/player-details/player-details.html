@@ -17,23 +17,23 @@
 <ion-content>
   <div class="card">
     <img src="assets/imgs/logo.png" alt="{{name}}" style="width:100%">
-    <h1>{{name}}</h1>
-    <p class="title">{{type}}</p>
+    <!-- <h1>{{name}}</h1>
+    <p class="title">{{type}}</p> -->
     <br>
     <p>W.P. Rugby Academy</p>
     <br>
     <ion-list>
       <ion-item>
         <ion-label color="primary" fixed>First Name</ion-label>
-        <ion-input placeholder={{fname}}></ion-input>
+        <ion-input [(ngModel)]="nameEdit" [ngModelOptions]="{standalone: true}" placeholder={{fname}}></ion-input>
       </ion-item>
       <ion-item>
         <ion-label color="primary" fixed>Surname</ion-label>
-        <ion-input placeholder={{lname}}></ion-input>
+        <ion-input [(ngModel)]="surnameEdit" [ngModelOptions]="{standalone: true}" placeholder={{lname}}></ion-input>
       </ion-item>
       <ion-item>
         <ion-label color="primary" fixed>Email</ion-label>
-        <ion-input type="email" placeholder={{email}}></ion-input>
+        <ion-input [(ngModel)]="emailEdit" [ngModelOptions]="{standalone: true}" type="email" placeholder={{email}}></ion-input>
       </ion-item>
     </ion-list>
     <br>

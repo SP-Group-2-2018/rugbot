@@ -8,12 +8,18 @@ import { PlayerAttendencePage } from '../player-attendence/player-attendence';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { LoginPage } from '../login/login';
 
+import { EmailValidator } from '../../validators/email';
+
 @IonicPage()
 @Component({
   selector: 'page-player-details',
   templateUrl: 'player-details.html',
 })
 export class PlayerDetailsPage {
+
+  nameEdit: string;
+  surnameEdit: string;
+  emailEdit: string;
 
   uid = "";
   fname = "";
@@ -32,13 +38,14 @@ export class PlayerDetailsPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad PlayerDetailsPage');
 
-    const email = this.afa.auth.currentUser.email + "";
+    let email = this.afa.auth.currentUser.email + "";
+    this.uid = this.afa.auth.currentUser.uid;
 
     this.afd.list('/users',
       ref => ref.orderByChild('email').equalTo(email)).valueChanges()
       .subscribe((data: any) => {
         for (let user of data) {
-          const name = user.name + " " + user.surname;
+          let name = user.name + " " + user.surname;
           this.fname = user.name;
           this.lname = user.surname;
           this.email = user.email;
@@ -48,7 +55,33 @@ export class PlayerDetailsPage {
   }
 
   editUser() {
-
+    let alert = this.alertCtrl.create({
+      title: 'Are you sure?',
+      subTitle: "You are changing your personal details. This cannot be undone.",
+      buttons: [
+        {
+          text: 'Continue',
+          handler: data => {
+            // console.log(this.nameEdit);
+            if (this.nameEdit == null || this.nameEdit == '') {
+              this.nameEdit = this.fname;
+            }
+            if (this.surnameEdit == null || this.surnameEdit == '') {
+              this.surnameEdit = this.lname;
+            }
+            if (this.emailEdit == null || this.emailEdit == '') {
+              this.emailEdit = this.email;
+            }
+            this.afd.list('/users/').update(this.uid, {
+              email: this.emailEdit,
+              name: this.nameEdit,
+              surname: this.surnameEdit
+            });
+          }
+        }
+      ]
+    });
+    alert.present();
   }
 
   deleteUser() {
