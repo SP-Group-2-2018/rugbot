@@ -15,6 +15,7 @@ import { AttendenceHistoryPage } from '../attendence-history/attendence-history'
 import { OtherPage } from '../other/other';
 
 import { MenuController, ToastController } from 'ionic-angular';
+import { Observable } from 'rxjs';
 
 @IonicPage()
 @Component({
