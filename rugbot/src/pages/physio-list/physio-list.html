@@ -16,11 +16,11 @@
 
 <ion-content padding>
 
-  <ion-searchbar class="searchBoxInput" *ngIf="isSearchbarOpened" showCancelButton="true" [(ngModel)]="searchTerm" [formControl]="searchControl" (ionInput)="onSearchInput()" (ionCancel)="isSearchbarOpened=false"></ion-searchbar>
+  <!-- <ion-searchbar class="searchBoxInput" *ngIf="isSearchbarOpened" showCancelButton="true" [(ngModel)]="searchTerm" [formControl]="searchControl" (ionInput)="onSearchInput()" (ionCancel)="isSearchbarOpened=false"></ion-searchbar>
   <ion-buttons end>
     <button class="searchBtn" ion-button icon-only *ngIf="!isSearchbarOpened" (click)="isSearchbarOpened=true">
     </button>
-  </ion-buttons>
+  </ion-buttons> -->
 
   <div *ngIf="searching" class="spinner-container">
     <ion-spinner></ion-spinner>

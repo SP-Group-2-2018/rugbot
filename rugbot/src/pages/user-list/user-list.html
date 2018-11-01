@@ -16,7 +16,7 @@
 <ion-content>
   <ul>
     <li *ngFor="let user of (users | async)">
-      {{user.name}} {{user.surname}}
+      <a (click)="details(user);">{{user.name}} {{user.surname}}</a>
     </li>
   </ul>
 

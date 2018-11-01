@@ -49,4 +49,8 @@ export class UserListPage {
     this.users = this.afd.list('/users',
       ref => ref.orderByChild('type').equalTo("coach")).valueChanges();
   }
+
+  details(user) {
+    this.navCtrl.push(PlayerDetailsPage);
+  }
 }
