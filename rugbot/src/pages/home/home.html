@@ -7,7 +7,8 @@
     <ion-title>Home</ion-title>
   </ion-navbar>
 
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+    crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </ion-header>
@@ -39,6 +40,12 @@
     <h1>{{name}}</h1>
     <p class="title">{{userType}}</p>
     <br>
+
+    <button [hidden]="buttonStatusCoach()" ion-button block round (click)="showCoach()" color="light">Register</button>
+    <button [hidden]="buttonStatusTest()" ion-button block round (click)="test()" color="light">attendance</button>
+    <button [hidden]="buttonStatusCalendar()" ion-button block round (click)="showCalendar()" color="light">Calendar</button>
+    <button [hidden]="buttonStatusPhysio()" ion-button block round (click)="showPhysio()" color="light">physio</button>
+    <button ion-button block round (click)="userDetails()" color="light">User Details</button>
     <p>W.P. Rugby Academy</p>
   </div>
 
