@@ -35,7 +35,7 @@ export class CoachListPage {
 
   searchUser(searchTerm) {
     this.users = this.afd.list('/users',
-    ref => ref.orderByChild('name').equalTo(searchTerm)).valueChanges();
+      ref => ref.orderByChild('name').equalTo(searchTerm)).valueChanges();
 
     // this.attendance = this.afd.list('/attendance',
     //   ref => ref.orderByChild('date').equalTo(this.date + "")).valueChanges();
@@ -86,7 +86,7 @@ export class CoachListPage {
 
 
   userDetails(user) {
-    this.navCtrl.push(PlayerDetailsPage, {user: user.uid});
+    this.navCtrl.push(PlayerDetailsPage, { user: user.uid });
   }
 
   ionViewDidLoad() {
@@ -95,9 +95,7 @@ export class CoachListPage {
     this.attendance = this.afd.list('/attendance',
       ref => ref.orderByChild('date').equalTo(this.date + "")).valueChanges();
 
-
-    let email = "stefbuys21@gmail.com"; // TODO
-    // let email = this.afa.auth.currentUser.email + "";
+    let email = this.afa.auth.currentUser.email + "";
 
     this.afd.list('/users',
       ref => ref.orderByChild('email').equalTo(email)).valueChanges()

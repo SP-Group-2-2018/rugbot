@@ -97,9 +97,7 @@ export class MatchDayPage {
     this.teams = this.afd.list('/teams',
       ref => ref.orderByChild('evtid').equalTo(this.evtid + "")).valueChanges();
 
-
-    let email = "stefbuys21@gmail.com"; // TODO
-    // let email = this.afa.auth.currentUser.email + "";
+    let email = this.afa.auth.currentUser.email + "";
 
     this.afd.list('/users',
       ref => ref.orderByChild('email').equalTo(email)).valueChanges()

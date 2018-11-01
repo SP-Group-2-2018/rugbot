@@ -36,7 +36,6 @@ export class HomePage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad HomePage');
 
-    // let email = "stefbuys21@gmail.com"; // TODO
     this.uid = this.afa.auth.currentUser.uid + "";
 
     this.afd.list('/users',

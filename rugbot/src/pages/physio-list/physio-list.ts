@@ -32,7 +32,6 @@ export class PhysioListPage {
     this.users = this.afd.list('/users/', reg =>
       reg.orderByChild('type').equalTo('player')).valueChanges();
 
-    // let email = "stefbuys21@gmail.com"; // TODO
     let email = this.afa.auth.currentUser.email + "";
 
     this.afd.list('/users',
