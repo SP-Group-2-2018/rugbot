@@ -25,6 +25,7 @@ export class HomePage {
 
   name = "Welcome!"; // tmp message for loading
   userType = "";
+  uid = "";
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
     public afa: AngularFireAuth, public menuCtrl: MenuController,
@@ -36,10 +37,10 @@ export class HomePage {
     console.log('ionViewDidLoad HomePage');
 
     // let email = "stefbuys21@gmail.com"; // TODO
-    const email = this.afa.auth.currentUser.email + "";
+    this.uid = this.afa.auth.currentUser.uid + "";
 
     this.afd.list('/users',
-      ref => ref.orderByChild('email').equalTo(email)).valueChanges()
+      ref => ref.orderByChild('uid').equalTo(this.uid)).valueChanges()
       .subscribe((data: any) => {
         for (let user of data) {
           this.name = user.name + " " + user.surname;
@@ -136,11 +137,11 @@ export class HomePage {
 
   }
 
-  mailto(email) {
+  userDetails() {
     // this.plt.ready().then(() => {
     //   window.open('mailto:' + email);
     // });
-    this.navCtrl.push(PlayerDetailsPage);
+    this.navCtrl.push(PlayerDetailsPage, {user: this.uid});
   }
 
   misc() {
