@@ -33,13 +33,17 @@ export class PlayerDetailsPage {
     // this.fname = navParams.get('fname');
     // this.lname = navParams.get('lname');
     // this.email = navParams.get('email');
+    this.uid = this.navParams.get('user');
+    console.log(this.uid);
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad PlayerDetailsPage');
 
-    let email = this.afa.auth.currentUser.email + "";
-    this.uid = this.afa.auth.currentUser.uid;
+    // let email = this.afa.auth.currentUser.email + "";
+    // if (this.uid == '' || this.uid == null) {
+    //   this.uid = this.afa.auth.currentUser.uid;
+    // }
 
     this.afd.list('/users',
       ref => ref.orderByChild('uid').equalTo(this.uid)).valueChanges()
@@ -115,27 +119,41 @@ export class PlayerDetailsPage {
   }
 
   deleteUser() {
-    let alert = this.alertCtrl.create({
-      title: 'Are you sure?',
-      subTitle: "This action cannot be undone!", //!!",
-      buttons: [
-        {
-          text: 'Continue',
-          handler: data => {
-            this.afd.list('/users/').remove(this.afa.auth.currentUser.uid); // works!!!
-            this.afa.auth.currentUser.delete().then(thing => {
-              console.log("This is the end........");
-              this.navCtrl.setRoot(LoginPage);
-            });
+    if (this.uid == this.afa.auth.currentUser.uid) {
+      let alert = this.alertCtrl.create({
+        title: 'Are you sure?',
+        subTitle: "This action cannot be undone!", //!!",
+        buttons: [
+          {
+            text: 'Continue',
+            handler: data => {
+              this.afd.list('/users/').remove(this.uid); // works!!!
+              this.afa.auth.currentUser.delete().then(thing => {
+                console.log("This is the end........");
+                this.navCtrl.setRoot(LoginPage);
+              });
+            }
+          },
+          {
+            text: 'Cancel',
+            role: 'cancel'
           }
-        },
-        {
-          text: 'Cancel',
-          role: 'cancel'
-        }
-      ]
-    });
-    alert.present();
+        ]
+      });
+      alert.present();
+    } else {
+      let alert = this.alertCtrl.create({
+        title: 'Cannot delete user',
+        subTitle: "Only account owner can delete account.",
+        buttons: [
+          {
+            text: 'Ok',
+            role: 'cancel'
+          }
+        ]
+      });
+      alert.present();
+    }
   }
 
   sendEmail() {
