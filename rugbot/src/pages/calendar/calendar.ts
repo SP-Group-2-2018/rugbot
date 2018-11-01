@@ -12,6 +12,8 @@ import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
 })
 export class CalendarPage {
 
+  isCoach = false;
+
   events: AngularFireList<any>;
 
   eventSource = [];
@@ -30,6 +32,16 @@ export class CalendarPage {
   ionViewDidLoad() {
     this.events = this.afd.list('events');
 
+    this.afd.list('/users',
+      ref => ref.orderByChild('email').equalTo(email)).valueChanges()
+      .subscribe((data: any) => {
+        for (let user of data) {
+          console.log('User type ' + user.type + " (" + (user.type == 'coach') + ")");
+          this.isCoach = user.type.toLowerCase() == 'coach';
+        }
+      });
+
+    let email = this.afa.auth.currentUser.email + "";
     this.afd.list('/events').valueChanges()
       .subscribe((data: any) => {
         for (let eventData of data) {
@@ -48,6 +60,16 @@ export class CalendarPage {
   }
 
   addEvent() {
+    if (!this.isCoach) {
+      let alert = this.alertCtrl.create({
+        title: 'Access Denied',
+        subTitle: 'This field can only be edited by coaches.',
+        buttons: ['Close']
+      });
+      alert.present();
+      return;
+    }
+
     let modal = this.modalCtrl.create('EventModalPage', {
       selectedDay: this.selectedDay
     });
@@ -97,7 +119,7 @@ export class CalendarPage {
         }
       });
 
-      this.navCtrl.pop();
+    this.navCtrl.pop();
   }
 
   onTitleChanged(title) {
@@ -105,23 +127,10 @@ export class CalendarPage {
   }
 
   onEventSelected(event) {
-    // let start = moment(event.startTime).format('LLLL');
-    // let end = moment(event.endTime).format('LLLL');
-    //
-    // let alert = this.alertCtrl.create({
-    //   title: '' + event.title,
-    //   subTitle: 'From: ' + start + '<br>To: ' + end,
-    //   buttons: ['OK']
-    // })
-    // alert.present();
     this.navCtrl.push(MatchDayPage, { 'evtid': event.uid });
   }
 
   onTimeSelected(ev) {
     this.selectedDay = ev.selectedTime;
   }
-
-  // genFBID() {
-  //   return Math.floor(Math.random() * 9999999) + 1000000;
-  // }
 }
