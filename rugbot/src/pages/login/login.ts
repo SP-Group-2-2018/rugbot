@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, LoadingController, Loading, AlertController } from 'ionic-angular';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AuthProvider } from '../../providers/auth/auth';
+import { AngularFireAuth } from '@angular/fire/auth';
+
 
 import { HomePage } from '../home/home';
 import { RegisterPage } from '../register/register';
@@ -18,7 +20,10 @@ export class LoginPage {
   loginForm: FormGroup;
   loading: Loading;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public auth: AuthProvider, public FormBuilder: FormBuilder, public alertCtrl: AlertController, public loadingCtrl: LoadingController) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,
+    public auth: AuthProvider, public FormBuilder: FormBuilder,
+    public alertCtrl: AlertController, public loadingCtrl: LoadingController,
+    public afa: AngularFireAuth) {
     this.loginForm = FormBuilder.group({
       email: ['', Validators.compose([Validators.required, EmailValidator.isValid])],
       password: ['', Validators.compose([Validators.minLength(6), Validators.required])]

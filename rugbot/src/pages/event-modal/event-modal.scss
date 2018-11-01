@@ -1,1 +1,6 @@
-page-event-modal {}
+page-event-modal {
+  ion-content {
+    background-image: none;
+    background-color: #f6f6f6;
+  }
+}

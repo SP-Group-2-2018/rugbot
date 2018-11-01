@@ -78,10 +78,11 @@ ion-label {
 ion-input {
   padding: 5px;
 }
-
-.ion-content {
-  background-image: url("assets/imgs/edgar-pimenta-539077-unsplash.jpg");
-}
+// Did nothing
+// .ion-content {
+//   background-image: url("../assets/imgs/edgar-pimenta-539077-unsplash.jpg") !important;
+// }
+// --
 
 ::-webkit-input-placeholder {
   color: black !important;
@@ -124,7 +125,8 @@ img {
 }
 
 .title {
-  color: grey;
+  color: black;
+  opacity: 0.8;
   font-size: 18px;
 }
 
@@ -147,5 +149,13 @@ ul li {
   border: 1px solid #ddd;
   margin-top: -1px;
   background-color: #f6f6f6;
-  padding: 12px;
+  // padding: 12px;
+}
+
+.page {
+  background-image: url("../assets/imgs/edgar-pimenta-539077-unsplash.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
 }

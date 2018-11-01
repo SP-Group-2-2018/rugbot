@@ -6,6 +6,7 @@ import { PlayerDetailsPage } from '../player-details/player-details';
 
 import { AlertController } from 'ionic-angular'
 import { Observable } from 'rxjs';
+import { AngularFireAuth } from '@angular/fire/auth';
 
 @IonicPage()
 @Component({
@@ -21,7 +22,8 @@ export class PhysioListPage {
   date: Date = new Date();
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
-    public afd: AngularFireDatabase, private alertCtrl: AlertController) {
+    public afd: AngularFireDatabase, private alertCtrl: AlertController,
+    public afa: AngularFireAuth) {
 
     this.tasks = afd.list('users');
   }
@@ -30,8 +32,8 @@ export class PhysioListPage {
     this.users = this.afd.list('/users/', reg =>
       reg.orderByChild('type').equalTo('player')).valueChanges();
 
-    let email = "stefbuys21@gmail.com"; // TODO
-    // let email = this.afa.auth.currentUser.email + "";
+    // let email = "stefbuys21@gmail.com"; // TODO
+    let email = this.afa.auth.currentUser.email + "";
 
     this.afd.list('/users',
       ref => ref.orderByChild('email').equalTo(email)).valueChanges()

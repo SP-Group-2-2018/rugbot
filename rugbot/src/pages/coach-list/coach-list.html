@@ -17,9 +17,9 @@
 <ion-content padding>
   <div style="overflow-x:auto;">
 
-    <ion-searchbar [(ngModel)]="myInput" [showCancelButton]="shouldShowCancel" (ionInput)="searchUser($event)"
-        (ionCancel)="onCancel($event)">
-      </ion-searchbar>
+    <!-- <ion-searchbar [(ngModel)]="myInput" [showCancelButton]="shouldShowCancel" (ionInput)="searchUser($event)"
+(ionCancel)="onCancel($event)">
+</ion-searchbar> -->
 
     <ion-item>
       <ion-label>Date</ion-label>
@@ -37,7 +37,7 @@
         <th align="center">Level of Injury</th>
       </tr>
 
-      
+
 
       <tr *ngFor="let user of (users | async)">
         <td align="center">
