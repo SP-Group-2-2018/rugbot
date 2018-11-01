@@ -37,7 +37,7 @@ export class PhysioListPage {
       ref => ref.orderByChild('email').equalTo(email)).valueChanges()
       .subscribe((data: any) => {
         for (let user of data) {
-          console.log('User type ' + user.userType.toLowerCase() + " (" + (user.userType == 'physio') + ")");
+          console.log('User type ' + user.type.toLowerCase() + " (" + (user.type == 'physio') + ")");
           this.isPhysio = user.type.toLowerCase() == 'physio';
         }
       });
