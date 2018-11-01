@@ -22,10 +22,10 @@
         <button [hidden]="buttonStatusTest()" ion-button full (click)="test()">attendance</button>
         <button [hidden]="buttonStatusCalendar()" ion-button full (click)="showCalendar()">Calendar</button>
         <button ion-button full (click)="userDetails()">User Details</button>
-        <br>
-        <button ion-button full (click)="misc()">Other</button>
+        <hr>
         <button ion-button full (click)="userList()">Users</button>
-        <br>
+        <button ion-button full (click)="misc()">About</button>
+        <hr>
         <button ion-button full (click)="logout()">Logout</button>
         <button ion-button full (click)="exit()">Exit</button>
       </ion-list>
@@ -45,7 +45,7 @@
     <button [hidden]="buttonStatusTest()" ion-button block round (click)="test()" color="light">attendance</button>
     <button [hidden]="buttonStatusCalendar()" ion-button block round (click)="showCalendar()" color="light">Calendar</button>
     <button [hidden]="buttonStatusPhysio()" ion-button block round (click)="showPhysio()" color="light">physio</button>
-    <button ion-button block round (click)="userDetails()" color="light">User Details</button>
+    <!-- <button ion-button block round (click)="userDetails()" color="light">User Details</button> -->
     <p>W.P. Rugby Academy</p>
   </div>
 

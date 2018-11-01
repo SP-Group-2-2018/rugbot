@@ -11,8 +11,8 @@ import { PlayerAttendencePage } from '../player-attendence/player-attendence';
 import { CalendarPage } from '../calendar/calendar';
 import { PlayerDetailsPage } from '../player-details/player-details';
 import { AttendenceHistoryPage } from '../attendence-history/attendence-history';
-import { OtherPage } from '../other/other';
 import { UserListPage } from '../user-list/user-list';
+import { AboutPage } from '../about/about';
 
 import { MenuController, ToastController } from 'ionic-angular';
 
@@ -144,7 +144,7 @@ export class HomePage {
   }
 
   misc() {
-    this.navCtrl.push(OtherPage);
+    this.navCtrl.push(AboutPage);
   }
 
   exit() {
