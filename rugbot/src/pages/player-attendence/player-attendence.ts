@@ -13,6 +13,8 @@ import { PlayerDetailsPage } from '../player-details/player-details';
 })
 export class PlayerAttendencePage {
 
+  email = "";
+
   firstName = "test first Name";
   surname = "test surname";
 
@@ -20,15 +22,27 @@ export class PlayerAttendencePage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
     public afd: AngularFireDatabase) {
+    this.email = navParams.get("email");
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad PlayerAttendencePage');
   }
 
-  // TODO
   ngOnInit() {
+    let uid = "";
+
+    this.afd.list('/users',
+      ref => ref.orderByChild('email').equalTo(this.email)).valueChanges()
+      .subscribe((data: any) => {
+        for (let user of data) {
+          uid = user.uid;
+          this.firstName = user.name;
+          this.surname = user.surname;
+        }
+      });
+
     this.users = this.afd.list('/attendance',
-      ref => ref.orderByChild('uid').equalTo("s9M4Jr8DczSUbADBiq3HP1tTup33")).valueChanges();
+      ref => ref.orderByChild('uid').equalTo(uid)).valueChanges();
   }
 }

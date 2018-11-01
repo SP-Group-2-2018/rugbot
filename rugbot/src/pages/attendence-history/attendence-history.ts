@@ -26,10 +26,10 @@ export class AttendenceHistoryPage {
   }
 
   history(player) {
-    this.navCtrl.push(PlayerAttendencePage);
+    this.navCtrl.push(PlayerAttendencePage, { email: player.email });
   }
 
   details(player) {
-    this.navCtrl.push(PlayerDetailsPage, {user: player.uid});
+    this.navCtrl.push(PlayerDetailsPage, { user: player.uid });
   }
 }

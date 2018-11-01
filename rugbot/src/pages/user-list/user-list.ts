@@ -50,6 +50,6 @@ export class UserListPage {
   }
 
   details(user) {
-    this.navCtrl.push(PlayerDetailsPage);
+    this.navCtrl.push(PlayerDetailsPage, { user: user.uid });
   }
 }

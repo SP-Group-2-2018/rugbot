@@ -87,7 +87,7 @@ export class MatchDayPage {
 
 
   userDetails(user) {
-    this.navCtrl.push(PlayerDetailsPage);
+    this.navCtrl.push(PlayerDetailsPage, { user: player.uid });
   }
 
   ionViewDidLoad() {
