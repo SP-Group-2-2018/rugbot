@@ -1,14 +1,12 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, ModalController, Platform, AlertController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, Platform, AlertController } from 'ionic-angular';
 
 import { AngularFireDatabase } from 'angularfire2/database';
-import { Observable } from 'rxjs/Observable';
 
 import { PlayerAttendencePage } from '../player-attendence/player-attendence';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { LoginPage } from '../login/login';
 
-import { EmailValidator } from '../../validators/email';
 
 @IonicPage()
 @Component({
