@@ -35,10 +35,10 @@ export class HomePage {
     console.log('ionViewDidLoad HomePage');
 
     // let email = "stefbuys21@gmail.com"; // TODO
-    const email = this.afa.auth.currentUser.email + "";
+    let uid = this.afa.auth.currentUser.uid + "";
 
     this.afd.list('/users',
-      ref => ref.orderByChild('email').equalTo(email)).valueChanges()
+      ref => ref.orderByChild('uid').equalTo(uid)).valueChanges()
       .subscribe((data: any) => {
         for (let user of data) {
           this.name = user.name + " " + user.surname;

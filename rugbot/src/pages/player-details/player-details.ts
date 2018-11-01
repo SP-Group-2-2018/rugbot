@@ -42,7 +42,7 @@ export class PlayerDetailsPage {
     this.uid = this.afa.auth.currentUser.uid;
 
     this.afd.list('/users',
-      ref => ref.orderByChild('email').equalTo(email)).valueChanges()
+      ref => ref.orderByChild('uid').equalTo(this.uid)).valueChanges()
       .subscribe((data: any) => {
         for (let user of data) {
           let name = user.name + " " + user.surname;
@@ -52,6 +52,15 @@ export class PlayerDetailsPage {
           console.log('Current user: ' + name);
         }
       });
+  }
+
+  validateEmail(email): boolean {
+    var isValid: boolean;
+
+    let re = new RegExp(/^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/);
+
+    isValid = re.test(email);
+    return isValid;
   }
 
   editUser() {
@@ -71,13 +80,34 @@ export class PlayerDetailsPage {
             }
             if (this.emailEdit == null || this.emailEdit == '') {
               this.emailEdit = this.email;
+            } else if (!this.validateEmail(this.emailEdit)) {
+              let alert = this.alertCtrl.create({
+                title: "Invalid email",
+                subTitle: "Enter an email with valid format.",
+                buttons: [
+                  {
+                    text: "Ok",
+                    role: 'cancel'
+                  }
+                ]
+              });
+              alert.present();
+              this.emailEdit = this.email;
             }
+
             this.afd.list('/users/').update(this.uid, {
               email: this.emailEdit,
               name: this.nameEdit,
               surname: this.surnameEdit
             });
+            this.nameEdit = null;
+            this.surnameEdit = null;
+            this.emailEdit = null;
           }
+        },
+        {
+          text: "Cancel",
+          role: 'cancel'
         }
       ]
     });
