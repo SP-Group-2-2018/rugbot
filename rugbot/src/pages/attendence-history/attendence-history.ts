@@ -31,6 +31,6 @@ export class AttendenceHistoryPage {
   }
 
   details(player) {
-    this.navCtrl.push(PlayerDetailsPage);
+    this.navCtrl.push(PlayerDetailsPage, {user: player.uid});
   }
 }
