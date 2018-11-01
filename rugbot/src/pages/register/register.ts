@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, LoadingController, Loading, AlertController  } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, LoadingController, Loading, AlertController } from 'ionic-angular';
 
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AuthProvider } from '../../providers/auth/auth';
@@ -21,8 +21,9 @@ export class RegisterPage {
   loading: Loading;
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
-     public auth: AuthProvider, public afd: AngularFireDatabase, public afa: AngularFireAuth, public FormBuilder: FormBuilder,
-     public alertCtrl: AlertController, public loadingCtrl: LoadingController) {
+    public auth: AuthProvider, public afd: AngularFireDatabase,
+    public afa: AngularFireAuth, public FormBuilder: FormBuilder,
+    public alertCtrl: AlertController, public loadingCtrl: LoadingController) {
     this.registerForm = FormBuilder.group({
       email: ['', Validators.compose([Validators.required, EmailValidator.isValid])],
       name: ['', Validators.required],
@@ -30,7 +31,7 @@ export class RegisterPage {
       type: [],
       password: ['', Validators.compose([Validators.minLength(6), Validators.required])],
       passwordConfirm: ['', Validators.required],
-    }, {validator: this.matchPassword('password', 'passwordConfirm')});
+    }, { validator: this.matchPassword('password', 'passwordConfirm') });
   }
 
   registerUser() {
@@ -69,7 +70,7 @@ export class RegisterPage {
             statusColour: "",
             name: this.registerForm.value.name + "",
             surname: this.registerForm.value.surname + "",
-            type: this.registerForm.value.type + "", 
+            type: this.registerForm.value.type + "",
             comment: "",
             playDate: "",
           });
@@ -97,7 +98,7 @@ export class RegisterPage {
   }
 
   matchPassword(password: string, passwordConfirm: string) {
-    return (group: FormGroup): {[key: string]: any} => {
+    return (group: FormGroup): { [key: string]: any } => {
       let pass = group.controls[password];
       let passCon = group.controls[passwordConfirm];
 
