@@ -39,7 +39,7 @@ export class MatchDayPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
     private alertCtrl: AlertController, public afd: AngularFireDatabase,
-    private toaster: ToastController) {
+    private toaster: ToastController, public afa: AngularFireAuth) {
     this.evtid = navParams.get("evtid");
   }
 

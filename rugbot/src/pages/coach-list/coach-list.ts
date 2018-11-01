@@ -1,12 +1,10 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { AlertController } from 'ionic-angular';
-
 import { PlayerDetailsPage } from '../player-details/player-details';
-
+import { AngularFireAuth } from '@angular/fire/auth';
 import { AngularFireDatabase } from 'angularfire2/database';
 import { Observable } from 'rxjs/Observable';
-
 import { ToastController } from 'ionic-angular';
 
 @IonicPage()
@@ -30,7 +28,7 @@ export class CoachListPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
     private alertCtrl: AlertController, public afd: AngularFireDatabase,
-    private toaster: ToastController) {
+    private toaster: ToastController, public afa: AngularFireAuth) {
   }
 
   searchUser(searchTerm) {
