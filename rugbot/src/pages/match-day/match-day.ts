@@ -133,7 +133,7 @@ export class MatchDayPage {
     return false;
   }
 
-  setNumber(player) {
+  setNumber(user) {
     if (!this.isCoach) {
       let alert = this.alertCtrl.create({
         title: 'Access Denied',
@@ -156,11 +156,25 @@ export class MatchDayPage {
           text: 'Submit',
           role: 'ok',
           handler: data => {
+            console.log("jersey num: " + data.num);
 
+            let id = this.evtid + " " + user.uid;
+            this.afd.list('/teams/').update(id,
+              { evtid: this.evtid + "", plyid: user.uid, num: data.num });
           }
         }
       ]
     });
     alert.present();
+  }
+
+  getNum(user) {
+    for (let i of this.marks) {
+      console.log(i.uid + " sdf " + user.uid);
+      if (i.plyid == user.uid) {
+        return i.num;
+      }
+    }
+    return "";
   }
 }

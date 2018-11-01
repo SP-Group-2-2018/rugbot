@@ -30,7 +30,7 @@
       </td>
       <td>{{ user.surname }}<br>{{ user.name }}</td>
       <td>
-        <button ion-button full (click)="setNumber(user);">num</button>
+        <button ion-button full (click)="setNumber(user);" color="light">{{ getNum(user) }}</button>
       </td>
       <td>
         <button ion-button full (click)="statusDetails(user);" color="{{user.statusColour}}">{{user.status}}</button>
