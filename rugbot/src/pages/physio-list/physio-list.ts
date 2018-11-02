@@ -61,11 +61,11 @@ export class PhysioListPage {
         {
           // value: user.status,
           name: 'comment',
-          placeholder: 'comment...'
+          placeholder: 'Comment...'
         },
         {
           name: 'playDate',
-          placeholder: 'Ready for practise',
+          placeholder: 'Estimate date ready for practise',
           type: 'date'
         }
       ],

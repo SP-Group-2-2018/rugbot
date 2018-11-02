@@ -152,6 +152,6 @@ export class HomePage {
   }
 
   userList() {
-    this.navCtrl.push(UserListPage);
+    this.navCtrl.push(UserListPage, {type: this.userType});
   }
 }

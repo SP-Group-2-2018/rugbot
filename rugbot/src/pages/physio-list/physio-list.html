@@ -30,17 +30,17 @@
     <table>
 
       <tr>
-        <th align="center">Name</th>
+        <th align="left">Name</th>
         <!-- <th>Email</th> -->
         <th align="center">Level of Injury</th>
-        <th align="center">Comment</th>
+        <th align="left">Comment</th>
       </tr>
 
       <tr *ngFor="let user of users | async">
-        <td><a (click)="userDetails(user)">{{ user.surname }}, {{ user.name }}</a></td>
+        <td>{{ user.surname }}, {{ user.name }}</td>
         <!-- <td>{{ user.email }}</td> -->
         <td>
-          <button full ion-button (click)="edit(user);" color="{{user.statusColour}}">{{user.status}}</button>
+          <button block round ion-button (click)="edit(user);" color="{{user.statusColour}}">{{user.status}}</button>
         </td>
         <td>{{user.comment}}</td>
       </tr>

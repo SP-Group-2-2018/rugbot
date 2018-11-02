@@ -8,31 +8,37 @@
     </button>
     <ion-title>User List</ion-title>
 
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+      crossorigin="anonymous">
   </ion-navbar>
 
+
+  <ion-toolbar>
+    <ion-segment>
+      <ion-segment-button (click)="players();">
+        Players
+      </ion-segment-button>
+      <ion-segment-button (click)="coaches();">
+        coaches
+      </ion-segment-button>
+      <ion-segment-button (click)="physios();">
+        Physios
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ul>
-    <li *ngFor="let user of (users | async)">
-      <a (click)="details(user);">{{user.name}} {{user.surname}}</a>
-    </li>
-  </ul>
+  <table>
+    <tr *ngFor="let user of (users | async)">
+      <td>
+        {{user.name}} {{user.surname}}
+      </td>
+      <td align="right">
+        <button round ion-button [hidden]="boo" (click)="details(user);">player<br>details</button>
+      </td>
+    </tr>
+  </table>
 
-  <ion-footer>
-    <ion-toolbar no-border-top>
-      <ion-segment>
-        <ion-segment-button (click)="players();">
-          Players
-        </ion-segment-button>
-        <ion-segment-button (click)="coaches();">
-          coaches
-        </ion-segment-button>
-        <ion-segment-button (click)="physios();">
-          Physios
-        </ion-segment-button>
-      </ion-segment>
-    </ion-toolbar>
-  </ion-footer>
+
 </ion-content>

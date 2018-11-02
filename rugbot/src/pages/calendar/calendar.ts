@@ -5,6 +5,7 @@ import * as moment from 'moment';
 import { MatchDayPage } from '../match-day/match-day';
 
 import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
+import { AngularFireAuth } from '@angular/fire/auth';
 
 @Component({
   selector: 'page-calendar',
@@ -26,14 +27,15 @@ export class CalendarPage {
   };
 
   constructor(public navCtrl: NavController, private modalCtrl: ModalController,
-    private alertCtrl: AlertController, public afd: AngularFireDatabase) {
+    private alertCtrl: AlertController, public afd: AngularFireDatabase, public afa: AngularFireAuth) {
   }
 
   ionViewDidLoad() {
     this.events = this.afd.list('events');
+    let uid = this.afa.auth.currentUser.uid;
 
     this.afd.list('/users',
-      ref => ref.orderByChild('email').equalTo(email)).valueChanges()
+      ref => ref.orderByChild('uid').equalTo(uid)).valueChanges()
       .subscribe((data: any) => {
         for (let user of data) {
           console.log('User type ' + user.type + " (" + (user.type == 'coach') + ")");
@@ -41,7 +43,7 @@ export class CalendarPage {
         }
       });
 
-    let email = this.afa.auth.currentUser.email + "";
+    // let email = this.afa.auth.currentUser.email + "";
     this.afd.list('/events').valueChanges()
       .subscribe((data: any) => {
         for (let eventData of data) {

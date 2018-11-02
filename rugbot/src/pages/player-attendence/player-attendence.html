@@ -7,13 +7,14 @@
       <ion-icon name="menu"></ion-icon>
     </button>
     <ion-title>Player Attendance</ion-title>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+      crossorigin="anonymous">
   </ion-navbar>
 
 </ion-header>
 
 <ion-content padding>
-  <table>
+  <!-- <table>
     <tr>
       <td>
         <b>Surname</b>
@@ -26,25 +27,26 @@
       </td>
       <td align="center">{{surname}}</td>
     </tr>
-  </table>
+  </table> -->
 
-  <br>
+  <ion-list no-lines>
+    <ion-list-header>
+      {{surname}}, {{firstName}}
+    </ion-list-header>
+    <ion-item>
+      18-02-2018
+    </ion-item>
+    <ion-item>
+      19-02-2018
+    </ion-item>
 
-  <table>
-    <tr>
-      <th>
-        <!-- thumb -->
-      </th>
-      <th align="center">Date</th>
-    </tr>
+  </ion-list>
 
-    <tr *ngFor="let user of (users | async)">
-      <td align="center">
-        <a><img src="assets/imgs/thumb-up-green.png" style="width:32px;"></a>
-      </td>
-      <td>
-        {{user.date}}
-      </td>
-    </tr>
-  </table>
+
+  <!-- <table>
+    <th>
+        {{surname}}, {{firstName}}
+    </th>
+    
+  </table> -->
 </ion-content>

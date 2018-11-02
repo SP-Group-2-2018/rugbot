@@ -6,7 +6,7 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Register</ion-title>
+    <ion-title>Rugby Players</ion-title>
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
       crossorigin="anonymous">
@@ -33,7 +33,7 @@
         <th>
           <!-- Thumb -->
         </th>
-        <th align="center">Name</th>
+        <th align="left">Name</th>
         <th align="center">Level of Injury</th>
       </tr>
 
@@ -43,9 +43,9 @@
         <td align="center">
           <a (click)="mark(user)"><img src="{{f(user) ? thumbGreen : thumbBlack}}" style="width:32px;"></a>
         </td>
-        <td><a (click)="userDetails(user);">{{ user.surname }}, {{ user.name }}</a></td>
+        <td>{{ user.surname }}, {{ user.name }}</td>
         <td>
-          <button ion-button full (click)="statusDetails(user);" color="{{user.statusColour}}">{{user.status}}</button>
+          <button ion-button block round (click)="statusDetails(user);" color="{{user.statusColour}}">{{user.status}}</button>
         </td>
       </tr>
     </table>
