@@ -29,9 +29,6 @@ export class UserListPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad UserListPage');
-
-
-
     this.players();
   }
 

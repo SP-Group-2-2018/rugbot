@@ -169,6 +169,6 @@ export class PhysioListPage {
   // }
 
   userDetails(user) {
-    this.navCtrl.push(PlayerDetailsPage, {user: user.uid});
+    this.navCtrl.push(PlayerDetailsPage, { user: user.uid });
   }
 }
