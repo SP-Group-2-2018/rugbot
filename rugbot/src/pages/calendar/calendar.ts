@@ -53,7 +53,7 @@ export class CalendarPage {
     this.afd.list('/events').valueChanges()
       .subscribe((data: any) => {
         for (let eventData of data) {
-          console.log(eventData.uid + "");
+          // console.log(eventData.uid + "");
 
           let n = this.eventSource;
           eventData.startTime = new Date(eventData.startTime);
@@ -114,7 +114,7 @@ export class CalendarPage {
     this.afd.list('/events').valueChanges()
       .subscribe((data: any) => {
         for (let eventData of data) {
-          console.log(eventData.uid + "");
+          // console.log(eventData.uid + "");
 
           let n = this.eventSource;
           eventData.startTime = new Date(eventData.startTime);
@@ -127,7 +127,7 @@ export class CalendarPage {
         }
       });
 
-    this.navCtrl.pop();
+    // this.navCtrl.pop();
   }
 
   onTitleChanged(title) {
