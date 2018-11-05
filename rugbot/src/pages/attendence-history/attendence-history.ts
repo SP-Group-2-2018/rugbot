@@ -26,7 +26,7 @@ export class AttendenceHistoryPage {
   }
 
   history(player) {
-    this.navCtrl.push(PlayerAttendencePage, { email: player.email });
+    this.navCtrl.push(PlayerAttendencePage, { uid: player.uid });
   }
 
   details(player) {

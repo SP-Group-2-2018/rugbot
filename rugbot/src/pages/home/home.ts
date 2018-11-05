@@ -35,6 +35,7 @@ export class HomePage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad HomePage');
+    // this.navCtrl.popToRoot();
 
     this.uid = this.afa.auth.currentUser.uid + "";
 
