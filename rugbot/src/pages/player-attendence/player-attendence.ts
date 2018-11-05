@@ -10,6 +10,8 @@ import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
 })
 export class PlayerAttendencePage {
 
+  title = "Player Attendance";
+
   uid = "";
   obs;
 
@@ -52,6 +54,8 @@ export class PlayerAttendencePage {
           this.surname = user.surname;
         }
       });
+
+    // this.title = this.firstName + " " + this.surname;
   }
 
   ionViewWillLeave() {

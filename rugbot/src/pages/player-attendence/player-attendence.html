@@ -6,7 +6,8 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Player Attendance</ion-title>
+    <!-- <ion-title>{{title}}</ion-title> -->
+    <ion-title>{{firstName}} {{surname}}</ion-title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
   </ion-navbar>
 
@@ -35,7 +36,7 @@
     <ion-item *ngFor="let date of dates">
       {{ date }}
     </ion-item>
-      
+
   </ion-list>
 
 
