@@ -1,10 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectorRef } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
-import { AngularFireDatabase } from 'angularfire2/database';
-import { Observable } from 'rxjs/Observable';
-
-import { PlayerDetailsPage } from '../player-details/player-details';
+import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
 
 @IonicPage()
 @Component({
@@ -13,27 +10,41 @@ import { PlayerDetailsPage } from '../player-details/player-details';
 })
 export class PlayerAttendencePage {
 
-  email = "";
+  uid = "";
+  obs;
 
   firstName = "test first Name";
   surname = "test surname";
 
-  users: Observable<any[]>;
+  users: any; //Observable<any[]>;
+  dates: any = [""]; //Observable<any[]>;
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
-    public afd: AngularFireDatabase) {
-    this.email = navParams.get("email");
+    public afd: AngularFireDatabase, private cd: ChangeDetectorRef) {
+    this.uid = navParams.get("uid");
+
+    this.obs = this.afd.list('/attendance').valueChanges().subscribe((data: any) => {
+      for (let record of data) {
+        if (record.uid == this.uid) {
+          console.log(record.date);
+          // this.dates = record.date;
+          this.dates.push(record.date);
+          this.cd.detectChanges();
+        }
+      }
+    });
   }
+
+  // ionViewDidLoad() {
+  //   console.log('ionViewDidLoad PlayerAttendencePage');
+  // }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad PlayerAttendencePage');
-  }
-
-  ngOnInit() {
+    this.dates = [""];
     let uid = "";
 
     this.afd.list('/users',
-      ref => ref.orderByChild('email').equalTo(this.email)).valueChanges()
+      ref => ref.orderByChild('uid').equalTo(this.uid)).valueChanges()
       .subscribe((data: any) => {
         for (let user of data) {
           uid = user.uid;
@@ -41,8 +52,10 @@ export class PlayerAttendencePage {
           this.surname = user.surname;
         }
       });
+  }
 
-    this.users = this.afd.list('/attendance',
-      ref => ref.orderByChild('uid').equalTo(uid)).valueChanges();
+  ionViewWillLeave() {
+    this.cd.detach();
+    this.obs.unsubscribe();
   }
 }
