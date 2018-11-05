@@ -16,6 +16,7 @@ export class CalendarPage {
   isCoach = false;
 
   events: AngularFireList<any>;
+  buttonStatus: boolean = false;
 
   eventSource = [];
   viewTitle: string;
@@ -40,6 +41,11 @@ export class CalendarPage {
         for (let user of data) {
           console.log('User type ' + user.type + " (" + (user.type == 'coach') + ")");
           this.isCoach = user.type.toLowerCase() == 'coach';
+          if (user.type.toLowerCase() == "player") {
+            this.buttonStatus = true;
+          } else {
+            this.buttonStatus = false;
+          }
         }
       });
 
@@ -47,7 +53,7 @@ export class CalendarPage {
     this.afd.list('/events').valueChanges()
       .subscribe((data: any) => {
         for (let eventData of data) {
-          console.log(eventData.uid + "");
+          // console.log(eventData.uid + "");
 
           let n = this.eventSource;
           eventData.startTime = new Date(eventData.startTime);
@@ -108,7 +114,7 @@ export class CalendarPage {
     this.afd.list('/events').valueChanges()
       .subscribe((data: any) => {
         for (let eventData of data) {
-          console.log(eventData.uid + "");
+          // console.log(eventData.uid + "");
 
           let n = this.eventSource;
           eventData.startTime = new Date(eventData.startTime);
@@ -121,7 +127,7 @@ export class CalendarPage {
         }
       });
 
-    this.navCtrl.pop();
+    // this.navCtrl.pop();
   }
 
   onTitleChanged(title) {
