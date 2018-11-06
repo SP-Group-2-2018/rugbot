@@ -104,6 +104,12 @@ export class HomePage {
     return true;
   }
 
+  buttonStatusPlayerAttendence(): boolean {
+    if (this.userType == 'player') {
+      return false;
+    }
+    return true;
+  }
 
   showPhysio() {
     this.navCtrl.push(PhysioListPage); //.then(res => {
@@ -153,7 +159,7 @@ export class HomePage {
     // this.plt.ready().then(() => {
     //   window.open('mailto:' + email);
     // });
-    this.navCtrl.push(PlayerDetailsPage, {user: this.uid});
+    this.navCtrl.push(PlayerDetailsPage, { user: this.uid });
   }
 
   misc() {
@@ -165,6 +171,10 @@ export class HomePage {
   }
 
   userList() {
-    this.navCtrl.push(UserListPage, {type: this.userType});
+    this.navCtrl.push(UserListPage, { type: this.userType });
+  }
+
+  playerAttendence() {
+    this.navCtrl.push(PlayerAttendencePage, { uid: this.uid });
   }
 }
