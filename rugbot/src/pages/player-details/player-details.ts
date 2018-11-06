@@ -156,7 +156,7 @@ export class PlayerDetailsPage {
 
   sendEmail() {
     this.plt.ready().then(() => {
-      window.open('mailto:stefbuys21@gmail.com');
+      window.location.href = ('mailto:stefbuys21@gmail.com');
     });
   }
 
