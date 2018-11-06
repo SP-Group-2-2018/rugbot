@@ -15,8 +15,8 @@ export class PlayerAttendencePage {
   uid = "";
   obs;
 
-  firstName = "test first Name";
-  surname = "test surname";
+  firstName = "";
+  surname = "";
 
   users: any; //Observable<any[]>;
   dates: any = [""]; //Observable<any[]>;
