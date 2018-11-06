@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, Platform, AlertController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, Platform, AlertController, ToastController } from 'ionic-angular';
 
 import { AngularFireDatabase } from 'angularfire2/database';
 
@@ -25,7 +25,7 @@ export class PlayerDetailsPage {
   email = "";
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
-    public plt: Platform, private alertCtrl: AlertController,
+    public plt: Platform, private alertCtrl: AlertController, private toaster: ToastController,
     public afd: AngularFireDatabase, public afa: AngularFireAuth) {
     // this.uid = navParams.get('uid');
     // this.fname = navParams.get('fname');
@@ -141,12 +141,21 @@ export class PlayerDetailsPage {
       alert.present();
     } else {
       let alert = this.alertCtrl.create({
-        title: 'Cannot delete user',
-        subTitle: "Only account owner can delete account.",
+        title: 'Are you sure?',
+        subTitle: "This action cannot be undone!",
         buttons: [
           {
-            text: 'Ok',
-            role: 'cancel'
+            text: 'Continue',
+            handler: data => {
+              this.afd.list('/users/').remove(this.uid);
+              this.navCtrl.pop();
+              let toast = this.toaster.create({
+                message: 'User deleted!',
+                duration: 3000,
+                position: 'center'
+              });
+              toast.present();
+            }
           }
         ]
       });
