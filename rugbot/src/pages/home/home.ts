@@ -44,17 +44,17 @@ export class HomePage {
       .subscribe((data: any) => {
         if (data.length <= 0) {
           this.logout();
-            let toast = this.toaster.create({
-              message: 'User deleted!',
-              duration: 3000,
-              position: 'center'
-            });
-            toast.present();
+          let toast = this.toaster.create({
+            message: 'User deleted!',
+            duration: 3000,
+            position: 'center'
+          });
+          toast.present();
         }
         for (let user of data) {
           this.name = user.name + " " + user.surname;
           this.userType = user.type;
-        
+
           console.log('Current user: ' + this.name);
         }
       });
@@ -66,7 +66,7 @@ export class HomePage {
     });
     toast.present();
 
-    
+
   }
 
   buttonStatusCoach(): boolean {
