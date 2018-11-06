@@ -13,7 +13,7 @@
 
 </ion-header>
 
-<ion-content padding>
+<ion-content>
   <!-- <table>
     <tr>
       <td>
@@ -29,15 +29,14 @@
     </tr>
   </table> -->
 
-  <ion-list no-lines>
+  <!-- <ion-list no-lines>
     <ion-list-header>
       {{surname}}, {{firstName}}
     </ion-list-header>
     <ion-item *ngFor="let date of dates">
       {{ date }}
     </ion-item>
-
-  </ion-list>
+  </ion-list> -->
 
 
   <!-- <table>
@@ -46,4 +45,12 @@
     </th>
 
   </table> -->
+
+  <table>
+    <tr *ngFor="let date of dates">
+      <td>
+        <strong>{{ date }}</strong>
+      </td>
+    </tr>
+  </table>
 </ion-content>
