@@ -1,0 +1,1341 @@
+commit c21ab78576b1c2aec39f646f1959e54f1b32111c
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Thu Nov 8 00:56:49 2018 +0200
+
+    Generated git log
+
+commit 16a6b7c45140aa923fade1ee42aa53e6abba4d88
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Wed Nov 7 12:33:48 2018 +0200
+
+    Fixe typo
+
+commit 954faee919b54796afa3579fa320b7fb1cda581e
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Wed Nov 7 12:32:47 2018 +0200
+
+    Renamed prototype images
+
+commit 3ce36d0dfc1b35dc24f2845638a92b3d709347d2
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Wed Nov 7 12:29:02 2018 +0200
+
+    Updated slideshow
+    
+    All heading gonts are the same
+
+commit fc2f83cdf0a21ca23c747e25dfdcb29de2c20282
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Tue Nov 6 21:26:02 2018 +0200
+
+    Minor changes
+    
+    Change register page title
+    Formatted code
+
+commit 3858ddb4be461272881d789572924bb70be76a9b
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Tue Nov 6 21:06:39 2018 +0200
+
+    Add files via upload
+    
+    Final Presentation
+
+commit 5693f24e4c8493c57efdb237c9c25718facf40bf
+Merge: e1dab1a 696a740
+Author: Stefanus <stefbuys21@gmail.com>
+Date:   Tue Nov 6 19:31:40 2018 +0200
+
+    Merge branch 'master' of https://github.com/SP-Group-2-2018/rugbot
+
+commit e1dab1a48e3ed2eba7f7f68099651b2007dfe933
+Author: Stefanus <stefbuys21@gmail.com>
+Date:   Tue Nov 6 19:31:27 2018 +0200
+
+    Delete userss!!!
+
+commit 696a74053d197837a357938451df323c56cc2095
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Tue Nov 6 18:47:04 2018 +0200
+
+    Player Attendence history
+
+commit b316991e5c062566fee5e1d52a7a5b58ec99324d
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Tue Nov 6 13:07:09 2018 +0200
+
+    Deliveables
+    
+    Renamed a bunch of stuff & added some new
+
+commit c8341e7b3ce2a792ed5af265d93d4e78afc44afb
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Tue Nov 6 11:32:36 2018 +0200
+
+    Minor update
+
+commit 88a52bbc0891ac64262c73ae067ac29241ea195e
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Tue Nov 6 11:24:30 2018 +0200
+
+    Edited images
+
+commit 900e44a2b751fe5566dae79966f0619da63bec80
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Tue Nov 6 11:21:47 2018 +0200
+
+    New icons
+
+commit 32be81fc79f32dfe60b8cd9da5f52896580f9a6b
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Tue Nov 6 10:41:08 2018 +0200
+
+    Minor Update
+    
+    Number of players at tryouts
+
+commit 8a98d9192abe4de83b9ebfb3f77fe4300e6ab806
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Tue Nov 6 10:30:24 2018 +0200
+
+    Format
+    
+    Better looking table. There was a random gap.
+
+commit 04f425ae6facd00276d15b38ffb041e61acc51a8
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Tue Nov 6 10:24:39 2018 +0200
+
+    MAJOR BUG FIX
+    
+    WHY DOES THIS KEEP HAPPENING
+
+commit 0332bed6df723b1b6fce821d1b8e1010e4992828
+Author: Stefanus <stefbuys21@gmail.com>
+Date:   Tue Nov 6 10:09:46 2018 +0200
+
+    email working
+
+commit 609cf57aca5659528e0841acac843784e3d9a4d9
+Author: Stefanus <stefbuys21@gmail.com>
+Date:   Tue Nov 6 10:06:44 2018 +0200
+
+    whitelist plugin
+
+commit 11e4f81c151b1c49aa780df6b86a739357cdd4b5
+Merge: cc94f31 349737a
+Author: Stefanus <stefbuys21@gmail.com>
+Date:   Tue Nov 6 09:39:10 2018 +0200
+
+    Merge branch 'master' of https://github.com/SP-Group-2-2018/rugbot
+
+commit cc94f311feff700dcaa36d593721b1e1b78019e6
+Author: Stefanus <stefbuys21@gmail.com>
+Date:   Tue Nov 6 09:39:00 2018 +0200
+
+    deeets
+
+commit 349737ac62c025995a752332a2e5187add178ddb
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Mon Nov 5 15:32:07 2018 +0200
+
+    Clean up
+    
+    Deleted unused images (the apk is 11mb...)
+
+commit 48bc4c48dea6725134054343ce85004cdb88ef88
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Mon Nov 5 15:30:42 2018 +0200
+
+    Favion
+    
+    Created new favicon using the old logo image
+
+commit b2e7d9b7b61791191f40a4589c16da72def6b16a
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Mon Nov 5 12:23:04 2018 +0200
+
+    Formating
+    
+    Added more horisontal rules to the sidebar
+    Removed bg image for login & registration
+
+commit 25f9b0ebf3c6dee89af12bd6b94ad198f9b66a73
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Mon Nov 5 11:54:30 2018 +0200
+
+    Minor update
+
+commit 9b1e1974b12a966e987e4f3c1e556b0a8b3235c0
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Mon Nov 5 11:39:12 2018 +0200
+
+    MAJOR BUG FIX
+    
+    THE BIGGRST ISSUE ANY PROGTAM CAN HAVE
+
+commit 3f883a15eb33c510ec9d9b4d5574f625ad22c7ab
+Merge: bd47870 c07a4a1
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Mon Nov 5 11:30:08 2018 +0200
+
+    Merge branch 'master' of https://github.com/SP-Group-2-2018/rugbot
+
+commit bd47870df03ecc97fec6a3e1fb3f5ed698414564
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Mon Nov 5 11:25:50 2018 +0200
+
+    Final document uploaded
+    
+    Finished D6. All documents in one.
+
+commit 379f50b48085e0e64fa2bc8ce3194d276bd2cbc0
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Mon Nov 5 11:25:12 2018 +0200
+
+    Uploaded prototype screenshots
+
+commit b0b7fdab18eacfe0a652e92a6d2d28771aef2ef5
+Merge: 48cb4fb 8472873
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Mon Nov 5 11:00:58 2018 +0200
+
+    Merge branch 'master' of https://github.com/SP-Group-2-2018/rugbot
+
+commit c07a4a140e30b5c7359af9fb0179ce4529eb3c0c
+Author: Stefanus <stefbuys21@gmail.com>
+Date:   Mon Nov 5 10:39:11 2018 +0200
+
+    Attendace history
+
+commit 8472873c9201b0157c116cd041f94d955a834cdf
+Author: Stefanus <stefbuys21@gmail.com>
+Date:   Sun Nov 4 20:24:35 2018 +0200
+
+    bug
+
+commit 8efe84d75f4a3540444d1bcee34c813516b9b4bc
+Merge: 862ae2d 739b8f8
+Author: Stefanus <stefbuys21@gmail.com>
+Date:   Sun Nov 4 18:55:53 2018 +0200
+
+    Merge branch 'master' of https://github.com/SP-Group-2-2018/rugbot
+
+commit 48cb4fbae9b48d11a002062e20f9790af763366f
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Sun Nov 4 13:57:17 2018 +0200
+
+    Uploaded testing results
+
+commit 739b8f806b6ee79597ee8904df19e85718d6fab6
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Sun Nov 4 13:41:06 2018 +0200
+
+    Bug fix
+    
+    Hard to read about with image
+
+commit 862ae2db817fd98e37856f8f82b7c8fb927fd7e2
+Author: Stefanus <stefbuys21@gmail.com>
+Date:   Sat Nov 3 11:43:05 2018 +0200
+
+    hide event button for players
+
+commit 9583c1bbb368d0039a9a4a2e568b3a5b57ab55d0
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Fri Nov 2 16:12:18 2018 +0200
+
+    Minor update
+    
+    cleaned/formatted code
+
+commit 2b34a8c3657341e879c1e57f9db5fd43e2697c00
+Author: Stefanus <stefbuys21@gmail.com>
+Date:   Fri Nov 2 13:53:19 2018 +0200
+
+    updates
+
+commit ccc3291001620d6529d7d26f6618eb87102eef0e
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Fri Nov 2 00:58:06 2018 +0200
+
+    Linked player details to sending email
+
+commit 62be8b7312bc133958f79904770da43bbac96ba7
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Fri Nov 2 00:53:19 2018 +0200
+
+    Minor format change
+
+commit b6a2bd8c24bc7b0e84401e2ac3e6c99bd26ef3ae
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Fri Nov 2 00:45:40 2018 +0200
+
+    Attendence history
+    
+    Loading details into attendence history page from email
+
+commit f5f59e2260b725da24b626144bfe48b6b8e6156d
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Fri Nov 2 00:16:39 2018 +0200
+
+    Calendar add event hide button for players
+
+commit e56df112d3cfa14898c772936b563f0d49fcb3c0
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Fri Nov 2 00:08:51 2018 +0200
+
+    Update
+    
+    Removed other page.
+    General work.
+
+commit ab7febf063a4174f9061cd4515916c5f8872f29b
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Thu Nov 1 22:03:40 2018 +0200
+
+    Update
+    
+    Jersey numbers
+
+commit 17c38a62ea37447e1ea3df752f4b08a62656b8c3
+Merge: 40a3271 fb500ab
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Thu Nov 1 21:39:22 2018 +0200
+
+    Merge branch 'master' of https://github.com/SP-Group-2-2018/rugbot
+
+commit 40a3271516b54d49ef6c8fea1b3732d486297fb0
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Thu Nov 1 21:38:33 2018 +0200
+
+    Bug fix
+
+commit fb500abde1b0a2ca3cbde8da4016952840a27b8a
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Thu Nov 1 21:22:45 2018 +0200
+
+    Delete package-lock.json
+
+commit 3b31abcaa350a4eefb62fe15981f3b6cda551ccc
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Thu Nov 1 20:12:04 2018 +0200
+
+    Delete stuff.txt
+    
+    No longer needed
+
+commit cffcb4d9c19672502fd9106847fa8ff069a0055e
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Thu Nov 1 20:08:33 2018 +0200
+
+    Minor update
+    
+    Added padding to home buttons
+
+commit 1cbb5ddd77632959bb8205ffa68fcb91527c52ec
+Merge: 41d4cd8 28a8da2
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Thu Nov 1 20:03:39 2018 +0200
+
+    Merge branch 'master' of https://github.com/SP-Group-2-2018/rugbot
+
+commit 41d4cd86b13dcfc0540eebe43fc398a781dc1206
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Thu Nov 1 20:03:36 2018 +0200
+
+    Update
+    
+    email thing
+
+commit 28a8da20a104a36257d83cc72679343819319bb6
+Author: Stefanus <stefbuys21@gmail.com>
+Date:   Thu Nov 1 19:25:39 2018 +0200
+
+    Home buttons
+
+commit e57ab1786e8fa1e602aed45c81cc209c717059f3
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Thu Nov 1 19:11:07 2018 +0200
+
+    Edited imaged to improve readability
+
+commit 0c825f4289298213aef774d8e7f8906c1c690232
+Merge: a064d85 cde4c1b
+Author: Stefanus <stefbuys21@gmail.com>
+Date:   Thu Nov 1 18:12:01 2018 +0200
+
+    Merge branch 'master' of https://github.com/SP-Group-2-2018/rugbot
+
+commit a064d8563f8519cc1c616f3b52f7de76b51070cc
+Author: Stefanus <stefbuys21@gmail.com>
+Date:   Thu Nov 1 18:11:34 2018 +0200
+
+    Attendance history link to edit details page
+
+commit cde4c1b4c0ce04418ad6008e71be750678a27365
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Thu Nov 1 18:04:23 2018 +0200
+
+    Minor update
+
+commit e546773a412eac145116531d050fbea531a3e1ff
+Merge: 7e63ece b69229f
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Thu Nov 1 18:03:57 2018 +0200
+
+    Merge branch 'master' of https://github.com/SP-Group-2-2018/rugbot
+
+commit 7e63ece82acb4b62840e4207040ef993c0229482
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Thu Nov 1 18:03:53 2018 +0200
+
+    .
+
+commit b69229fd1e48edac55f885c5c1bc9dda088ec417
+Author: Stefanus <stefbuys21@gmail.com>
+Date:   Thu Nov 1 17:56:29 2018 +0200
+
+    Edit player details
+
+commit daf867d25c4269e692ff114c45b152fe7456d8e3
+Merge: dc50398 b2213d0
+Author: Stefanus <stefbuys21@gmail.com>
+Date:   Thu Nov 1 17:55:47 2018 +0200
+
+    Merge branch 'master' of https://github.com/SP-Group-2-2018/rugbot
+
+commit dc503983626e5e699c27224db616a476707d4497
+Author: Stefanus <stefbuys21@gmail.com>
+Date:   Thu Nov 1 17:54:11 2018 +0200
+
+    Edit player details
+
+commit b2213d01a7d1cd911d14c34a2387b32031cb2750
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Thu Nov 1 15:31:37 2018 +0200
+
+    Update stuff.txt
+    
+    Clean up
+
+commit cafdc4300cb16e055a533f98e13341c3f0ed2c4b
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Thu Nov 1 14:13:12 2018 +0200
+
+    Major update
+
+commit 7610cc4fd9c3be789a0a1000ee7c29783a624a68
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Thu Nov 1 14:02:28 2018 +0200
+
+    Change image
+    
+    Change image to improve readablility
+
+commit 38d39969d4b8a4e51778576a35bab8ce437868bc
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Thu Nov 1 13:52:21 2018 +0200
+
+    Bug fix
+    
+    Physio user type, incorrect varible name. fixed
+
+commit d0d0ed66ca6379b7949eb2fa365d4140863b9cba
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Thu Nov 1 12:51:07 2018 +0200
+
+    Update
+    
+    Linked user list page
+
+commit 33fb1abee6295556816fb4f1bfc761d78e77c92e
+Author: Stefanus <stefbuys21@gmail.com>
+Date:   Thu Nov 1 10:43:15 2018 +0200
+
+    User details
+
+commit 166575853657133885172f781fe36d931ffbb3b8
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Thu Nov 1 10:37:50 2018 +0200
+
+    Add files via upload
+    
+    Uploaded module outline
+
+commit 9da6966aafc924a146a4826248beec336f2c27f2
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Thu Nov 1 10:36:29 2018 +0200
+
+    Add files via upload
+    
+    Uploaded evaluation report (D5 B).
+    (The user manual needs to be reworked)
+
+commit 3a99c9867e95de1f91be37826be76b82f895d5a5
+Author: Stefanus <stefbuys21@gmail.com>
+Date:   Wed Oct 31 22:50:01 2018 +0200
+
+    Edit user & Delete user
+
+commit 75068ef583cab1aacc8c99eb14df93c0a30df4b2
+Author: Stefanus <stefbuys21@gmail.com>
+Date:   Wed Oct 31 21:53:06 2018 +0200
+
+    Delete user account and details
+
+commit 858aa444c7456eeadcce830e2485bb7be048ad64
+Author: Stefanus <stefbuys21@gmail.com>
+Date:   Wed Oct 31 19:23:54 2018 +0200
+
+    Register page complete.
+
+commit 1dcb82811ab51a6d063214e7b2ea2c6b058020f1
+Merge: 400ccc4 f22d5e1
+Author: Stefanus <stefbuys21@gmail.com>
+Date:   Wed Oct 31 17:53:24 2018 +0200
+
+    Merge branch 'master' of https://github.com/SP-Group-2-2018/rugbot
+
+commit 400ccc4323fe08fa29141cf085af83b3709205bb
+Author: Stefanus <stefbuys21@gmail.com>
+Date:   Wed Oct 31 17:53:16 2018 +0200
+
+    register writes to firebase
+
+commit f22d5e1e872010f7f67ef0dcdd9e16134d9cd5af
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Wed Oct 31 15:30:38 2018 +0200
+
+    Bug fix
+
+commit 370dea298e78a46615956fb2576e76696bed36ad
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Wed Oct 31 11:12:23 2018 +0200
+
+    Created about page
+    
+    Information has been taken from the GitHub README.md
+
+commit 5a81ddea522cfce76f6e09f45dec21559ff89df9
+Merge: 9c7ac02 cbc2e24
+Author: Stefanus <stefbuys21@gmail.com>
+Date:   Wed Oct 31 09:39:50 2018 +0200
+
+    Merge branch 'master' of https://github.com/SP-Group-2-2018/rugbot
+
+commit 9c7ac02955547c1438d52cc270fba25d07db7301
+Author: Stefanus <stefbuys21@gmail.com>
+Date:   Wed Oct 31 09:39:43 2018 +0200
+
+    imported Observable
+
+commit cbc2e24a5799ced7556054e377ebcdd80312a434
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Tue Oct 30 23:50:05 2018 +0200
+
+    Update
+    
+    Working on jersey number
+
+commit cdfc98e04f5cb0d284ce108bd193b9e94d8e4b1e
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Tue Oct 30 21:54:43 2018 +0200
+
+    Matchday Update
+
+commit dcff70516e284298793803d9ebef48bcbca70774
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Tue Oct 30 19:52:58 2018 +0200
+
+    .
+
+commit 28dc21aa38717ab6863fa62b740bc7de5e2ec5dc
+Author: Stefanus <stefbuys21@gmail.com>
+Date:   Tue Oct 30 15:03:01 2018 +0200
+
+    spelling...
+
+commit 8b8bc4970a6e464453c1553854cdb93c86da6c87
+Merge: 47860fb b6d9e98
+Author: Stefanus <stefbuys21@gmail.com>
+Date:   Tue Oct 30 15:02:32 2018 +0200
+
+    update
+
+commit 47860fb34b04f9024fa7d210b0c0a91dd97f4ac6
+Author: Stefanus <stefbuys21@gmail.com>
+Date:   Tue Oct 30 15:00:53 2018 +0200
+
+    bugs
+
+commit b6d9e98a3c56d9451e3803f5629b25839fb0eab0
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Tue Oct 30 13:02:06 2018 +0200
+
+    Update
+    
+    SAVE ME
+
+commit 5c03a530da83fa857f3937a1882495d89548101b
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Tue Oct 30 12:39:35 2018 +0200
+
+    bug fix
+
+commit 2e57652c9ce899da631b8c522d4f022fcd2fad86
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Tue Oct 30 11:47:47 2018 +0200
+
+    Update
+    
+    User list working prototype
+
+commit e473ce5350a01f17605de972b9897c8d93285540
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Tue Oct 30 11:19:50 2018 +0200
+
+    Generated page
+    
+    Generated user list page to show all users of the system by type (todo).
+
+commit e13769dcc3ccf461b799bc7574fd984282786778
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Tue Oct 30 10:59:07 2018 +0200
+
+    Generate page
+    
+    regenerate match day information page
+
+commit ab06a6678ee1768e76939274fe68d5ab1a441db6
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Tue Oct 30 10:58:28 2018 +0200
+
+    Delete match day information
+    
+    It will be easier to redo everthing than fix Tyler's code
+
+commit a7cfec6abcc3ca5e8bb415dac445fdee574d6c80
+Merge: a74f8da d7a2d7a
+Author: Stefanus <stefbuys21@gmail.com>
+Date:   Tue Oct 30 10:34:47 2018 +0200
+
+    Merge branch 'master' of https://github.com/SP-Group-2-2018/rugbot
+
+commit a74f8dadefe92bc2817ecb368509ad1ba6e2a73f
+Author: Stefanus <stefbuys21@gmail.com>
+Date:   Tue Oct 30 10:34:41 2018 +0200
+
+    minor bug
+
+commit d7a2d7ac68537adc1d25e5bf2218d68cb8227009
+Merge: 7879d4e 8b1c3b3
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Tue Oct 30 00:24:48 2018 +0200
+
+    Merge branch 'master' of https://github.com/SP-Group-2-2018/rugbot
+
+commit 7879d4e3dbf52eedbaae010b1bf79c31159c0b36
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Tue Oct 30 00:24:14 2018 +0200
+
+    Other page update
+    
+    skeleton, not currently a priority.
+    General work
+
+commit 8b1c3b3337ee4c6e4602da541cfb74079c15b21a
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Mon Oct 29 23:24:33 2018 +0200
+
+    Update stuff.txt
+
+commit 6139e610d3b79a8396e174fa5ec1317640e99715
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Mon Oct 29 23:06:11 2018 +0200
+
+    Generated other page
+    
+    Because I can't call it 'crap'
+    
+    Ps. Had a really nice cup of coffee
+
+commit 1369204cc49945fc32e30e717c1217275ce4408a
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Mon Oct 29 22:00:53 2018 +0200
+
+    Update
+    
+    player history page became generic player list
+    general work
+    
+    Ps. I need some coffee
+
+commit 01f5b2d6b34d6fce4b8c40d9261c6722511d9770
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Mon Oct 29 21:14:28 2018 +0200
+
+    Generate attendence history page
+    
+    list of all player. click name opens personal history
+
+commit ba7396188845b47773bd451e24936552be7bec15
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Mon Oct 29 20:57:15 2018 +0200
+
+    Update
+    
+    Worked on player details
+
+commit e37d9c84a385fae1e7071d02976b5034eca14378
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Mon Oct 29 17:40:01 2018 +0200
+
+    Hotfix
+    
+    Spelling error
+
+commit ce69a9068cc285d6be88298f0067952cf0e43ac5
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Mon Oct 29 17:37:13 2018 +0200
+
+    Hotfix
+
+commit abae71db114cd31d5ccd290aae3fb8dbf52fa67c
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Mon Oct 29 17:36:05 2018 +0200
+
+    Bug fixes
+    
+    Case case sensitive equals
+    Non injured player no longer have a recovery date
+
+commit c02cc94ac936049ad20ca43159e39c24ccf41ac9
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Mon Oct 29 16:54:08 2018 +0200
+
+    Bug fix
+    
+    Fixed coach message
+
+commit 73d49cdda81e63897652977cb7a03713e21ac2c9
+Author: Stefanus <stefbuys21@gmail.com>
+Date:   Mon Oct 29 11:24:26 2018 +0200
+
+    Bug fixes
+
+commit d9beb1a2ce3141a562465163c97089ec007f20b1
+Merge: f6539ae 2f9ffd0
+Author: Stefanus <stefbuys21@gmail.com>
+Date:   Mon Oct 29 09:08:32 2018 +0200
+
+    Merge branch 'master' of https://github.com/SP-Group-2-2018/rugbot
+
+commit f6539ae95ea9ac018583b8f122261eca0d56dfad
+Author: Stefanus <stefbuys21@gmail.com>
+Date:   Mon Oct 29 09:08:25 2018 +0200
+
+    Register user details.
+
+commit 2f9ffd045db0b058153401134bbbb9edd355cbe9
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Sun Oct 28 23:09:30 2018 +0200
+
+    Bug fix
+    
+    loading current day as default value.
+    https://stackoverflow.com/questions/45528396/how-to-set-default-datetodays-date-of-ion-datetime
+
+commit 2fee118130c2b4e200525868c3990e88fd924253
+Merge: aab9aa3 a2327ec
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Sun Oct 28 22:13:45 2018 +0200
+
+    Merge pull request #2 from Blunderchips/master
+    
+    Abo's code
+    
+    Code sent to me by Abongile. Wanted to ensure that there is no conflicts so PR.
+
+commit a2327ecdd4e5caece694ebe756147b8e32cd70b9
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Sun Oct 28 22:10:58 2018 +0200
+
+    Abo code
+
+commit 5dd3b428755dab4547de40a29e0e851a66bca5db
+Author: Stefanus <stefbuys21@gmail.com>
+Date:   Sun Oct 28 20:47:50 2018 +0200
+
+    Show only players on coach and physio lists.
+
+commit aab9aa3f679c97a7ea572ca141c6c97fb2e0b2ea
+Author: Stefanus <stefbuys21@gmail.com>
+Date:   Sun Oct 28 20:16:08 2018 +0200
+
+    Page authorization
+
+commit f0f90f47f717d4f1672072efc2c01c635c94e03d
+Merge: ff1cc70 f1e539a
+Author: Stefanus <stefbuys21@gmail.com>
+Date:   Sun Oct 28 14:28:33 2018 +0200
+
+    New
+
+commit ff1cc7092718eb923f1a5cfb4c63ffa8ea936a93
+Author: Stefanus <stefbuys21@gmail.com>
+Date:   Sun Oct 28 14:22:23 2018 +0200
+
+    Testing...
+
+commit f1e539a68528d741c036fcd3cb04b1a6dbb57e20
+Merge: a7c1491 38765b6
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Sun Oct 28 13:24:49 2018 +0200
+
+    Merge pull request #1 from Blunderchips/master
+    
+    Removed unused pages
+
+commit a7c1491ac0ea061e62470583212f023947654dc3
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Sun Oct 28 00:18:54 2018 +0200
+
+    General Update
+    
+    Nightly. Format design of reg page.
+    Cheching for user type when edditing information.
+
+commit 38765b6bb197fe96b94c4f6d876627682f65d613
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Sun Oct 28 00:13:02 2018 +0200
+
+    Deleted coach attendence page
+
+commit 62ddf7f5e04dd39aa97709daac177bb4b8b13013
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Sun Oct 28 00:12:22 2018 +0200
+
+    deleted physio reg page
+
+commit 74132565866731b1078d1633bcd0dc17529fb169
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Sun Oct 28 00:12:00 2018 +0200
+
+    deleted physio form page
+
+commit 43ad34c7d713a25d94c1654ba47815d885abb2b5
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Sun Oct 28 00:11:33 2018 +0200
+
+    deleted player home page
+
+commit 21b175ed072a99638a15ceb04af2d81b3af587b1
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Sat Oct 27 23:50:19 2018 +0200
+
+    Update stuff.txt
+
+commit 893170f0921e0a1966a4154cc9acd741222ced72
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Sat Oct 27 22:16:09 2018 +0200
+
+    Update stuff.txt
+    
+    For the details of the current user?
+    https://www.w3schools.com/howto/howto_css_product_card.asp
+
+commit 7d144caff1895e08631b29875ef542353017700a
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Sat Oct 27 22:04:59 2018 +0200
+
+    Create stuff.txt
+    
+    Dump for random crap that may be of use
+
+commit 066ca01c224b1bf39bd243df2bd4ce42429a3e39
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Sat Oct 27 22:02:48 2018 +0200
+
+    Loading user details from the database
+    
+    Moving on to the attendence page.
+
+commit aa0dcc160167b41ee67332f78e20e44eb775b0e7
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Sat Oct 27 20:29:52 2018 +0200
+
+    Update
+
+commit faa680a8128858477f513a3edf80de4f99886539
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Sat Oct 27 19:56:01 2018 +0200
+
+    Update
+    
+    TESTING button is broken
+
+commit 8ffaa185dfb078750f7c053b2081e2778d4778f2
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Sat Oct 27 17:45:51 2018 +0200
+
+    Generate player details page
+
+commit 6e29d559868d605463c37c07abafd4aa66d4521d
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Sat Oct 27 17:26:56 2018 +0200
+
+    Bug fix
+    
+    Readded removed files
+
+commit f7e81ea425a81f8eda62c210cd4fca026151d7f3
+Merge: c7d7ec1 26178b9
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Sat Oct 27 17:22:55 2018 +0200
+
+    Merge branch 'master' of https://github.com/SP-Group-2-2018/rugbot
+
+commit c7d7ec13d25bf05254dfdecd2c3c08e273195f00
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Sat Oct 27 17:22:41 2018 +0200
+
+    Hotfix
+
+commit 26178b969447efb706d225116b3cc97af6f1634f
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Sat Oct 27 16:03:41 2018 +0200
+
+    Hotfix
+    
+    Forgot to remove these file. Still working on player details.
+
+commit ceae9b4ee32e1c81ee0082237da88f56db8aafa8
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Sat Oct 27 15:53:41 2018 +0200
+
+    Udate
+    
+    Adding stuff to calender.
+    Still a bit buggy.
+
+commit 485e10decd9f61f074ecb66c64298d4b26ca10d7
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Sat Oct 27 09:52:07 2018 +0200
+
+    Nightly
+
+commit 42f93d4028e5fd58eff8555100d0ac725b452b1e
+Author: Stefanus <stefbuys21@gmail.com>
+Date:   Fri Oct 26 12:11:17 2018 +0200
+
+    Killed bug.
+
+commit 0b3b6eb92b63454d35332df9877930d93106e077
+Author: Stefanus <stefbuys21@gmail.com>
+Date:   Fri Oct 26 08:47:40 2018 +0200
+
+    Calendar
+
+commit 85a74e81d154de0cd72c81c09e7876c27be00db9
+Author: Stefanus <stefbuys21@gmail.com>
+Date:   Thu Oct 25 17:17:44 2018 +0200
+
+    Calendar GUI
+
+commit aebcce4c4ef2a44b4555c08df60d119a4c1e2757
+Author: Stefanus <stefbuys21@gmail.com>
+Date:   Thu Oct 25 11:36:54 2018 +0200
+
+    update
+
+commit fb4b61acf00d0cc9e0f316fab4750c280f5917d9
+Author: Stefanus <stefbuys21@gmail.com>
+Date:   Thu Oct 25 11:31:43 2018 +0200
+
+    update
+
+commit 40520b06f69ed4e5daec62232bc36aedb562a79d
+Merge: b34889a 18e0ba0
+Author: Stefanus <stefbuys21@gmail.com>
+Date:   Thu Oct 25 11:31:32 2018 +0200
+
+    update
+
+commit b34889a7fb5a65bdc72c8898296b9a2852af72ec
+Author: Stefanus <stefbuys21@gmail.com>
+Date:   Thu Oct 25 11:30:12 2018 +0200
+
+    update
+
+commit 2c42890d6a3b0c4239df8c324e7d5e9aa84343fb
+Author: Stefanus <stefbuys21@gmail.com>
+Date:   Wed Oct 24 17:22:28 2018 +0200
+
+    Menu button
+
+commit 18e0ba08c808c336cc9479326b2c4529cf0eea20
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Wed Oct 24 10:14:29 2018 +0200
+
+    Update
+    
+    Minor changes
+
+commit 09b1c1b645ac4bd107a8ad111ddf67621e2b54cb
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Wed Oct 24 09:38:14 2018 +0200
+
+    Add files via upload
+    
+    Uploaded missing image.
+
+commit 2b890fe48025a0b68be58887bf55d735ff6be5e7
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Tue Oct 23 23:44:16 2018 +0200
+
+    Nightly
+
+commit 18e2587d0bf9576d03750417711613c6d181aa63
+Merge: 124c6ea cc5b72c
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Tue Oct 23 23:36:05 2018 +0200
+
+    Merge branch 'master' of https://github.com/SP-Group-2-2018/rugbot
+
+commit cc5b72c58351bb1f0292f6a5a66c2b103b1200ed
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Tue Oct 23 23:35:57 2018 +0200
+
+    Delete package.zip
+    
+    Not needed
+
+commit 124c6eac09427d577418bb7f400a3c4a8e539870
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Tue Oct 23 22:58:32 2018 +0200
+
+    Minor Update
+    
+    No major changes.
+
+commit 9cff1eb3ec61b2c73776d083019ff99248f72118
+Merge: 414b3e5 4d6480a
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Tue Oct 23 20:20:56 2018 +0200
+
+    Merge branch 'master' of https://github.com/SP-Group-2-2018/rugbot
+
+commit 414b3e531d1dbf657ee79539cfee257310480a45
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Tue Oct 23 20:20:02 2018 +0200
+
+    Update
+
+commit 4d6480ac03b85c1f54d3e4a7c45d276c8c9f8070
+Author: Stefanus <stefbuys21@gmail.com>
+Date:   Tue Oct 23 20:04:23 2018 +0200
+
+    updates...
+
+commit d45f20a4099bce220c4caa00f25979589cc2889e
+Author: Stefanus <stefbuys21@gmail.com>
+Date:   Tue Oct 23 20:03:06 2018 +0200
+
+    Fixed test attendance page
+
+commit c4126f5dc986b9cc3461378fe67bcf57671e7d86
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Tue Oct 23 18:39:16 2018 +0200
+
+    Add files via upload
+    
+    Uploaded the user manual
+
+commit 45b62f53f8714ae380252fa7413ecef01ecdf87b
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Tue Oct 23 18:34:51 2018 +0200
+
+    Hotfix
+    
+    Formatting looked a bit wierd
+
+commit 05b00a9932b9ff00b5f8b373e1506e417e148159
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Tue Oct 23 18:34:12 2018 +0200
+
+    Update README.md
+    
+    Added details from the first deliverable. Will continue to update and generally make look better later.
+
+commit 516322b687ebbd4d5592cf60eda67bc1176e4e82
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Tue Oct 23 15:20:40 2018 +0200
+
+    Update
+    
+    Worked on attendence page (still prototyping).
+    Bug fix on physio page.
+
+commit ba8c08fb8e8662bd7cf80a907c0017507533f319
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Mon Oct 22 19:20:44 2018 +0200
+
+    Working on attendence page
+
+commit 62b6376311b168488096cafb12761aeeee607d4d
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Mon Oct 22 10:27:15 2018 +0200
+
+    removable marks
+
+commit c13779161d8234865e271cfb9548a1a40ebcfc8c
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Mon Oct 22 00:34:03 2018 +0200
+
+    Register prototype
+
+commit 07ffc887152844319a687466fbec8c9c535f4f0a
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Sun Oct 21 16:14:36 2018 +0200
+
+    Removed player attendence page
+
+commit e32fb84ff552f26ae783d74670a6a0b4868ebf84
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Sun Oct 21 15:46:28 2018 +0200
+
+    .
+
+commit 7e9f18f18988c15ac7a3e28906a917f3607235a8
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Sun Oct 21 14:33:27 2018 +0200
+
+    hotfix
+
+commit 7c20426f7bf57a8cd88134d0dd4b2ca291e37eef
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Sun Oct 21 14:14:23 2018 +0200
+
+    hotfix
+
+commit 72008ac53025e8d84f5ac1fbc1e665ca3a4eadca
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Sun Oct 21 13:51:09 2018 +0200
+
+    update
+
+commit ba9b7ce52623abc6157ada94c4ec708264e10735
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Sat Oct 20 17:37:24 2018 +0200
+
+    generated player attendence
+
+commit 094e3fbfa23d77cd2269c4c27c9f73a91f53b6cb
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Sat Oct 20 17:23:53 2018 +0200
+
+    table for testing
+
+commit 3a0ee93965206ee51b0e6ae7a826cdaa74a3ecce
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Sat Oct 20 12:19:22 2018 +0200
+
+    generate coach attendence page
+
+commit 8095916ae2afb326fa3151a2ce4cff6f8a387f02
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Fri Oct 19 23:39:26 2018 +0200
+
+    Nightly
+
+commit 11027d82975dbff2a92d2c9955976438a92dd674
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Fri Oct 19 17:14:21 2018 +0200
+
+    Regiater enter ID on given date
+
+commit ed6214d0730166e092b0fc5b0c93536699682b81
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Fri Oct 19 14:30:18 2018 +0200
+
+    Bugfix on updating database
+
+commit 9c3b721835545f7a48266b2b52954286b94a8821
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Thu Oct 18 22:29:04 2018 +0200
+
+    hotfix
+
+commit d0b574ade2a3e0446e45624777810f5f8a8e5da8
+Merge: 2217786 78de783
+Author: Stefanus <stefbuys21@gmail.com>
+Date:   Thu Oct 18 18:05:38 2018 +0200
+
+    Merge branch 'master' of https://github.com/SP-Group-2-2018/rugbot
+
+commit 2217786b88aa4b403d6413db5d6678054c29eda7
+Author: Stefanus <stefbuys21@gmail.com>
+Date:   Thu Oct 18 18:05:11 2018 +0200
+
+    Stef's updates
+
+commit 78de7830d301f8f20c9dabbdba50d5c7181759c2
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Thu Oct 18 16:04:06 2018 +0200
+
+    Minor update
+
+commit 2501fbd2849f218c31c75d4f3ab322ead57755b2
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Thu Oct 18 12:12:45 2018 +0200
+
+    comment
+
+commit f9aaf1c3b269d5f87d2d1d5020aadfd74a7c1a5c
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Thu Oct 18 11:37:35 2018 +0200
+
+    Status button chaning colour
+
+commit 8d3f19bb4d71036fda80ad554e6926533703c3ac
+Author: Stefanus <stefbuys21@gmail.com>
+Date:   Thu Oct 18 11:02:10 2018 +0200
+
+    delete schedule &  session
+
+commit 75f9db35dc2a7e2ca6abb0457c1ac60e013d0419
+Author: Stefanus <stefbuys21@gmail.com>
+Date:   Thu Oct 18 10:28:57 2018 +0200
+
+    update
+
+commit 8ef038ef550530ceb69ff148d6508998a1852434
+Merge: 113d812 8b1b935
+Author: Stefanus <stefbuys21@gmail.com>
+Date:   Thu Oct 18 10:23:59 2018 +0200
+
+    Merge branch 'master' of https://github.com/SP-Group-2-2018/rugbot
+
+commit 113d812956eb087668b97583d7767a0a12049def
+Author: Stefanus <stefbuys21@gmail.com>
+Date:   Thu Oct 18 10:21:39 2018 +0200
+
+    update
+
+commit 8b1b935bec7d2667dd6126c1cc24dd94710512c5
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Thu Oct 18 10:16:39 2018 +0200
+
+    hotfix
+
+commit 0c8e5c86d28aa871e809119d74dbc0f4619edf95
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Thu Oct 18 10:12:32 2018 +0200
+
+    update
+
+commit f40f8ad2248b97544d18f0c89745c8014598e2ed
+Merge: 4f3b086 25aa674
+Author: Stefanus <stefbuys21@gmail.com>
+Date:   Thu Oct 18 10:04:41 2018 +0200
+
+    update
+
+commit 4f3b086e6095a9e09c2c149e3437e829a28d62da
+Author: Stefanus <stefbuys21@gmail.com>
+Date:   Thu Oct 18 10:01:44 2018 +0200
+
+    Home logout button
+
+commit 25aa674bde5e55036259432cb5767058e46a7196
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Thu Oct 18 00:09:08 2018 +0200
+
+    Recreated calander page
+
+commit 3041f9792bd51a2ffa6ab385826067d362902900
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Wed Oct 17 23:29:45 2018 +0200
+
+    update
+
+commit d2b93a8c3e91360c58d42ac5fcddc3b399924e50
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Wed Oct 17 20:40:19 2018 +0200
+
+    update
+
+commit b216cae04bb188007d0b08db242674b9e1ba5295
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Wed Oct 17 14:55:51 2018 +0200
+
+    New home from Tyler
+
+commit 7db71bf52bd0eb2b97cbdd2ee9f38343d1bfd6c0
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Wed Oct 17 09:38:42 2018 +0200
+
+    Basic popup
+
+commit 4a23b654ae3063ac138f83fa1ea207a0929aeaba
+Author: Stefanus <stefbuys21@gmail.com>
+Date:   Tue Oct 9 20:29:44 2018 +0200
+
+    Physion player list from firebase
+
+commit 519fc5aeddc4d50bb7180fc89708104f91ca67e5
+Author: Stefanus <stefbuys21@gmail.com>
+Date:   Thu Oct 4 19:05:55 2018 +0200
+
+    Register page
+
+commit 9ab17a309a33e2a0480c8e16b8c2e28bbe13a975
+Author: Stefanus <stefbuys21@gmail.com>
+Date:   Thu Oct 4 19:04:50 2018 +0200
+
+    login and register pages
+
+commit d6b1c618ab769d0143ab92b587db5e2b635d4711
+Author: Stefanus <stefbuys21@gmail.com>
+Date:   Mon Sep 10 21:12:03 2018 +0200
+
+    Massive update & complete working login and session tracking
+
+commit fa5d46d179811dd5dd62306b33a42515a54b542f
+Author: Stefanus <stefbuys21@gmail.com>
+Date:   Mon Aug 6 08:21:16 2018 +0200
+
+    login page with firebase auth
+
+commit c6e638e67fefba42d39638dd29b7d7a3f104beec
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Tue Jul 31 15:22:18 2018 +0200
+
+    Added previous deliverables
+
+commit faeb824cbec2797436de63ac51693cd612685ce0
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Tue Jul 31 15:15:20 2018 +0200
+
+    moved the project into seperate folder
+
+commit aee62a0ab9fcdfb03ee4927409b6353ea9b3139e
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Tue Jul 31 12:32:53 2018 +0200
+
+    Create README.md
+
+commit 2ea62698a91a0e59da1e66dca724fed2035f5cbb
+Author: Stefanus <stefbuys21@gmail.com>
+Date:   Tue Jul 31 09:43:04 2018 +0200
+
+    New login page
+
+commit cf33c390741c232f93fa28b31e338ec488ef2d71
+Author: Stefanus <stefbuys21@gmail.com>
+Date:   Mon Jul 30 11:19:27 2018 +0200
+
+    Initial commit
+    
+    Empty Ionic project
